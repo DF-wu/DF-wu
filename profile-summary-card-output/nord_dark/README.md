@@ -52,13 +52,3 @@
 ```
 
     
-
----
-
-![](./4-productive-time.svg)
-
-```
-![](https://raw.githubusercontent.com/DF-wu/DF-wu/master/profile-summary-card-output/nord_dark/4-productive-time.svg)
-```
-
-    
