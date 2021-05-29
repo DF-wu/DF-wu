@@ -52,3 +52,13 @@
 ```
 
     
+
+---
+
+![](./4-productive-time.svg)
+
+```
+![](https://raw.githubusercontent.com/DF-wu/DF-wu/master/profile-summary-card-output/vue/4-productive-time.svg)
+```
+
+    
