@@ -5,6 +5,11 @@
 [![](./profile-summary-card-output/monokai/4-productive-time.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
 
+
+![Alt text](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/46360496-eb3a-4a1b-bc25-e528eed01750.svg)
+<img src="https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/46360496-eb3a-4a1b-bc25-e528eed01750.svg">
+
+
 <!-- <figure><embed src="https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/084d2c44-1ff2-4765-86e4-efed21fe9861.svg"></embed></figure> -->
 ![![](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/c87ff586-1aaf-406f-a5a8-af74266b864a.png)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
