@@ -17,7 +17,7 @@ jobs:
 #       GH_TOKEN: ${{ secrets.waka-box-token }}
 #       UPDATE_OPTION: GIST_AND_MARKDOWN
       UPDATE_OPTION: MARKDOWN
-      MARKDOWN_FILE: README.md
+      MARKDOWN_FILE: DF-wu/README.md
 #       GIST_ID: 9bc7025496e478f439b9cd43eba989a4
 #       GIST_BARSTYLE: SOLIDLT
 #       GIST_BARLENGTH: -1
