@@ -6,7 +6,7 @@
 
 
 
-[![my wakatime chart](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/46360496-eb3a-4a1b-bc25-e528eed01750.svg)](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/c87ff586-1aaf-406f-a5a8-af74266b864a.png)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+[![my wakatime chart](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/46360496-eb3a-4a1b-bc25-e528eed01750.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
 
 
