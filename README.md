@@ -8,5 +8,8 @@
 <!-- Example: <img src="https://github.com/avinal/avinal/blob/main/images/stat.svg" alt="Avinal WakaTime Activity"/> -->
 
 
-
+ <!-- waka-box start -->
+ <!-- waka-box end -->
+ 
+ 
 [More Info about the template author](https://github.com/vn7n24fzkq/github-profile-summary-cards)
