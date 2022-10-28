@@ -1,4 +1,8 @@
 ![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social)
+
+[![DF's GitHub stats](https://github-readme-stats.vercel.app/api?username=DF-wu?show_icons=true?count_private=true?theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu)](https://github.com/anuraghazra/github-readme-stats)
+
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
 [![VSCODE](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blue?style=flat-square&logo=Visual-Studio-Code)](https://code.visualstudio.com/)
