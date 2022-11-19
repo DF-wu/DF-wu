@@ -1,4 +1,4 @@
-![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social)
+![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social) <a rel="me" href="https://g0v.social/@df">df@g0v.social</a>
 
 [![DF's GitHub stats](https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats) 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu)](https://github.com/anuraghazra/github-readme-stats)
