@@ -1,8 +1,11 @@
-![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social) <a rel="me" href="https://g0v.social/@df">My mastodon profile at g0v.social</a>
+# My profile page
+![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social) [![Mastdon - g0v](https://img.shields.io/badge/Mastdon-g0v-2ea44f?logo=mastodon)](https://g0v.social/@df)
 
+## repo status (private repo excluded)
 [![DF's GitHub stats](https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats) 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu)](https://github.com/anuraghazra/github-readme-stats)
 
+## graffiti wall
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
 [![VSCODE](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blue?style=flat-square&logo=Visual-Studio-Code)](https://code.visualstudio.com/)
@@ -52,7 +55,7 @@
 [![](./profile-summary-card-output/monokai/4-productive-time.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
 
-
+## wakatime analysis
 [![my wakatime chart](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/46360496-eb3a-4a1b-bc25-e528eed01750.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
 
