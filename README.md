@@ -69,14 +69,15 @@ Let's push the boundaries of what technology can achieve! 🚀
 [![](./profile-summary-card-output/monokai/4-productive-time.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
 ## wakatime analysis
-[![my wakatime chart](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/46360496-eb3a-4a1b-bc25-e528eed01750.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
-<!-- <figure><embed src="https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/084d2c44-1ff2-4765-86e4-efed21fe9861.svg"></embed></figure> -->
+<figure><embed src="https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/d210fe3c-7b63-47b5-a4d4-b70bb8300fcb.svg"></embed></figure>
+
 
 <!-- png version -->
 <!-- ![![](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/c87ff586-1aaf-406f-a5a8-af74266b864a.png)](https://www.linkedin.com/in/chufei-wu-b33990164/) -->
-<!-- svg yyds -->
-<figure><embed src="https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/d210fe3c-7b63-47b5-a4d4-b70bb8300fcb.svg"></embed></figure>
+
+
+
 
 
 <!-- Example: <img src="https://github.com/avinal/avinal/blob/main/images/stat.svg" alt="Avinal WakaTime Activity"/> -->
