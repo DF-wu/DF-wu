@@ -8,9 +8,11 @@ Let's push the boundaries of what technology can achieve! 🚀
   - [Table of Contents](#table-of-contents)
   - [repo status (private repo excluded)](#repo-status-private-repo-excluded)
   - [Professional Connections](#professional-connections)
+  - [Professional Portfolio \& Resume](#professional-portfolio--resume)
   - [Monokai Style Charts](#monokai-style-charts)
   - [wakatime analysis](#wakatime-analysis)
-  - [更多資訊](#更多資訊)
+  - [Additional Information](#additional-information)
+  - [Achievements](#achievements)
 
 ![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social) [![Mastdon - g0v](https://img.shields.io/badge/Mastdon-g0v-2ea44f?logo=mastodon)](https://g0v.social/@df)
 
@@ -25,7 +27,7 @@ Let's push the boundaries of what technology can achieve! 🚀
 [![](https://img.shields.io/badge/Editor-Vim-019733?style=flat-square&logo=vim&logoColor=ffffff)](https://www.vim.org/)
 [![](https://img.shields.io/badge/macOS-Catalina-d0d1d4?style=flat-square&logo=Apple)](<[https://](https://www.aple.com/macos/catalina/)>)
 [![ARCH](https://img.shields.io/badge/Archlinux-Rolling-39a2ef?style=flat-square&logo=Archlinux)](https://archlinux.org/)
-[![](https://img.shields.io/badge/-HackMD-333333?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8%2BCjxzdmcKICAgd2lkdGg9IjE3OTIiCiAgIGhlaWdodD0iMTc5MiIKICAgdmlld0JveD0iMCAwIDE3OTIgMTc5MiIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnNCIKICAgc29kaXBvZGk6ZG9jbmFtZT0iZmlsZS10ZXh0Mi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjEuMSAoYzRlOGY5ZWQ3NCwgMjAyMS0wNS0yNCkiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BCiAgPGRlZnMKICAgICBpZD0iZGVmczgiIC8%2BCiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJuYW1lZHZpZXc2IgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9IjAiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnpvb209IjAuNDU4NzA1MzYiCiAgICAgaW5rc2NhcGU6Y3g9IjkwMS40NTAxMiIKICAgICBpbmtzY2FwZTpjeT0iODk5LjI3MDA3IgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMjU1MiIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMzcxIgogICAgIGlua3NjYXBlOndpbmRvdy14PSIyNTYwIgogICAgIGlua3NjYXBlOndpbmRvdy15PSIzMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzQiIC8%2BCiAgPHBhdGgKICAgICBkPSJNMTU5NiA0NzZxMTQgMTQgMjggMzZoLTQ3MnYtNDcycTIyIDE0IDM2IDI4em0tNDc2IDE2NGg1NDR2MTA1NnEwIDQwLTI4IDY4dC02OCAyOGgtMTM0NHEtNDAgMC02OC0yOHQtMjgtNjh2LTE2MDBxMC00MCAyOC02OHQ2OC0yOGg4MDB2NTQ0cTAgNDAgMjggNjh0NjggMjh6bTE2MCA3MzZ2LTY0cTAtMTQtOS0yM3QtMjMtOWgtNzA0cS0xNCAwLTIzIDl0LTkgMjN2NjRxMCAxNCA5IDIzdDIzIDloNzA0cTE0IDAgMjMtOXQ5LTIzem0wLTI1NnYtNjRxMC0xNC05LTIzdC0yMy05aC03MDRxLTE0IDAtMjMgOXQtOSAyM3Y2NHEwIDE0IDkgMjN0MjMgOWg3MDRxMTQgMCAyMy05dDktMjN6bTAtMjU2di02NHEwLTE0LTktMjN0LTIzLTloLTcwNHEtMTQgMC0yMyA5dC05IDIzdjY0cTAgMTQgOSAyM3QyMyA5aDcwNHExNCAwIDIzLTl0OS0yM3oiCiAgICAgaWQ9InBhdGgyIgogICAgIHN0eWxlPSJmaWxsOiNmZmZmZmYiIC8%2BCjwvc3ZnPgo%3D&logoColor=ffffff)](https://hackmd.io/)
+[![](https://img.shields.io/badge/-HackMD-333333?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8%2BCjxzdmcKICAgd2lkdGg9IjE3OTIiCiAgIGhlaWdodD0iMTc5MiIKICAgdmlld0JveD0iMCAwIDE3OTIgMTc5MiIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnNCIKICAgc29kaXBvZGk6ZG9jbmFtZT0iZmlsZS10ZXh0Mi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjEuMSAoYzRlOGY5ZWQ3NCwgMjAyMS0wNS0yNCkiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZyI%2BCiAgPGRlZnMKICAgICBpZD0iZGVmczgiIC8%2BCiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJuYW1lZHZpZXc2IgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9IjAiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnpvb209IjAuNDU4NzA1MzYiCiAgICAgaW5rc2NhcGU6Y3g9IjkwMS40NTAxMiIKICAgICBpbmtzY2FwZTpjeT0iODk5LjI3MDA3IgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMjU1MiIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMzcxIgogICAgIGlua3NjYXBlOndpbmRvdy14PSIyNTYwIgogICAgIGlua3NjYXBlOndpbmRvdy15PSIzMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzQiIC8%2BCiAgPHBhdGgKICAgICBkPSJNMTU5NiA0NzZxMTQgMTQgMjggMzZoLTQ3MnYtNDcycTIyIDE0IDM2IDI4em0tNDc2IDE2NGg1NDR2MTA1NnEwIDQwLTI4IDY4dC02OCAyOGgtMTM0NHEtNDAgMC02OC0yOHQtMjgtNjh2LTE2MDBxMC00MCAyOC02OHQ2OC0yOGg4MDB2NTQ0cTAgNDAgMjggNjh0NjggMjh6bTE2MCA3MzZ2LTY0cTAtMTQtOS0yM3QtMjMtOWgtNzA0cS0xNCAwLTIzIDl0LTkgMjN2NjRxMCAxNCA5IDIzdDIzIDloNzA0cTE0IDAgMjMtOXQ5LTIzem0wLTI1NnYtNjRxMC0xNC05LTIzdC0yMy05aC03MDRxLTE0IDAtMjMgOXQtOSAyM3Y2NHEwIDE0IDkgMjN0MjMgOWg3MDRxMTQgMCAyMy05dDktMjN6bTAtMjU2di02NHEwLTE0LTktMjN0LTIzLTloLTcwNHEtMTQgMC0yMyA5dC05IDIzdjY0cTAgMTQgOSAyM3QyMyA5aDcwNHExNCAwIDIzLTl0OS0yM3oiCiAgICAgaWQ9InBhdGgyIgogICAgIHN0eWxlPSJmaWxsOiNmZmZmZmYiIC8%2BCjwvc3ZnPgo%3D&logoColor=ffffff)](https://hackmd.io/)
 [![](https://img.shields.io/badge/-diagrams.net-F08705?style=flat-square&logo=diagramsdotnet&logoColor=ffffff)](https://app.diagrams.net/)
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
@@ -61,6 +63,18 @@ Let's push the boundaries of what technology can achieve! 🚀
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
 
+## Professional Portfolio & Resume
+<div align="center">
+  
+[![View My Resume](https://img.shields.io/badge/View%20Resume-PDF-blue?style=for-the-badge&logo=adobe-acrobat-reader)](https://github.com/DF-wu/resume/raw/main/Resume_Df.pdf)
+[![Portfolio Details](https://img.shields.io/badge/Portfolio-Details-success?style=for-the-badge&logo=github)](https://github.com/DF-wu/resume)
+
+</div>
+
+> 🎯 Specialized in backend development and system architecture design, excelling at solving complex technical challenges
+> 
+> 💼 Click above to view my complete resume and portfolio
+
 ## Monokai Style Charts
 [![](./profile-summary-card-output/monokai/0-profile-details.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 [![](./profile-summary-card-output/monokai/1-repos-per-language.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
@@ -76,16 +90,17 @@ Let's push the boundaries of what technology can achieve! 🚀
 <!-- png version -->
 <!-- ![![](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/c87ff586-1aaf-406f-a5a8-af74266b864a.png)](https://www.linkedin.com/in/chufei-wu-b33990164/) -->
 
-
-
-
-
 <!-- Example: <img src="https://github.com/avinal/avinal/blob/main/images/stat.svg" alt="Avinal WakaTime Activity"/> -->
 
  <!-- waka-box start -->
  <!-- waka-box end -->
  
-## 更多資訊
-感謝您拜訪我的個人頁面！如果想進一步交流或合作，歡迎透過上方連結聯絡我。一起開創更多可能性！
+## Additional Information
+Thank you for visiting my profile! Feel free to reach out through the links above for collaboration opportunities. Let's create something amazing together!
 
 [More Info about the template author](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+
+## Achievements
+> Summarized from the resume and page image:
+> - Published relevant technical papers at international conferences
+> - Executed large-scale cloud projects and multiple microservices architecture designs
