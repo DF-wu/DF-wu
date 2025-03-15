@@ -10,6 +10,7 @@ Let's push the boundaries of what technology can achieve! 🚀
   - [Table of Contents](#table-of-contents)
   - [repo status (private repo excluded)](#repo-status-private-repo-excluded)
   - [Professional Connections](#professional-connections)
+  - [Skill Graffiti wall](#skill-graffiti-wall)
   - [Professional Portfolio \& Resume](#professional-portfolio--resume)
   - [Github Public Activity Charts](#github-public-activity-charts)
   - [Wakatime analysis](#wakatime-analysis)
@@ -25,6 +26,9 @@ Let's push the boundaries of what technology can achieve! 🚀
 
 ## Professional Connections
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+
+
+## Skill Graffiti wall
 
 [![VSCODE](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blue?style=flat-square&logo=Visual-Studio-Code)](https://code.visualstudio.com/)
 [![](https://img.shields.io/badge/Editor-Vim-019733?style=flat-square&logo=vim&logoColor=ffffff)](https://www.vim.org/)
