@@ -15,6 +15,7 @@ Let's push the boundaries of what technology can achieve! 🚀
   - [Wakatime analysis](#wakatime-analysis)
   - [Additional Information](#additional-information)
   - [Achievements](#achievements)
+  - [Credit](#credit)
 
 ![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social) [![Mastdon - g0v](https://img.shields.io/badge/Mastdon-g0v-2ea44f?logo=mastodon)](https://g0v.social/@df)
 
@@ -100,9 +101,11 @@ Let's push the boundaries of what technology can achieve! 🚀
 ## Additional Information
 Thank you for visiting my profile! Feel free to reach out through the links above for collaboration opportunities. Let's create something amazing together!
 
-[More Info about the template author](https://github.com/vn7n24fzkq/github-profile-summary-cards)
 
 ## Achievements
 > Summarized from the resume and page image:
 > - Published relevant technical papers at international conferences
 > - Executed large-scale cloud projects and multiple microservices architecture designs
+
+## Credit
+[More Info about the template author](https://github.com/vn7n24fzkq/github-profile-summary-cards)
