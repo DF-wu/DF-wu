@@ -1,4 +1,6 @@
 # My profile page
+- [Link to My Github](https://github.com/DF-wu/DF-wu)
+
 Not-Full-Enough-Stack developer with a passion for scalable system architecture and emerging technologies. 
 Experienced in building cloud-native applications and microservices, with a strong focus on backend development using Java, Python and Golang.
 Let's push the boundaries of what technology can achieve! 🚀
@@ -66,7 +68,7 @@ Let's push the boundaries of what technology can achieve! 🚀
 ## Professional Portfolio & Resume
 <div align="center">
   
-[![View My Resume](https://img.shields.io/badge/View%20Resume-PDF-blue?style=for-the-badge&logo=adobe-acrobat-reader)](https://github.com/DF-wu/resume/raw/main/Resume_Df.pdf)
+[![View My Resume](https://img.shields.io/badge/View%20Resume-PDF-blue?style=for-the-badge&logo=adobe-acrobat-reader)](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf)
 [![Portfolio Details](https://img.shields.io/badge/Portfolio-Details-success?style=for-the-badge&logo=github)](https://github.com/DF-wu/resume)
 
 </div>
