@@ -1,7 +1,7 @@
 # My profile page
 - [Link to My Github](https://github.com/DF-wu/DF-wu)
 
-Not-Full-Enough-Stack developer with a passion for scalable system architecture and emerging technologies. 
+May-Not-Full-Enough-Full-Stack developer with a passion for scalable system architecture and emerging technologies.
 Experienced in building cloud-native applications and microservices, with a strong focus on backend development using Java, Python and Golang.
 Let's push the boundaries of what technology can achieve! 🚀
 
