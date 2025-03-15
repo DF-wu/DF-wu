@@ -9,8 +9,8 @@ Let's push the boundaries of what technology can achieve! 🚀
   - [repo status (private repo excluded)](#repo-status-private-repo-excluded)
   - [Professional Connections](#professional-connections)
   - [Professional Portfolio \& Resume](#professional-portfolio--resume)
-  - [Monokai Style Charts](#monokai-style-charts)
-  - [wakatime analysis](#wakatime-analysis)
+  - [Github Public Activity Charts](#github-public-activity-charts)
+  - [Wakatime analysis](#wakatime-analysis)
   - [Additional Information](#additional-information)
   - [Achievements](#achievements)
 
@@ -75,14 +75,14 @@ Let's push the boundaries of what technology can achieve! 🚀
 > 
 > 💼 Click above to view my complete resume and portfolio
 
-## Monokai Style Charts
+## Github Public Activity Charts
 [![](./profile-summary-card-output/monokai/0-profile-details.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 [![](./profile-summary-card-output/monokai/1-repos-per-language.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 [![](./profile-summary-card-output/monokai/2-most-commit-language.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 [![](./profile-summary-card-output/monokai/3-stats.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 [![](./profile-summary-card-output/monokai/4-productive-time.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
 
-## wakatime analysis
+## Wakatime analysis
 
 <figure><embed src="https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/d210fe3c-7b63-47b5-a4d4-b70bb8300fcb.svg"></embed></figure>
 
