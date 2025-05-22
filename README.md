@@ -72,7 +72,8 @@ Let's push the boundaries of what technology can achieve! 🚀
 
 ## Professional Portfolio & Resume
 
-[![View My Resume](https://img.shields.io/badge/View%20Resume-PDF-blue?style=for-the-badge&logo=adobe-acrobat-reader)](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf) &nbsp;&nbsp;&nbsp;&nbsp; [![Portfolio Details](https://img.shields.io/badge/Portfolio-Details-success?style=for-the-badge&logo=github)](https://github.com/DF-wu/resume)
+[![View My Resume](https://img.shields.io/badge/View%20Resume-PDF-blue?style=for-the-badge&logo=adobe-acrobat-reader)](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf) &nbsp;&nbsp;&nbsp;&nbsp; ←    Click this to see my Resume 
+[![Portfolio Details](https://img.shields.io/badge/Portfolio-Details-success?style=for-the-badge&logo=github)](https://github.com/DF-wu/resume) ← Click this to see my simple self-promotion 
 
 
 > 🎯 Specialized in backend development and system architecture design, excelling at solving complex technical challenges
