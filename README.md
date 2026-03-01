@@ -1,113 +1,142 @@
-# My profile page
-- [Link to My Github](https://github.com/DF-wu/DF-wu)
+# DF Wu ｜ Backend Systems Engineer
 
-May-Not-Full-Enough-Full-Stack developer with a passion for scalable system architecture and emerging technologies.
-Experienced in building cloud-native applications and microservices, with a strong focus on backend development using Java, Python and Golang.
-Let's push the boundaries of what technology can achieve! 🚀
+<div align="center">
 
-## Table of Contents
-- [My profile page](#my-profile-page)
-  - [Table of Contents](#table-of-contents)
-  - [repo status (private repo excluded)](#repo-status-private-repo-excluded)
-  - [Professional Connections](#professional-connections)
-  - [Skill Graffiti wall](#skill-graffiti-wall)
-  - [Professional Portfolio \& Resume](#professional-portfolio--resume)
-  - [Github Public Activity Charts](#github-public-activity-charts)
-  - [Wakatime analysis](#wakatime-analysis)
-  - [Additional Information](#additional-information)
-  - [Achievements](#achievements)
-  - [Credit](#credit)
+[![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social)](https://github.com/DF-wu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+[![Mastodon](https://img.shields.io/badge/Mastodon-g0v-6364FF?style=flat-square&logo=mastodon&logoColor=white)](https://g0v.social/@df)
+[![Website](https://img.shields.io/badge/Website-df.is--a.dev-111827?style=flat-square&logo=googlechrome&logoColor=white)](https://df.is-a.dev)
 
-![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social) [![Mastdon - g0v](https://img.shields.io/badge/Mastdon-g0v-2ea44f?logo=mastodon)](https://g0v.social/@df)
+</div>
 
-## repo status (private repo excluded)
-[![DF's GitHub stats](https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats) 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu)](https://github.com/anuraghazra/github-readme-stats)
+我是一位偏後端與系統工程取向的開發者，長期專注在 **Microservices、Cloud-Native、DevOps 與工程自動化**。
 
-## Professional Connections
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+我的工作方式是：先釐清限制與邊界，再把複雜系統拆成可演進、可維運、可觀測的交付節奏。  
+I care about practical outcomes: reliability, maintainability, and team velocity.
 
+---
 
-## Skill Graffiti wall
+## Engineering Snapshot
 
-[![VSCODE](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blue?style=flat-square&logo=Visual-Studio-Code)](https://code.visualstudio.com/)
-[![](https://img.shields.io/badge/Editor-Vim-019733?style=flat-square&logo=vim&logoColor=ffffff)](https://www.vim.org/)
-[![](https://img.shields.io/badge/macOS-Catalina-d0d1d4?style=flat-square&logo=Apple)](<[https://](https://www.aple.com/macos/catalina/)>)
-[![ARCH](https://img.shields.io/badge/Archlinux-Rolling-39a2ef?style=flat-square&logo=Archlinux)](https://archlinux.org/)
-[![](https://img.shields.io/badge/-HackMD-333333?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8%2BCjxzdmcKICAgd2lkdGg9IjE3OTIiCiAgIGhlaWdodD0iMTc5MiIKICAgdmlld0JveD0iMCAwIDE3OTIgMTc5MiIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnNCIKICAgc29kaXBvZGk6ZG9jbmFtZT0iZmlsZS10ZXh0Mi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjEuMSAoYzRlOGY5ZWQ3NCwgMjAyMS0wNS0yNCkiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZyI%2BCiAgPGRlZnMKICAgICBpZD0iZGVmczgiIC8%2BCiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJuYW1lZHZpZXc2IgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9IjAiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnpvb209IjAuNDU4NzA1MzYiCiAgICAgaW5rc2NhcGU6Y3g9IjkwMS40NTAxMiIKICAgICBpbmtzY2FwZTpjeT0iODk5LjI3MDA3IgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMjU1MiIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMzcxIgogICAgIGlua3NjYXBlOndpbmRvdy14PSIyNTYwIgogICAgIGlua3NjYXBlOndpbmRvdy15PSIzMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzQiIC8%2BCiAgPHBhdGgKICAgICBkPSJNMTU5NiA0NzZxMTQgMTQgMjggMzZoLTQ3MnYtNDcycTIyIDE0IDM2IDI4em0tNDc2IDE2NGg1NDR2MTA1NnEwIDQwLTI4IDY4dC02OCAyOGgtMTM0NHEtNDAgMC02OC0yOHQtMjgtNjh2LTE2MDBxMC00MCAyOC02OHQ2OC0yOGg4MDB2NTQ0cTAgNDAgMjggNjh0NjggMjh6bTE2MCA3MzZ2LTY0cTAtMTQtOS0yM3QtMjMtOWgtNzA0cS0xNCAwLTIzIDl0LTkgMjN2NjRxMCAxNCA5IDIzdDIzIDloNzA0cTE0IDAgMjMtOXQ5LTIzem0wLTI1NnYtNjRxMC0xNC05LTIzdC0yMy05aC03MDRxLTE0IDAtMjMgOXQtOSAyM3Y2NHEwIDE0IDkgMjN0MjMgOWg3MDRxMTQgMCAyMy05dDktMjN6bTAtMjU2di02NHEwLTE0LTktMjN0LTIzLTloLTcwNHEtMTQgMC0yMyA5dC05IDIzdjY0cTAgMTQgOSAyM3QyMyA5aDcwNHExNCAwIDIzLTl0OS0yM3oiCiAgICAgaWQ9InBhdGgyIgogICAgIHN0eWxlPSJmaWxsOiNmZmZmZmYiIC8%2BCjwvc3ZnPgo%3D&logoColor=ffffff)](https://hackmd.io/)
-[![](https://img.shields.io/badge/-diagrams.net-F08705?style=flat-square&logo=diagramsdotnet&logoColor=ffffff)](https://app.diagrams.net/)
+> Data snapshot: 2026-03-01
 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-[![GO](https://img.shields.io/badge/-Golang-00ADD8?style=flat-square&logo=go&logoColor=ffffff)](https://golang.org/)
-[![](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=ffffff)](https://html.spec.whatwg.org/multipage/)
-[![](https://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=sass&logoColor=ffffff)](https://sass-lang.com/)
-[![](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=ffffff)](https://getbootstrap.com/)
+| Signal | Current |
+| --- | --- |
+| Public repositories | 123 |
+| Owned repositories（non-fork） | 46 public + 16 private |
+| Yearly contributions | 605 |
+| Yearly commits | 567 |
+| Merged pull requests | 22 |
+| External merged PRs | 13 |
+| Organizations | PDAS-team、SOSELAB |
 
+---
 
+## Focus Areas
+
+- **Backend Engineering**：Java / Python / Go 服務設計、API 邊界治理、資料流程與穩定性。
+- **Distributed Systems**：微服務拆分、整合、部署策略與故障隔離思維。
+- **Cloud & Platform Delivery**：Docker 化交付、CI 流程整合、環境自動化。
+- **Research-to-Implementation**：把研究與實驗轉成可落地、可驗證的工程方案。
+
+---
+
+## Organization & Collaboration
+
+- **PDAS-team**：參與多服務協作場景（30 repos，含 29 private），涵蓋後端、平台與整體交付鏈路。
+- **SOSELAB**：研究與工程交會的協作情境，強化技術探索與實作連結。
+- **Cross-repo Contribution**：持續以 PR 形式在不同 repository 交付功能、修正與文件品質提升。
+
+---
+
+## Selected Projects
+
+| Project | What it demonstrates | Stack |
+| --- | --- | --- |
+| [iDRACFanSpeedControl](https://github.com/DF-wu/iDRACFanSpeedControl) | 面向實務運維情境的伺服器風扇控制自動化 | Shell |
+| [HideReplier](https://github.com/DF-wu/HideReplier) | 完整功能實作與後端邏輯整合的交付經驗 | Java |
+| [myServices](https://github.com/DF-wu/myServices) | 自建服務組合與部署演進實驗場 | Python, Docker |
+| [CCTS](https://github.com/DF-wu/CCTS) | 持續式後端架構演進練習 | Java |
+| [df_dice](https://github.com/DF-wu/df_dice) | 輕量工具產品化與快速迭代 | JavaScript |
+| [taobaoOrderExporter](https://github.com/DF-wu/taobaoOrderExporter) | 面向實際工作流程的資料匯出工具 | HTML, JavaScript |
+
+---
+
+## Recent External Merged PRs
+
+- [`stanley2058/lilac-mono#5`](https://github.com/stanley2058/lilac-mono/pull/5) — cleanup and quality refinement.
+- [`stanley2058/lilac-mono#4`](https://github.com/stanley2058/lilac-mono/pull/4) — custom Tavily API endpoint support.
+- [`stanley2058/lilac-mono#1`](https://github.com/stanley2058/lilac-mono/pull/1) — Exa web search provider integration.
+- [`Minidoracat/mcp-feedback-enhanced#138`](https://github.com/Minidoracat/mcp-feedback-enhanced/pull/138) — localization and docs enhancement.
+- [`yym68686/ChatGPT-Telegram-Bot#111`](https://github.com/yym68686/ChatGPT-Telegram-Bot/pull/111) — markdown table correctness.
+- [`is-a-dev/register#19293`](https://github.com/is-a-dev/register/pull/19293) — custom domain registration contribution.
+
+---
+
+## Core Stack
+
+### Languages
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+### Platform & Infra
+
+![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Windows 10](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
-![Visual Studio](https://img.shields.io/badge/VisualStudio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
-![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
-[![](https://img.shields.io/badge/-Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=ffffff)](https://maven.apache.org/)
-[![](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=Docker&logoColor=ffffff)](https://www.docker.com/)
-[![](https://img.shields.io/badge/-Nginx-269539?style=flat-square&logo=Nginx&logoColor=ffffff)](https://nginx.org/)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
-[![](https://img.shields.io/badge/-MariaDB-003545?style=flat-square&logo=mariadb&logoColor=ffffff)](https://mariadb.org/)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4ea94b?style=for-the-badge&logo=mongodb&logoColor=white)
 
+### Daily Environment
 
-![Bitbucket](https://img.shields.io/badge/bitbucket-%230047B3.svg?style=for-the-badge&logo=bitbucket&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
-![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
-![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+[![VS Code](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
+[![Vim](https://img.shields.io/badge/Editor-Vim-019733?style=flat-square&logo=vim&logoColor=white)](https://www.vim.org/)
+[![Arch Linux](https://img.shields.io/badge/OS-Arch%20Linux-1793D1?style=flat-square&logo=archlinux&logoColor=white)](https://archlinux.org/)
+[![macOS](https://img.shields.io/badge/OS-macOS-000000?style=flat-square&logo=apple&logoColor=white)](https://www.apple.com/macos/)
 
-## Professional Portfolio & Resume
+---
 
-[![View My Resume](https://img.shields.io/badge/View%20Resume-PDF-blue?style=for-the-badge&logo=adobe-acrobat-reader)](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf) &nbsp;&nbsp;&nbsp;&nbsp; ←    Click this to see my Resume 
-[![Portfolio Details](https://img.shields.io/badge/Portfolio-Details-success?style=for-the-badge&logo=github)](https://github.com/DF-wu/resume) ← Click this to see my simple self-promotion 
+## GitHub Analytics
 
+<div align="center">
 
-> 🎯 Specialized in backend development and system architecture design, excelling at solving complex technical challenges
-> 
-> 💼 Click above to view my complete resume and portfolio
+[![DF's GitHub stats](https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu&layout=compact&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
 
-## Github Public Activity Charts
-[![](./profile-summary-card-output/monokai/0-profile-details.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
-[![](./profile-summary-card-output/monokai/1-repos-per-language.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
-[![](./profile-summary-card-output/monokai/2-most-commit-language.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
-[![](./profile-summary-card-output/monokai/3-stats.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
-[![](./profile-summary-card-output/monokai/4-productive-time.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+</div>
 
-## Wakatime analysis
+## Profile Summary Cards
 
-<figure><embed src="https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/d210fe3c-7b63-47b5-a4d4-b70bb8300fcb.svg"></embed></figure>
+[![](./profile-summary-card-output/monokai/0-profile-details.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/1-repos-per-language.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/2-most-commit-language.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/3-stats.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/4-productive-time.svg)](https://github.com/DF-wu)
 
+## WakaTime
 
-<!-- png version -->
-<!-- ![![](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/c87ff586-1aaf-406f-a5a8-af74266b864a.png)](https://www.linkedin.com/in/chufei-wu-b33990164/) -->
+[![WakaTime](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/d210fe3c-7b63-47b5-a4d4-b70bb8300fcb.svg)](https://wakatime.com/)
 
-<!-- Example: <img src="https://github.com/avinal/avinal/blob/main/images/stat.svg" alt="Avinal WakaTime Activity"/> -->
+<!-- waka-box start -->
+<!-- waka-box end -->
 
- <!-- waka-box start -->
- <!-- waka-box end -->
- 
-## Additional Information
-Thank you for visiting my profile! Feel free to reach out through the links above for collaboration opportunities. Let's create something amazing together!
+---
 
+## Portfolio & Contact
 
-## Achievements
-> Summarized from the resume and page image:
-> - Published relevant technical papers at international conferences
-> - Executed large-scale cloud projects and multiple microservices architecture designs
+- Resume: [CHUFEIWU_Resume.pdf](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf)
+- Portfolio repo: [DF-wu/resume](https://github.com/DF-wu/resume)
+- LinkedIn: [chufei-wu-b33990164](https://www.linkedin.com/in/chufei-wu-b33990164/)
+- Mastodon: [@df@g0v.social](https://g0v.social/@df)
 
-## Credit
-[More Info about the template author](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+如果你正在尋找能把「技術複雜度」轉成「穩定交付」的工程夥伴，歡迎來聊。
+
+---
+
+## Acknowledgements
+
+- Summary cards powered by [vn7n24fzkq/github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)

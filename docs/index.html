@@ -1,55 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to df profile</h1>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DF Wu | Engineering Profile</title>
+    <meta
+      name="description"
+      content="DF Wu - Backend Systems Engineer focusing on microservices, cloud-native delivery, and practical engineering outcomes."
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <header class="site-header">
+      <div class="container hero reveal">
+        <p class="eyebrow">Backend Systems Engineer</p>
+        <h1>DF Wu</h1>
+        <p class="hero-text">
+          專注於後端系統、微服務架構與工程交付。把複雜系統拆解為可維運、可擴充、可長期演進的解法。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/DF-wu" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a
+            class="btn"
+            href="https://www.linkedin.com/in/chufei-wu-b33990164/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a class="btn" href="https://df.is-a.dev" target="_blank" rel="noopener noreferrer">Website</a>
+        </div>
+      </div>
     </header>
-    <main>
-        <p>This is my profile in GitHub Pages!</p>
-        <section class="profile-section">
-            <h2>Professional Overview</h2>
-            <div class="badge-container">
-                <!-- 使用部分徽章示例 -->
-                <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=java&logoColor=white" alt="Java Badge"/>
-                <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=javascript&logoColor=white" alt="JavaScript Badge"/>
-                <img src="https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=white" alt="Python Badge"/>
-                <!-- ...可依需求加入更多徽章... -->
-            </div>
-            <p>I am DF-Wu, showcasing the technologies and tools I frequently use, along with charts reflecting my development insights.</p>
-            <h3>GitHub Analytics</h3>
-            <div class="stats-container">
-                <img src="https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight" alt="GitHub Stats"/>
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu" alt="Top Langs"/>
-            </div>
-        </section>
-        <section class="expertise-section">
-            <h2>Areas of Expertise</h2>
-            <p>Proficient in various back-end and front-end technologies including Java, JavaScript, and Python, having participated in large-scale projects.</p>
-            <ul>
-                <li>Agile development and refactoring</li>
-                <li>Database design and optimization</li>
-                <li>Cloud deployment and containerization</li>
-            </ul>
-        </section>
-        <section class="project-section">
-            <h2>Project Highlights</h2>
-            <p>Examples of diverse development experience:</p>
-            <ul>
-                <li>Microservices architecture deployment</li>
-                <li>Full-stack integration</li>
-                <li>Open-source contributions</li>
-            </ul>
-        </section>
+
+    <main class="container">
+      <section class="stats-grid reveal" aria-label="engineering snapshot">
+        <article class="stat-card">
+          <span class="stat-label">Public Repos</span>
+          <strong class="stat-value">123</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Owned Repos</span>
+          <strong class="stat-value">46 + 16</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Yearly Contributions</span>
+          <strong class="stat-value">605</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Merged PRs</span>
+          <strong class="stat-value">22</strong>
+        </article>
+      </section>
+
+      <section class="panel reveal">
+        <h2>Core Focus</h2>
+        <ul class="bullet-list">
+          <li>Backend service design with Java, Python, Go, and TypeScript.</li>
+          <li>Microservice architecture and cloud-native delivery workflows.</li>
+          <li>DevOps automation, deployment reliability, and observability thinking.</li>
+          <li>Cross-team collaboration in product, research, and open-source contexts.</li>
+        </ul>
+      </section>
+
+      <section class="panel reveal">
+        <h2>Selected Work</h2>
+        <div class="project-grid">
+          <a class="project-card" href="https://github.com/DF-wu/iDRACFanSpeedControl" target="_blank" rel="noopener noreferrer">
+            <h3>iDRACFanSpeedControl</h3>
+            <p>Practical server operation automation for thermal management workflows.</p>
+            <span>Shell</span>
+          </a>
+          <a class="project-card" href="https://github.com/DF-wu/HideReplier" target="_blank" rel="noopener noreferrer">
+            <h3>HideReplier</h3>
+            <p>Full-cycle implementation practice in backend logic and interaction flow.</p>
+            <span>Java</span>
+          </a>
+          <a class="project-card" href="https://github.com/DF-wu/myServices" target="_blank" rel="noopener noreferrer">
+            <h3>myServices</h3>
+            <p>Home-lab service composition and deployment-oriented engineering experiments.</p>
+            <span>Python, Docker</span>
+          </a>
+          <a class="project-card" href="https://github.com/DF-wu/CCTS" target="_blank" rel="noopener noreferrer">
+            <h3>CCTS</h3>
+            <p>Continuous backend architecture practice for real-world maintainability.</p>
+            <span>Java</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel reveal">
+        <h2>GitHub Visual Analytics</h2>
+        <div class="analytics-grid">
+          <img
+            loading="lazy"
+            src="https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight&hide_border=true"
+            alt="GitHub stats"
+          />
+          <img
+            loading="lazy"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu&layout=compact&theme=tokyonight&hide_border=true"
+            alt="Top languages"
+          />
+          <img
+            loading="lazy"
+            src="https://raw.githubusercontent.com/DF-wu/DF-wu/master/profile-summary-card-output/monokai/0-profile-details.svg"
+            alt="Profile summary details"
+          />
+          <img
+            loading="lazy"
+            src="https://raw.githubusercontent.com/DF-wu/DF-wu/master/profile-summary-card-output/monokai/3-stats.svg"
+            alt="Profile stats summary"
+          />
+        </div>
+      </section>
     </main>
-    <footer>
-        <p>© 2025 Df</p>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Built from DF Wu's profile repository. <span id="year"></span></p>
+      </div>
     </footer>
+
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>
