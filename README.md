@@ -1,79 +1,107 @@
-# DF Wu ｜ Backend Systems Engineer
+# DF Wu · Backend Systems Engineer
 
 <div align="center">
 
 [![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social)](https://github.com/DF-wu)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
-[![Mastodon](https://img.shields.io/badge/Mastodon-g0v-6364FF?style=flat-square&logo=mastodon&logoColor=white)](https://g0v.social/@df)
+[![Profile Views](https://komarev.com/ghpvc/?username=DF-wu&style=flat-square&color=2ea44f)](https://github.com/DF-wu/DF-wu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ChuFei%20Wu-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+[![Mastodon](https://img.shields.io/badge/Mastodon-@df@g0v.social-6364FF?style=flat-square&logo=mastodon&logoColor=white)](https://g0v.social/@df)
 [![Website](https://img.shields.io/badge/Website-df.is--a.dev-111827?style=flat-square&logo=googlechrome&logoColor=white)](https://df.is-a.dev)
 
 </div>
 
-我是一位偏後端與系統工程取向的開發者，長期專注在 **Microservices、Cloud-Native、DevOps 與工程自動化**。
+I build production-oriented backend systems and engineering workflows across **Java**, **Python**, **Go**, and **TypeScript**.
 
-我的工作方式是：先釐清限制與邊界，再把複雜系統拆成可演進、可維運、可觀測的交付節奏。  
-I care about practical outcomes: reliability, maintainability, and team velocity.
+My core style is straightforward:
+- reduce complexity before adding features,
+- design for maintainability and operations from day one,
+- convert research and experiments into reliable delivery.
 
 ---
 
-## Engineering Snapshot
+## Executive Snapshot
 
-> Data snapshot: 2026-03-01
+> Snapshot date: 2026-03-01
 
-| Signal | Current |
+| Signal | Value |
 | --- | --- |
 | Public repositories | 123 |
-| Owned repositories（non-fork） | 46 public + 16 private |
+| Owned repositories (non-fork) | 46 public + 16 private |
+| Followers / Following | 10 / 13 |
 | Yearly contributions | 605 |
 | Yearly commits | 567 |
-| Merged pull requests | 22 |
-| External merged PRs | 13 |
-| Organizations | PDAS-team、SOSELAB |
+| Yearly PR contributions | 5 |
+| Yearly issue contributions | 5 |
+| Merged PRs (overall) | 22 |
+| Merged PRs (external repos) | 13 |
+| Repositories contributed to | 7 |
+| Active org contexts | PDAS-team, SOSELAB |
 
 ---
 
-## Focus Areas
+## What I Deliver
 
-- **Backend Engineering**：Java / Python / Go 服務設計、API 邊界治理、資料流程與穩定性。
-- **Distributed Systems**：微服務拆分、整合、部署策略與故障隔離思維。
-- **Cloud & Platform Delivery**：Docker 化交付、CI 流程整合、環境自動化。
-- **Research-to-Implementation**：把研究與實驗轉成可落地、可驗證的工程方案。
+### 1) Backend & Platform Engineering
+- Service design with clear boundaries, resilient APIs, and maintainable code paths.
+- Practical architecture decisions for microservice and multi-service environments.
+- Engineering tradeoff handling: delivery speed, reliability, and long-term evolution.
+
+### 2) Cloud-Native & DevOps Workflow
+- Dockerized service composition and deployment-oriented development routines.
+- CI-aware project structure for iterative release cycles.
+- Observability-first mindset for diagnosing and stabilizing production behavior.
+
+### 3) Applied Engineering Research
+- Translate exploratory ideas into concrete implementation paths.
+- Turn ambiguity into testable milestones and incremental delivery.
+- Keep technical depth while preserving execution clarity for teams.
 
 ---
 
-## Organization & Collaboration
+## Organization Footprint
 
-- **PDAS-team**：參與多服務協作場景（30 repos，含 29 private），涵蓋後端、平台與整體交付鏈路。
-- **SOSELAB**：研究與工程交會的協作情境，強化技術探索與實作連結。
-- **Cross-repo Contribution**：持續以 PR 形式在不同 repository 交付功能、修正與文件品質提升。
+### PDAS-team
+- Collaboration in a service-heavy engineering environment.
+- Organization scale observed from current access: **30 repos** (predominantly private: **29 private / 1 public**).
+
+### SOSELAB
+- Research-engineering context emphasizing experimentation and technical synthesis.
+
+### Cross-repository Collaboration
+- Continuous external collaboration through merged PRs in community and OSS projects.
 
 ---
 
-## Selected Projects
+## Selected Repositories (Representative Work)
 
-| Project | What it demonstrates | Stack |
+| Repository | Why it matters | Stack |
 | --- | --- | --- |
-| [iDRACFanSpeedControl](https://github.com/DF-wu/iDRACFanSpeedControl) | 面向實務運維情境的伺服器風扇控制自動化 | Shell |
-| [HideReplier](https://github.com/DF-wu/HideReplier) | 完整功能實作與後端邏輯整合的交付經驗 | Java |
-| [myServices](https://github.com/DF-wu/myServices) | 自建服務組合與部署演進實驗場 | Python, Docker |
-| [CCTS](https://github.com/DF-wu/CCTS) | 持續式後端架構演進練習 | Java |
-| [df_dice](https://github.com/DF-wu/df_dice) | 輕量工具產品化與快速迭代 | JavaScript |
-| [taobaoOrderExporter](https://github.com/DF-wu/taobaoOrderExporter) | 面向實際工作流程的資料匯出工具 | HTML, JavaScript |
+| [iDRACFanSpeedControl](https://github.com/DF-wu/iDRACFanSpeedControl) | Practical automation for server thermal operations and infra convenience tooling. | Shell |
+| [HideReplier](https://github.com/DF-wu/HideReplier) | End-to-end course project with system integration and backend logic depth. | Java |
+| [myServices](https://github.com/DF-wu/myServices) | Home-lab service composition and deployment practice in real operational workflows. | Python, Docker |
+| [CCTS](https://github.com/DF-wu/CCTS) | Ongoing backend architecture exploration for maintainability and extensibility. | Java |
+| [df_dice](https://github.com/DF-wu/df_dice) | Lightweight utility product thinking and rapid iteration. | JavaScript |
+| [taobaoOrderExporter](https://github.com/DF-wu/taobaoOrderExporter) | Workflow-centric export utility for practical data handling tasks. | HTML, JavaScript |
+| [BehaviorMonitor](https://github.com/DF-wu/BehaviorMonitor) | AI-assisted implementation practice with product prototyping intent. | TypeScript |
 
 ---
 
-## Recent External Merged PRs
+## Recent External Merged Pull Requests
 
-- [`stanley2058/lilac-mono#5`](https://github.com/stanley2058/lilac-mono/pull/5) — cleanup and quality refinement.
-- [`stanley2058/lilac-mono#4`](https://github.com/stanley2058/lilac-mono/pull/4) — custom Tavily API endpoint support.
-- [`stanley2058/lilac-mono#1`](https://github.com/stanley2058/lilac-mono/pull/1) — Exa web search provider integration.
-- [`Minidoracat/mcp-feedback-enhanced#138`](https://github.com/Minidoracat/mcp-feedback-enhanced/pull/138) — localization and docs enhancement.
-- [`yym68686/ChatGPT-Telegram-Bot#111`](https://github.com/yym68686/ChatGPT-Telegram-Bot/pull/111) — markdown table correctness.
-- [`is-a-dev/register#19293`](https://github.com/is-a-dev/register/pull/19293) — custom domain registration contribution.
+| PR | Repository | Contribution |
+| --- | --- | --- |
+| [#5](https://github.com/stanley2058/lilac-mono/pull/5) | `stanley2058/lilac-mono` | Cleanup and quality refinement |
+| [#4](https://github.com/stanley2058/lilac-mono/pull/4) | `stanley2058/lilac-mono` | Custom Tavily API endpoint support |
+| [#1](https://github.com/stanley2058/lilac-mono/pull/1) | `stanley2058/lilac-mono` | Exa web search provider integration |
+| [#1](https://github.com/stanley2058/lilac-ai-rag-dashboard/pull/1) | `stanley2058/lilac-ai-rag-dashboard` | Custom OpenAI API base URL support |
+| [#138](https://github.com/Minidoracat/mcp-feedback-enhanced/pull/138) | `Minidoracat/mcp-feedback-enhanced` | Localization and docs enhancement |
+| [#111](https://github.com/yym68686/ChatGPT-Telegram-Bot/pull/111) | `yym68686/ChatGPT-Telegram-Bot` | Documentation correctness fix |
+| [#19293](https://github.com/is-a-dev/register/pull/19293) | `is-a-dev/register` | Custom domain registration contribution |
+| [#691](https://github.com/flipperdevices/flipperzero-firmware/pull/691) | `flipperdevices/flipperzero-firmware` | Command/documentation correction |
 
 ---
 
-## Core Stack
+## Technical Stack
 
 ### Languages
 
@@ -83,7 +111,7 @@ I care about practical outcomes: reliability, maintainability, and team velocity
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-### Platform & Infra
+### Backend, Data & Infra
 
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -91,7 +119,7 @@ I care about practical outcomes: reliability, maintainability, and team velocity
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4ea94b?style=for-the-badge&logo=mongodb&logoColor=white)
 
-### Daily Environment
+### Daily Engineering Environment
 
 [![VS Code](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Vim](https://img.shields.io/badge/Editor-Vim-019733?style=flat-square&logo=vim&logoColor=white)](https://www.vim.org/)
@@ -129,14 +157,15 @@ I care about practical outcomes: reliability, maintainability, and team velocity
 ## Portfolio & Contact
 
 - Resume: [CHUFEIWU_Resume.pdf](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf)
-- Portfolio repo: [DF-wu/resume](https://github.com/DF-wu/resume)
+- Portfolio repository: [DF-wu/resume](https://github.com/DF-wu/resume)
 - LinkedIn: [chufei-wu-b33990164](https://www.linkedin.com/in/chufei-wu-b33990164/)
 - Mastodon: [@df@g0v.social](https://g0v.social/@df)
+- Website: [df.is-a.dev](https://df.is-a.dev)
 
-如果你正在尋找能把「技術複雜度」轉成「穩定交付」的工程夥伴，歡迎來聊。
+If you are building products that require resilient backend architecture and pragmatic engineering execution, I would be glad to connect.
 
 ---
 
-## Acknowledgements
+## Credits
 
-- Summary cards powered by [vn7n24fzkq/github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+- Summary card generator: [vn7n24fzkq/github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)
