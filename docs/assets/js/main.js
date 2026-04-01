@@ -9,6 +9,19 @@ window.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  revealElements.forEach((element, index) => {
+    element.style.setProperty("--reveal-delay", `${Math.min(index * 70, 280)}ms`);
+  });
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (prefersReducedMotion) {
+    revealElements.forEach((element) => {
+      element.classList.add("is-visible");
+    });
+    return;
+  }
+
   if (!("IntersectionObserver" in window)) {
     revealElements.forEach((element) => {
       element.classList.add("is-visible");
