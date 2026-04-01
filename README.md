@@ -1,85 +1,148 @@
-# URL Balancer
+# DF Wu · Backend & Platform Engineer
 
-本專案是一個功能完整的 URL Balancer / API Gateway，包含一個 Go 語言開發的高效能後端，以及一個 React 打造的現代化管理介面。整個應用程式被設計為可透過 Docker 輕鬆部署。
+<div align="center">
 
-您不僅可以透過網頁介面輕鬆設定請求的分流路徑，還能對轉發的請求動態改寫其 Header 和 Body。
+[![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social)](https://github.com/DF-wu)
+[![Profile Views](https://komarev.com/ghpvc/?username=DF-wu&style=flat-square&color=2ea44f)](https://github.com/DF-wu/DF-wu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ChuFei%20Wu-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+[![Website](https://img.shields.io/badge/Website-df.is--a.dev-111827?style=flat-square&logo=googlechrome&logoColor=white)](https://df.is-a.dev)
 
-詳細的技術架構設計，請參閱 [`ARCHITECTURE.md`](./ARCHITECTURE.md)。
+</div>
 
-## 🚀 功能特色
+I build backend systems that remain stable, maintainable, and deployable as complexity grows.
 
-*   **動態路由設定**: 透過 Web UI 即可新增、修改、刪除需要進行分流的 API 端點 (Endpoint)。
-*   **權重分流 (Weighted Round-Robin)**: 可為每一個後端目標 (Target) 設定權重，實現按比例的流量分配。
-*   **請求改寫**: 在請求轉發至後端目標前，可動態覆寫或新增 Header 和 Body 的內容。
-*   **前後端分離**:
-    *   **後端 (Go)**:
-        *   **控制平面**: 基於 Gin 框架，提供 RESTful API 進行所有設定的管理。
-        *   **資料平面**: 基於 Go 原生 `net/http`，提供高效能的反向代理服務，並透過定期輪詢自動載入最新設定。
-    *   **前端 (React)**:
-        *   基於 Vite 和 React，提供快速的開發體驗。
-        *   使用 Ant Design 元件庫，打造美觀且專業的管理介面。
-*   **容器化部署**: 提供一個最佳化的多階段 `Dockerfile`，可將整個應用程式打包成一個輕量級的生產環境映像檔。
+---
 
-## 🛠️ 開發環境啟動
+## 60-Second Profile Summary
 
-您需要在本機安裝 Go (v1.20+), Node.js (v18+) 和 Docker。
+**Role fit:** Backend Engineer · Platform Engineer · Software Engineer (Systems/Infrastructure)
 
-1.  **啟動後端控制平面 (API Server)**
-    在一個終端機中執行：
-    ```bash
-    cd backend
-    go mod tidy
-    go run ./cmd/controlserver
-    ```
-    此服務將會在 `http://localhost:8080` 上運行。
+- I convert ambiguous requirements into reliable engineering outcomes.
+- I focus on architecture clarity, delivery consistency, and operational reliability.
+- I contribute across personal projects, organization repositories, and OSS collaboration.
 
-2.  **啟動後端資料平面 (Proxy Server)**
-    在**另一個**終端機中執行：
-    ```bash
-    cd backend
-    go run ./cmd/dataserver
-    ```
-    此服務將會在 `http://localhost:8081` 上運行。
+> Snapshot date: 2026-03-01
 
-3.  **啟動前端開發伺服器**
-    在**第三個**終端機中執行：
-    ```bash
-    cd frontend
-    npm install
-    npm run dev
-    ```
-    此服務將會在 `http://localhost:5173` (或另一個可用埠) 上運行。
+| Signal | Value |
+| --- | --- |
+| Public repositories | 123 |
+| Owned repositories (non-fork) | 46 public + 16 private |
+| Yearly contributions | 605 |
+| Yearly commits | 567 |
+| Merged pull requests | 22 |
+| External merged pull requests | 13 |
+| Active collaboration contexts | PDAS-team, SOSELAB |
 
-現在，您可以開啟瀏覽器訪問 `http://localhost:5173` 來使用管理介面。
+---
 
-## 🐳 使用 Docker 建置與運行
+## Role Fit Matrix
 
-1.  **建置 Docker 映像檔**
-    在專案根目錄下，執行：
-    ```bash
-    docker build -t urlbalancer:latest .
-    ```
+| Target Role | Why I Fit | Evidence |
+| --- | --- | --- |
+| Backend Engineer | Service delivery with maintainability and reliability focus | [Selected Impact](#selected-impact), [Technical Scope](#technical-scope) |
+| Platform Engineer | Deployment-aware engineering and operational reliability mindset | [Why This Is Valuable for Hiring Teams](#why-this-is-valuable-for-hiring-teams), [Technical Scope](#technical-scope) |
+| Systems-Oriented SWE | Practical architecture decisions under real constraints | [60-Second Profile Summary](#60-second-profile-summary), [Open-Source Contributions (Selected)](#open-source-contributions-selected) |
 
-2.  **運行 Docker 容器**
-    ```bash
-    docker run -d -p 8080:8080 -p 8081:8081 --name urlbalancer-app urlbalancer:latest
-    ```
-    *   `-d`: 在背景分離模式下運行。
-    *   `-p 8080:8080`: 將主機的 8080 埠映射到容器的 8080 埠 (控制平面)。
-    *   `-p 8081:8081`: 將主機的 8081 埠映射到容器的 8081 埠 (資料平面)。
-    *   `--name urlbalancer-app`: 為容器指定一個名稱。
+---
 
-    運行後，管理介面將可透過 `http://localhost:8080` 訪問 (在 Docker 環境中，前端靜態檔案由後端伺服器提供服務，這部分我們會在後續步驟中完成)。
+## Why This Is Valuable for Hiring Teams
 
-## ⚙️ API 使用範例
+- **Delivery with stability:** I design backend services for maintainability and runtime safety.
+- **Complexity control:** I reduce architecture entropy before it slows teams down.
+- **Execution discipline:** I prefer measurable iteration over speculative complexity.
+- **Cross-context collaboration:** I can ship within product teams and open-source workflows.
 
-一旦您在管理介面上設定好 Endpoint 和 Target，就可以開始透過 **資料平面 (Port 8081)** 發送請求。
+---
 
-**範例:**
-1.  在 UI 上建立一個 Endpoint，路徑為 `/v1/users`。
-2.  為此 Endpoint 新增一個 Target，URL 為 `http://my-backend-service.com/api/users`，權重為 1。
-3.  現在，您可以透過 `curl` 指令來測試：
-    ```bash
-    curl -X GET http://localhost:8081/v1/users
-    ```
-    URL Balancer 會將此請求代理到 `http://my-backend-service.com/api/users`。
+## Selected Impact
+
+| Project | Value delivered | Stack |
+| --- | --- | --- |
+| [HideReplier](https://github.com/DF-wu/HideReplier) | End-to-end project delivery with integrated backend logic and workflow implementation. | Java |
+| [CCTS](https://github.com/DF-wu/CCTS) | Ongoing architecture practice focused on maintainability and extensibility. | Java |
+| [myServices](https://github.com/DF-wu/myServices) | Deployment-oriented service composition in practical home-lab engineering. | Python, Docker |
+| [iDRACFanSpeedControl](https://github.com/DF-wu/iDRACFanSpeedControl) | Automation of repetitive server thermal operations. | Shell |
+| [BehaviorMonitor](https://github.com/DF-wu/BehaviorMonitor) | AI-assisted prototyping and practical implementation loop. | TypeScript |
+
+---
+
+## Open-Source Contributions (Selected)
+
+| PR | Repository | Contribution |
+| --- | --- | --- |
+| [#5](https://github.com/stanley2058/lilac-mono/pull/5) | `stanley2058/lilac-mono` | Cleanup and quality refinement |
+| [#4](https://github.com/stanley2058/lilac-mono/pull/4) | `stanley2058/lilac-mono` | Custom Tavily API endpoint support |
+| [#1](https://github.com/stanley2058/lilac-mono/pull/1) | `stanley2058/lilac-mono` | Exa web search provider integration |
+| [#138](https://github.com/Minidoracat/mcp-feedback-enhanced/pull/138) | `Minidoracat/mcp-feedback-enhanced` | Localization and docs enhancement |
+| [#111](https://github.com/yym68686/ChatGPT-Telegram-Bot/pull/111) | `yym68686/ChatGPT-Telegram-Bot` | Documentation correctness fix |
+| [#19293](https://github.com/is-a-dev/register/pull/19293) | `is-a-dev/register` | Custom domain registration contribution |
+
+---
+
+## Technical Scope
+
+### Languages
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+### Backend, Data, Infrastructure
+
+![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4ea94b?style=for-the-badge&logo=mongodb&logoColor=white)
+
+---
+
+## Collaboration & Contact
+
+- Resume: [CHUFEIWU_Resume.pdf](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf)
+- Portfolio: [DF-wu/resume](https://github.com/DF-wu/resume)
+- LinkedIn: [chufei-wu-b33990164](https://www.linkedin.com/in/chufei-wu-b33990164/)
+- Website: [df.is-a.dev](https://df.is-a.dev)
+- Mastodon: [@df@g0v.social](https://g0v.social/@df)
+
+## First 90 Days Contribution Style
+
+- First 30 days: understand architecture boundaries and highest-friction workflows.
+- First 60 days: reduce backend delivery friction with targeted improvements.
+- First 90 days: deliver measurable reliability and maintainability gains.
+
+If your team is hiring for backend/platform roles and values reliable execution, I would be glad to connect.
+
+---
+
+<details>
+<summary><strong>Extended Engineering Evidence (GitHub Analytics)</strong></summary>
+
+<br />
+
+<div align="center">
+
+[![DF's GitHub stats](https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu&layout=compact&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
+
+</div>
+
+[![](./profile-summary-card-output/monokai/0-profile-details.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/1-repos-per-language.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/2-most-commit-language.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/3-stats.svg)](https://github.com/DF-wu)
+
+[![WakaTime](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/d210fe3c-7b63-47b5-a4d4-b70bb8300fcb.svg)](https://wakatime.com/)
+
+<!-- waka-box start -->
+<!-- waka-box end -->
+
+</details>
+
+---
+
+## Credits
+
+- Summary cards powered by [vn7n24fzkq/github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)
