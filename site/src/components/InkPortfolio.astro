@@ -1,0 +1,166 @@
+---
+import { profile } from '../data/profile';
+---
+
+<div class="wrap">
+  <nav class="nav">
+    <span class="nav-name">DF WU</span>
+    <div class="nav-links">
+      <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
+      <a href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+      <a href={profile.links.paper} target="_blank" rel="noopener">Paper</a>
+      <a href={profile.links.website} target="_blank" rel="noopener">Web</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <p class="hero-role">{profile.title} &middot; {profile.location}</p>
+    <h1>DF Wu.</h1>
+    <p class="hero-sub">{profile.tagline}</p>
+  </section>
+
+  <section class="section">
+    <p class="section-label">About</p>
+    {profile.about.map((text) => <p>{text}</p>)}
+  </section>
+
+  <section class="section">
+    <p class="section-label">Education</p>
+    <div class="role">
+      <h3>{profile.education.degree}</h3>
+      <p>{profile.education.school} &middot; Graduated {profile.education.graduated}</p>
+      <div class="role-evidence">{profile.education.lab} &middot; Advisor: {profile.education.advisor}</div>
+      <p style="margin-top:0.5rem">Thesis focus: {profile.education.focus}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Publications</p>
+    {profile.publications.map((p) => (
+      <a class="project" href={p.url} target="_blank" rel="noopener" style="display:block;grid-template-columns:1fr">
+        <span class="project-stack">{p.publisher} &middot; {p.venue} &middot; {p.year}</span>
+        <h3 style="margin-top:0.5rem">{p.title}</h3>
+        <p style="margin-bottom:0.5rem">{p.authors.join(', ')}</p>
+        <p style="font-size:0.88rem">{p.abstract}</p>
+      </a>
+    ))}
+  </section>
+
+  <section class="section">
+    <p class="section-label">Research</p>
+    <ul style="padding-left:1.2rem;color:var(--muted);line-height:1.75">
+      {profile.researchHighlights.map((h) => <li style="margin-bottom:0.5rem">{h}</li>)}
+    </ul>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Numbers</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-value">{profile.stats.publicRepos}</div><div class="stat-label">Repos</div></div>
+      <div class="stat"><div class="stat-value">{profile.stats.yearlyContributions}</div><div class="stat-label">Contributions</div></div>
+      <div class="stat"><div class="stat-value">{profile.stats.ieeepapers}</div><div class="stat-label">IEEE Papers</div></div>
+      <div class="stat"><div class="stat-value">{profile.stats.mergedPRs}</div><div class="stat-label">Merged PRs</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Stack</p>
+    <div class="skills-grid" style="margin-bottom:0.75rem">
+      {profile.skills.languages.map((s) => <span class="skill-tag">{s}</span>)}
+    </div>
+    <div class="skills-grid" style="margin-bottom:0.75rem">
+      {[...profile.skills.frameworks, ...profile.skills.infrastructure, ...profile.skills.data].map((s) => <span class="skill-tag">{s}</span>)}
+    </div>
+    <div class="skills-grid">
+      {profile.skills.practices.map((s) => <span class="skill-tag">{s}</span>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Work</p>
+    <div class="projects">
+      {profile.projects.map((p) => (
+        <a class="project" href={p.url} target="_blank" rel="noopener">
+          <div><span class="project-stack">{p.stack}</span></div>
+          <div>
+            <h3>{p.name}</h3>
+            <p>{p.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Experience</p>
+    <div class="roles">
+      {profile.experience.map((e) => (
+        <div class="role">
+          <h3>{e.role} &middot; {e.org}</h3>
+          <p>{e.summary}</p>
+          <div class="role-evidence">{e.period}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Open Source</p>
+    <div class="contribs">
+      {profile.contributions.map((c) => (
+        <a class="contrib" href={c.url} target="_blank" rel="noopener">
+          <span class="contrib-type">{c.type}</span>
+          <span>{c.description}</span>
+          <span class="contrib-repo">{c.repo} {c.pr}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Fit</p>
+    <div class="roles">
+      {profile.roles.map((r) => (
+        <div class="role">
+          <h3>{r.title}</h3>
+          <p>{r.why}</p>
+          <div class="role-evidence">{r.evidence}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Ramp Up</p>
+    <div class="ramp">
+      {profile.rampUp.map((r) => (
+        <div class="ramp-item">
+          <span class="ramp-phase">{r.phase}</span>
+          <span class="ramp-focus">{r.focus}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Beyond</p>
+    <div class="skills-grid">
+      {profile.interests.map((i) => <span class="skill-tag">{i}</span>)}
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Let's talk.</h2>
+    <p>I don't bring drama. I bring working systems.</p>
+    <div class="contact-links">
+      <a class="primary" href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+      <a href={profile.links.email}>Email</a>
+      <a href={profile.links.resume} target="_blank" rel="noopener">Resume</a>
+      <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; {new Date().getFullYear()} {profile.fullName}</p>
+  </footer>
+</div>

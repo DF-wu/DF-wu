@@ -1,97 +1,167 @@
 # Vercel Deployment Guide
 
-## Prerequisites
+## What This Is
 
-- A [Vercel](https://vercel.com) account
-- This repository connected to Vercel
+A personal portfolio site for ChuFei Wu (DF Wu), built with Astro. The site has **one URL** (`/`) and renders as a single personal page — no gallery, no style selector. The visual style is chosen at **build time** via an environment variable.
 
 ## Quick Setup
 
-### 1. Connect to Vercel
+### 1. Import to Vercel
 
 1. Go to [vercel.com/new](https://vercel.com/new)
 2. Import this repository (`DF-wu/DF-wu`)
-3. In **Configure Project**:
+3. **Configure Project**:
    - **Framework Preset**: Astro
    - **Root Directory**: `site`
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
-4. Set the **Git Branch** to `vercel-site`
-5. Click **Deploy**
+   - **Production Branch**: `master` (or whichever branch you deploy from)
 
-### 2. Custom Domain (Optional)
+### 2. Set the Style (Required)
 
-1. Go to your project's **Settings > Domains**
-2. Add your custom domain
-3. Follow Vercel's DNS configuration instructions
+Under **Settings > Environment Variables**, add:
+
+| Name | Value | Scope |
+|:---|:---|:---|
+| `PORTFOLIO_STYLE` | one of `noir`, `linen`, `glass`, `ink`, `dusk` | Production (+ Preview + Development if desired) |
+
+Default (if unset) is `noir`. Invalid values also fall back to `noir`.
+
+### 3. Deploy
+
+Click **Deploy**. Vercel builds once and serves `/` as your chosen style.
+
+### 4. Custom Domain (Optional)
+
+**Settings > Domains** → add your domain → follow Vercel's DNS instructions.
+
+## Changing the Style Later
+
+1. Update `PORTFOLIO_STYLE` in Vercel's environment variables
+2. Trigger a redeploy (Deployments → `...` → Redeploy)
+
+No code changes needed.
+
+## The 5 Styles
+
+| Style | Vibe |
+|:---|:---|
+| `noir` | Dark refined. Monospace accents, amber highlights, polished developer tool aesthetic. |
+| `linen` | Warm editorial. Serif headings, cream tones, magazine feature article feel. |
+| `glass` | Modern glassmorphism. Frosted cards, gradient backgrounds, SaaS landing page vibe. |
+| `ink` | High contrast bold. Black & white with electric blue, strong geometry, content-forward. |
+| `dusk` | Cosmic gradient. Teal-purple glow, ethereal spacious feel, creative technologist space. |
+
+All 5 render the same content (hero, about, education, publications, research highlights, stats, stack, projects, experience, open source, role fit, ramp-up, interests, contact). Only the visual treatment differs.
 
 ## Local Development
 
 ```bash
 cd site
 npm install
-npm run dev
+
+# Choose a style for local dev
+PORTFOLIO_STYLE=noir npm run dev
+# or
+PORTFOLIO_STYLE=linen npm run dev
 ```
 
-The dev server starts at `http://localhost:4321`. Pages available:
-
-- `/` — Gallery (all 5 styles)
-- `/noir` — Dark refined
-- `/linen` — Warm editorial
-- `/glass` — Glassmorphism
-- `/ink` — High contrast bold
-- `/dusk` — Cosmic gradient
+Dev server starts at `http://localhost:4321`.
 
 ## Updating Content
 
 All profile data lives in **one file**: `site/src/data/profile.ts`
 
-Edit this file to update:
-- Name, title, tagline
-- Social links
-- Skills and tech stack
-- Featured projects
+Edit this file to change:
+- Name, title, tagline, motto
+- About paragraphs
+- Education (school, degree, thesis, advisor, lab)
+- Publications (title, authors, venue, year, DOI, abstract)
+- Research highlights
+- Skills (languages, frameworks, infrastructure, data, practices)
+- Projects (5 featured)
+- Experience (roles with dates)
 - Open source contributions
-- Stats and metrics
+- Role fit matrix
+- 90-day plan
+- Interests / beyond-code
+- Social links and email
 
-All 5 pages automatically reflect your changes.
+All 5 styles automatically reflect your changes.
 
-## Building for Production
+## Adding a New Publication
+
+In `site/src/data/profile.ts`, add an entry to the `publications` array:
+
+```ts
+publications: [
+  {
+    title: 'Your paper title',
+    authors: ['Chu-Fei Wu', 'Co-author 1', 'Co-author 2'],
+    venue: 'Conference Name Year',
+    publisher: 'IEEE',
+    year: 2024,
+    pages: '123–130',
+    doi: '10.1109/XXX',
+    url: 'https://ieeexplore.ieee.org/document/XXXXXXX',
+    abstract: 'One-paragraph summary.',
+    tag: 'IEEE',
+  },
+  // ... existing
+],
+```
+
+Also bump `stats.ieeepapers` if applicable.
+
+## Building for Production Locally
 
 ```bash
 cd site
-npm run build
-npm run preview  # Preview the build locally
+PORTFOLIO_STYLE=noir npm run build
+npm run preview    # Preview the built site at http://localhost:4321
 ```
 
 ## Project Structure
 
 ```
 site/
-├── src/
-│   ├── data/profile.ts      # All your content (edit this)
-│   ├── layouts/Base.astro    # Shared HTML head
-│   ├── pages/                # Each page = one style
-│   │   ├── index.astro       # Gallery selector
-│   │   ├── noir.astro
-│   │   ├── linen.astro
-│   │   ├── glass.astro
-│   │   ├── ink.astro
-│   │   └── dusk.astro
-│   └── styles/               # Each style's CSS
+├── astro.config.mjs
+├── package.json
+├── DEPLOY.md                  # This file
+├── public/
+│   ├── favicon.svg
+│   └── styles/                # Style CSS served as static assets
 │       ├── global.css
 │       ├── noir.css
 │       ├── linen.css
 │       ├── glass.css
 │       ├── ink.css
 │       └── dusk.css
-├── astro.config.mjs
-└── package.json
+└── src/
+    ├── data/
+    │   └── profile.ts         # ALL content lives here (edit this to update the page)
+    ├── layouts/
+    │   └── Base.astro          # Shared <html>/<head> wrapper
+    ├── components/             # One file per style — structure + markup
+    │   ├── NoirPortfolio.astro
+    │   ├── LinenPortfolio.astro
+    │   ├── GlassPortfolio.astro
+    │   ├── InkPortfolio.astro
+    │   └── DuskPortfolio.astro
+    └── pages/
+        └── index.astro         # Reads PORTFOLIO_STYLE, renders the matching component
 ```
+
+## How the Env Variable Works
+
+1. At build time, `resolveStyle()` in `src/data/profile.ts` reads `import.meta.env.PORTFOLIO_STYLE`.
+2. `src/pages/index.astro` renders only the matching component (the other 4 are tree-shaken out of the HTML).
+3. The matching CSS file (`/styles/<style>.css`) is linked in the `<head>`.
+4. Only one HTML file (`dist/index.html`) and one CSS file are served per deploy.
 
 ## Notes
 
-- **GitHub Pages** (`docs/` on master) is unaffected — it continues to serve independently
-- This branch (`vercel-site`) is only for the Vercel deployment
-- Astro outputs zero client-side JavaScript by default — pages are pure HTML + CSS
-- All pages are fully responsive (mobile, tablet, desktop)
+- **GitHub Pages** (`docs/` on master) is independent and unaffected — it continues to serve the old landing page.
+- Astro outputs **zero client-side JavaScript** by default. Pages are pure HTML + CSS.
+- All pages are fully responsive (mobile, tablet, desktop).
+- The previous `/noir`, `/linen`, `/glass`, `/ink`, `/dusk` URLs no longer exist — only `/`.

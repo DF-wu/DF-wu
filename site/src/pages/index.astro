@@ -1,58 +1,25 @@
 ---
 import Base from '../layouts/Base.astro';
-import '../styles/global.css';
+import { profile, resolveStyle } from '../data/profile';
+import NoirPortfolio from '../components/NoirPortfolio.astro';
+import LinenPortfolio from '../components/LinenPortfolio.astro';
+import GlassPortfolio from '../components/GlassPortfolio.astro';
+import InkPortfolio from '../components/InkPortfolio.astro';
+import DuskPortfolio from '../components/DuskPortfolio.astro';
 
-const styles = [
-  { name: 'Noir', slug: '/noir', color: '#c9a55a', bg: '#0a0a0f', desc: 'Dark refined. Monospace accents, amber highlights, polished developer tool aesthetic.' },
-  { name: 'Linen', slug: '/linen', color: '#5a7247', bg: '#faf7f2', desc: 'Warm editorial. Serif headings, cream tones, magazine feature article feel.' },
-  { name: 'Glass', slug: '/glass', color: '#60a5fa', bg: '#1a1045', desc: 'Modern glassmorphism. Frosted cards, gradient backgrounds, SaaS landing page vibe.' },
-  { name: 'Ink', slug: '/ink', color: '#2563eb', bg: '#fff', desc: 'High contrast bold. Black & white with electric blue, strong geometry, content-forward.' },
-  { name: 'Dusk', slug: '/dusk', color: '#5eead4', bg: '#140e2e', desc: 'Cosmic gradient. Teal-purple glow, ethereal spacious feel, creative technologist space.' },
-];
+const style = resolveStyle();
+const description = `${profile.fullName} — ${profile.title} based in ${profile.location}. ${profile.tagline}`;
+const stylesheets = [`/styles/${style}.css`];
 ---
 
-<Base title="DF Wu — Portfolio Styles">
-  <style>
-    body { background: #111; color: #e8e6e3; font-family: 'Inter', 'Noto Sans TC', sans-serif; }
-    .gallery-wrap { width: min(1060px, calc(100% - 2rem)); margin: 0 auto; padding: 3rem 0 4rem; }
-    .gallery-header { text-align: center; margin-bottom: 3rem; }
-    .gallery-header h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
-    .gallery-header p { color: #8a8a95; font-size: 1.05rem; max-width: 50ch; margin: 0 auto; }
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
-    .gallery-card { display: block; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: transform 0.25s, border-color 0.25s; }
-    .gallery-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.2); }
-    .card-preview { height: 180px; display: flex; align-items: center; justify-content: center; position: relative; }
-    .card-preview-name { font-size: 2.5rem; font-weight: 900; letter-spacing: -0.03em; opacity: 0.9; }
-    .card-body { padding: 1.25rem; background: rgba(255,255,255,0.03); }
-    .card-body h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem; }
-    .card-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-    .card-body p { color: #8a8a95; font-size: 0.88rem; line-height: 1.55; }
-    .gallery-footer { text-align: center; margin-top: 3rem; color: #555; font-size: 0.82rem; }
-    .gallery-footer a { color: #8a8a95; }
-  </style>
-
-  <div class="gallery-wrap">
-    <div class="gallery-header">
-      <h1>DF Wu</h1>
-      <p>Five portfolio styles. Same engineer. Pick the one that fits.</p>
-    </div>
-
-    <div class="gallery-grid">
-      {styles.map((s) => (
-        <a class="gallery-card" href={s.slug}>
-          <div class="card-preview" style={`background: ${s.bg};`}>
-            <span class="card-preview-name" style={`color: ${s.color};`}>{s.name}</span>
-          </div>
-          <div class="card-body">
-            <h2><span class="card-dot" style={`background: ${s.color};`}></span> {s.name}</h2>
-            <p>{s.desc}</p>
-          </div>
-        </a>
-      ))}
-    </div>
-
-    <div class="gallery-footer">
-      <p>Built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a> &middot; <a href="https://github.com/DF-wu" target="_blank" rel="noopener">GitHub</a></p>
-    </div>
-  </div>
+<Base
+  title={`${profile.fullName} — ${profile.title}`}
+  description={description}
+  stylesheets={stylesheets}
+>
+  {style === 'noir' && <NoirPortfolio />}
+  {style === 'linen' && <LinenPortfolio />}
+  {style === 'glass' && <GlassPortfolio />}
+  {style === 'ink' && <InkPortfolio />}
+  {style === 'dusk' && <DuskPortfolio />}
 </Base>
