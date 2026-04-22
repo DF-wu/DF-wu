@@ -45,14 +45,47 @@ import { profile } from '../data/profile';
   <div class="divider"></div>
 
   <section class="section">
-    <p class="section-label">Publications</p>
-    {profile.publications.map((p) => (
-      <a class="project" href={p.url} target="_blank" rel="noopener" style="display:block">
-        <span class="project-stack">{p.publisher} &middot; {p.venue} &middot; {p.year}</span>
-        <h3>{p.title}</h3>
-        <p style="margin-bottom:0.5rem;opacity:0.85">{p.authors.join(', ')}</p>
-        <p style="font-size:0.88rem">{p.abstract}</p>
-      </a>
+    <p class="section-label">Publications · IEEE</p>
+    <div style="display:grid;gap:1rem">
+      {profile.publications.map((p) => (
+        <a class="project" href={p.url} target="_blank" rel="noopener" style="display:block">
+          <span class="project-stack">{p.publisher} &middot; {p.venue} &middot; {p.year}{p.location ? ` · ${p.location}` : ''}</span>
+          <h3>{p.title}</h3>
+          <p style="margin-bottom:0.5rem;opacity:0.85;font-size:0.9rem">{p.authors.join(', ')}</p>
+          <p style="font-size:0.88rem;margin-bottom:0.4rem">{p.abstract}</p>
+          <p style="font-size:0.78rem;color:var(--accent);font-weight:700">{p.role}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <p class="section-label">Conference Papers · Domestic</p>
+    <div style="display:grid;gap:0.75rem">
+      {profile.domesticPublications.map((p) => (
+        <div style="padding:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;flex-direction:column;gap:0.35rem">
+          <strong style="font-size:0.98rem">{p.title}</strong>
+          <span style="color:var(--muted);font-size:0.82rem;font-style:italic">{p.titleEn}</span>
+          <span style="color:var(--muted);font-size:0.8rem">{p.authors.join('、')}</span>
+          <span style="color:var(--accent);font-size:0.78rem">{p.venue} &middot; {p.location} &middot; {p.year}</span>
+          {p.award && <span style="font-size:0.78rem;color:var(--accent2);font-weight:700">🏆 {p.award}</span>}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <p class="section-label">Awards</p>
+    {profile.awards.map((a) => (
+      <div class="role" style="background:linear-gradient(135deg, rgba(94,234,212,0.1), rgba(192,132,252,0.08))">
+        <h3>🏆 {a.title}</h3>
+        <p>{a.context}</p>
+        <div class="role-evidence">{a.year}</div>
+      </div>
     ))}
   </section>
 

@@ -35,14 +35,43 @@ import { profile } from '../data/profile';
   </section>
 
   <section class="section">
-    <p class="section-label">Publications</p>
-    {profile.publications.map((p) => (
-      <a class="project" href={p.url} target="_blank" rel="noopener" style="display:block;grid-template-columns:1fr">
-        <span class="project-stack">{p.publisher} &middot; {p.venue} &middot; {p.year}</span>
-        <h3 style="margin-top:0.5rem">{p.title}</h3>
-        <p style="margin-bottom:0.5rem">{p.authors.join(', ')}</p>
-        <p style="font-size:0.88rem">{p.abstract}</p>
-      </a>
+    <p class="section-label">Publications · IEEE</p>
+    <div style="display:grid;gap:1.5rem">
+      {profile.publications.map((p) => (
+        <a href={p.url} target="_blank" rel="noopener" style="display:block;padding:1rem 0;border-top:2px solid var(--text);color:inherit;text-decoration:none">
+          <span class="project-stack" style="display:block;margin-bottom:0.5rem">{p.publisher} &middot; {p.venue} &middot; {p.year}{p.location ? ` · ${p.location}` : ''}</span>
+          <h3 style="font-size:1.3rem;font-weight:900;margin-bottom:0.4rem">{p.title}</h3>
+          <p style="margin-bottom:0.5rem;font-size:0.9rem">{p.authors.join(', ')}</p>
+          <p style="font-size:0.88rem;margin-bottom:0.4rem">{p.abstract}</p>
+          <p style="font-size:0.78rem;color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:0.05em">{p.role}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Conference Papers · Domestic</p>
+    <div class="contribs">
+      {profile.domesticPublications.map((p) => (
+        <div class="contrib" style="grid-template-columns:1fr;gap:0.35rem;padding:1rem 0;border-bottom:1px solid var(--border)">
+          <strong style="font-size:0.98rem">{p.title}</strong>
+          <span style="color:var(--muted);font-size:0.82rem;font-style:italic">{p.titleEn}</span>
+          <span style="color:var(--muted);font-size:0.8rem">{p.authors.join('、')}</span>
+          <span class="contrib-type" style="font-size:0.72rem">{p.venue} &middot; {p.location} &middot; {p.year}</span>
+          {p.award && <span style="font-size:0.78rem;color:var(--accent);font-weight:800;margin-top:0.25rem">🏆 {p.award}</span>}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Awards</p>
+    {profile.awards.map((a) => (
+      <div style="padding:1.25rem;border:2px solid var(--text);background:var(--accent-soft)">
+        <h3 style="font-size:1.15rem;font-weight:900;margin-bottom:0.3rem">🏆 {a.title}</h3>
+        <p style="color:var(--muted);font-size:0.88rem">{a.context}</p>
+        <div style="font-size:0.72rem;color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.35rem">{a.year}</div>
+      </div>
     ))}
   </section>
 

@@ -1,6 +1,7 @@
 export const profile = {
   name: 'DF Wu',
   fullName: 'ChuFei Wu',
+  nameZh: '吳朱飛',
   title: 'Backend & Platform Engineer',
   location: 'Taipei, Taiwan',
   tagline: 'Building backend systems that stay stable, maintainable, and deployable as complexity grows.',
@@ -36,19 +37,69 @@ export const profile = {
       venue: 'APSEC 2022 — 29th Asia-Pacific Software Engineering Conference',
       publisher: 'IEEE',
       year: 2022,
-      pages: '467–471',
-      doi: '10.1109/APSEC57359.2022.00073',
+      location: 'Virtual',
       url: 'https://ieeexplore.ieee.org/document/10043304/',
       abstract:
-        "Introduces CCTS (Composite Contract Testing Service), a testing tool for event-driven microservices. Combines consumer-driven contract testing with event-driven state models to record state transitions of event exchange between services and automatically retrieve possible transition paths.",
+        'Introduces CCTS (Composite Contract Testing Service), a testing tool for event-driven microservices. Combines consumer-driven contract testing with event-driven state models to record state transitions of event exchange between services and automatically retrieve possible transition paths.',
+      role: 'First author · thesis work',
+      tag: 'IEEE',
+    },
+    {
+      title: 'PDAS: A Digital-Signature-Based Authorization Platform for Digital Personal Data',
+      authors: ['Yu-Te Wang', 'Chu-Fei Wu', 'Shang-Pin Ma', 'Hsuan-Tung Chen', 'Shih-Ying Chang', 'ChunSheng Li'],
+      venue: 'ICS 2020 — International Computer Symposium',
+      publisher: 'IEEE',
+      year: 2020,
+      location: 'Tainan, Taiwan',
+      url: 'https://ieeexplore.ieee.org/document/9359082/',
+      abstract:
+        'Uses Citizen Digital Certificate, digital signature, and blockchain to establish an authorization system (PDAS) for digital personal data. Enables safe, undeniable, and tamper-proof data authorization contracts that address legality, security, and multi-user authorization.',
+      role: 'Co-author · PDAS-team core contributor',
       tag: 'IEEE',
     },
   ],
 
+  domesticPublications: [
+    {
+      title: '事件驅動微服務系統之複合契約測試機制',
+      titleEn: 'Composite Contract Testing for Event-Driven Microservice Systems',
+      authors: ['吳朱飛', '馬尚彬', '邵安祺'],
+      venue: '2022 台灣軟體工程研討會 (TCSE)',
+      year: 2022,
+      location: '臺北 · 政治大學',
+      award: '最佳中文論文獎 · Best Chinese Paper Award',
+    },
+    {
+      title: '數位個人資料授權之計價與雙向支付平台之系統設計',
+      titleEn: 'Pricing and Bidirectional Payment Platform for Digital Personal Data Authorization',
+      authors: ['馬尚彬', '陳宣同', '吳朱飛', '王宇德', '黃郁文', '張仕穎'],
+      venue: '2021 全國計算機會議 (NCS)',
+      year: 2021,
+      location: '臺中 · 東海大學',
+    },
+    {
+      title: '基於數位簽章之個資授權平台設計',
+      titleEn: 'Design of a Digital-Signature-Based Personal Data Authorization Platform',
+      authors: ['馬尚彬', '陳宣同', '張仕穎', '吳朱飛', '王宇德', '陳筱蓉', '李昀陞'],
+      venue: '2020 台灣軟體工程研討會 (TCSE)',
+      year: 2020,
+      location: '嘉義 · 嘉義大學',
+    },
+  ],
+
+  awards: [
+    {
+      title: 'Best Chinese Paper Award · 最佳中文論文獎',
+      context: '2022 台灣軟體工程研討會 (TCSE) — for "事件驅動微服務系統之複合契約測試機制"',
+      year: 2022,
+    },
+  ],
+
   researchHighlights: [
-    'Designed CCTS — a tool combining Pact contract testing with SAGA-style state-machine assertions for event-driven architectures',
-    'Collaborated with ITRI (Industrial Technology Research Institute) on personal data authorization and security mechanisms',
-    'Published at APSEC 2022 on consumer-driven contract testing for event-driven microservice systems',
+    'Designed CCTS — a tool combining Pact consumer-driven contract testing with SAGA-style state-machine assertions for event-driven architectures',
+    'Core member of the PDAS-team building a digital-signature-based authorization platform for personal data, published at IEEE ICS 2020 and adopted in follow-up pricing/payment research',
+    'Received the 2022 Best Chinese Paper Award at the Taiwan Conference on Software Engineering for the CCTS research',
+    'Two IEEE international publications (APSEC 2022, ICS 2020) plus three domestic-conference papers across event-driven microservice testing and personal data authorization systems',
   ],
 
   links: {
@@ -69,7 +120,8 @@ export const profile = {
     yearlyCommits: 567,
     mergedPRs: 22,
     externalPRs: 13,
-    ieeepapers: 1,
+    ieeepapers: 2,
+    publications: 5,
     ossProjects: 5,
   },
 
@@ -173,22 +225,22 @@ export const profile = {
 
   experience: [
     {
-      role: 'Research Assistant',
+      role: 'Research Assistant · Thesis Author',
       org: 'SOSELAB, NTOU CSE',
       period: '2020 – 2022',
       summary:
-        'Designed and implemented CCTS — a contract-testing framework for event-driven microservice systems. Published at IEEE APSEC 2022.',
+        'Designed and implemented CCTS — a contract-testing framework for event-driven microservice systems. Published at IEEE APSEC 2022 and received the 2022 Best Chinese Paper Award at TCSE.',
     },
     {
-      role: 'Industry Collaborator',
-      org: 'Industrial Technology Research Institute (ITRI)',
-      period: 'During graduate studies',
+      role: 'Core Contributor',
+      org: 'PDAS-team (NTOU × ITRI collaboration)',
+      period: '2020 – 2021',
       summary:
-        'Contributed to personal data authorization and security mechanism projects — applied research meeting real compliance requirements.',
+        'Worked on the Personal Data Authorization System — digital-signature-based, blockchain-anchored authorization contracts for personal data. Joint research with Industrial Technology Research Institute (ITRI). Published at IEEE ICS 2020 and two domestic conferences.',
     },
     {
       role: 'Open-source Collaborator',
-      org: 'PDAS-team · g0v civic tech community',
+      org: 'g0v civic tech community · public OSS projects',
       period: 'Ongoing',
       summary:
         'Contribute across personal infrastructure, team projects, and public OSS workflows. Pattern: cleanup, integration, correctness.',
