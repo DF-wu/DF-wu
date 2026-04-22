@@ -1,12 +1,5 @@
 {
-  "rewrites": [
-    {
-      "source": "/assets/(.*)",
-      "destination": "/docs/assets/$1"
-    },
-    {
-      "source": "/",
-      "destination": "/docs/index.html"
-    }
-  ]
+  "framework": "astro",
+  "buildCommand": "cd site && npm install && npm run build",
+  "outputDirectory": "site/dist"
 }
