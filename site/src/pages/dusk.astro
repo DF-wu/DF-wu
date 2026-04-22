@@ -1,0 +1,134 @@
+---
+import Base from '../layouts/Base.astro';
+import { profile } from '../data/profile';
+import '../styles/dusk.css';
+---
+
+<Base title="DF Wu — Dusk">
+  <div class="wrap">
+    <nav class="nav">
+      <span class="nav-name">DF Wu</span>
+      <div class="nav-links">
+        <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
+        <a href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <a href={profile.links.website} target="_blank" rel="noopener">Web</a>
+        <a href={profile.links.mastodon} target="_blank" rel="noopener">Mastodon</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <p class="hero-role">{profile.title} &middot; {profile.location}</p>
+      <h1>{profile.name}</h1>
+      <p class="hero-sub">{profile.tagline}</p>
+      <div class="hero-actions">
+        <a class="primary" href={profile.links.linkedin} target="_blank" rel="noopener">Connect</a>
+        <a class="secondary" href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <p class="section-label">About</p>
+      {profile.about.map((text) => <p>{text}</p>)}
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <p class="section-label">Metrics</p>
+      <div class="stats">
+        <div class="stat"><div class="stat-value">{profile.stats.publicRepos}</div><div class="stat-label">Repositories</div></div>
+        <div class="stat"><div class="stat-value">{profile.stats.ownedRepos}</div><div class="stat-label">Owned</div></div>
+        <div class="stat"><div class="stat-value">{profile.stats.yearlyContributions}</div><div class="stat-label">Contributions/yr</div></div>
+        <div class="stat"><div class="stat-value">{profile.stats.mergedPRs}</div><div class="stat-label">Merged PRs</div></div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <p class="section-label">Stack</p>
+      <div class="skills-grid" style="margin-bottom:0.75rem">
+        {profile.skills.languages.map((s) => <span class="skill-tag">{s}</span>)}
+      </div>
+      <div class="skills-grid">
+        {[...profile.skills.frameworks, ...profile.skills.infrastructure].map((s) => <span class="skill-tag">{s}</span>)}
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <p class="section-label">Projects</p>
+      <div class="projects">
+        {profile.projects.map((p) => (
+          <a class="project" href={p.url} target="_blank" rel="noopener">
+            <span class="project-stack">{p.stack}</span>
+            <h3>{p.name}</h3>
+            <p>{p.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <p class="section-label">Open Source</p>
+      <div class="contribs">
+        {profile.contributions.map((c) => (
+          <a class="contrib" href={c.url} target="_blank" rel="noopener">
+            <span class="contrib-type">{c.type}</span>
+            <span>{c.description}</span>
+            <span class="contrib-repo">{c.repo} {c.pr}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <p class="section-label">Role Fit</p>
+      <div class="roles">
+        {profile.roles.map((r) => (
+          <div class="role">
+            <h3>{r.title}</h3>
+            <p>{r.why}</p>
+            <div class="role-evidence">{r.evidence}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <p class="section-label">First 90 Days</p>
+      <div class="ramp">
+        {profile.rampUp.map((r) => (
+          <div class="ramp-item">
+            <span class="ramp-phase">{r.phase}</span>
+            <span class="ramp-focus">{r.focus}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Looking for reliable execution?</h2>
+      <p>I build systems that stay standing after the demo. Let's connect.</p>
+      <div class="contact-links">
+        <a class="primary" href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <a href={profile.links.resume} target="_blank" rel="noopener">Resume</a>
+        <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
+        <a href={profile.links.mastodon} target="_blank" rel="noopener">Mastodon</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; {new Date().getFullYear()} DF Wu &middot; {profile.location}</p>
+    </footer>
+  </div>
+</Base>

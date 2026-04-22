@@ -1,113 +1,148 @@
-# My profile page
-- [Link to My Github](https://github.com/DF-wu/DF-wu)
+# DF Wu · Backend & Platform Engineer
 
-May-Not-Full-Enough-Full-Stack developer with a passion for scalable system architecture and emerging technologies.
-Experienced in building cloud-native applications and microservices, with a strong focus on backend development using Java, Python and Golang.
-Let's push the boundaries of what technology can achieve! 🚀
+<div align="center">
 
-## Table of Contents
-- [My profile page](#my-profile-page)
-  - [Table of Contents](#table-of-contents)
-  - [repo status (private repo excluded)](#repo-status-private-repo-excluded)
-  - [Professional Connections](#professional-connections)
-  - [Skill Graffiti wall](#skill-graffiti-wall)
-  - [Professional Portfolio \& Resume](#professional-portfolio--resume)
-  - [Github Public Activity Charts](#github-public-activity-charts)
-  - [Wakatime analysis](#wakatime-analysis)
-  - [Additional Information](#additional-information)
-  - [Achievements](#achievements)
-  - [Credit](#credit)
+[![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social)](https://github.com/DF-wu)
+[![Profile Views](https://komarev.com/ghpvc/?username=DF-wu&style=flat-square&color=2ea44f)](https://github.com/DF-wu/DF-wu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ChuFei%20Wu-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+[![Website](https://img.shields.io/badge/Website-df.is--a.dev-111827?style=flat-square&logo=googlechrome&logoColor=white)](https://df.is-a.dev)
 
-![GitHub followers](https://img.shields.io/github/followers/DF-wu?style=social) [![Mastdon - g0v](https://img.shields.io/badge/Mastdon-g0v-2ea44f?logo=mastodon)](https://g0v.social/@df)
+</div>
 
-## repo status (private repo excluded)
-[![DF's GitHub stats](https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats) 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu)](https://github.com/anuraghazra/github-readme-stats)
+I build backend systems that remain stable, maintainable, and deployable as complexity grows.
 
-## Professional Connections
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+---
 
+## 60-Second Profile Summary
 
-## Skill Graffiti wall
+**Role fit:** Backend Engineer · Platform Engineer · Software Engineer (Systems/Infrastructure)
 
-[![VSCODE](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blue?style=flat-square&logo=Visual-Studio-Code)](https://code.visualstudio.com/)
-[![](https://img.shields.io/badge/Editor-Vim-019733?style=flat-square&logo=vim&logoColor=ffffff)](https://www.vim.org/)
-[![](https://img.shields.io/badge/macOS-Catalina-d0d1d4?style=flat-square&logo=Apple)](<[https://](https://www.aple.com/macos/catalina/)>)
-[![ARCH](https://img.shields.io/badge/Archlinux-Rolling-39a2ef?style=flat-square&logo=Archlinux)](https://archlinux.org/)
-[![](https://img.shields.io/badge/-HackMD-333333?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8%2BCjxzdmcKICAgd2lkdGg9IjE3OTIiCiAgIGhlaWdodD0iMTc5MiIKICAgdmlld0JveD0iMCAwIDE3OTIgMTc5MiIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnNCIKICAgc29kaXBvZGk6ZG9jbmFtZT0iZmlsZS10ZXh0Mi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjEuMSAoYzRlOGY5ZWQ3NCwgMjAyMS0wNS0yNCkiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZyI%2BCiAgPGRlZnMKICAgICBpZD0iZGVmczgiIC8%2BCiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJuYW1lZHZpZXc2IgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9IjAiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnpvb209IjAuNDU4NzA1MzYiCiAgICAgaW5rc2NhcGU6Y3g9IjkwMS40NTAxMiIKICAgICBpbmtzY2FwZTpjeT0iODk5LjI3MDA3IgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMjU1MiIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMzcxIgogICAgIGlua3NjYXBlOndpbmRvdy14PSIyNTYwIgogICAgIGlua3NjYXBlOndpbmRvdy15PSIzMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzQiIC8%2BCiAgPHBhdGgKICAgICBkPSJNMTU5NiA0NzZxMTQgMTQgMjggMzZoLTQ3MnYtNDcycTIyIDE0IDM2IDI4em0tNDc2IDE2NGg1NDR2MTA1NnEwIDQwLTI4IDY4dC02OCAyOGgtMTM0NHEtNDAgMC02OC0yOHQtMjgtNjh2LTE2MDBxMC00MCAyOC02OHQ2OC0yOGg4MDB2NTQ0cTAgNDAgMjggNjh0NjggMjh6bTE2MCA3MzZ2LTY0cTAtMTQtOS0yM3QtMjMtOWgtNzA0cS0xNCAwLTIzIDl0LTkgMjN2NjRxMCAxNCA5IDIzdDIzIDloNzA0cTE0IDAgMjMtOXQ5LTIzem0wLTI1NnYtNjRxMC0xNC05LTIzdC0yMy05aC03MDRxLTE0IDAtMjMgOXQtOSAyM3Y2NHEwIDE0IDkgMjN0MjMgOWg3MDRxMTQgMCAyMy05dDktMjN6bTAtMjU2di02NHEwLTE0LTktMjN0LTIzLTloLTcwNHEtMTQgMC0yMyA5dC05IDIzdjY0cTAgMTQgOSAyM3QyMyA5aDcwNHExNCAwIDIzLTl0OS0yM3oiCiAgICAgaWQ9InBhdGgyIgogICAgIHN0eWxlPSJmaWxsOiNmZmZmZmYiIC8%2BCjwvc3ZnPgo%3D&logoColor=ffffff)](https://hackmd.io/)
-[![](https://img.shields.io/badge/-diagrams.net-F08705?style=flat-square&logo=diagramsdotnet&logoColor=ffffff)](https://app.diagrams.net/)
+- I convert ambiguous requirements into reliable engineering outcomes.
+- I focus on architecture clarity, delivery consistency, and operational reliability.
+- I contribute across personal projects, organization repositories, and OSS collaboration.
 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-[![GO](https://img.shields.io/badge/-Golang-00ADD8?style=flat-square&logo=go&logoColor=ffffff)](https://golang.org/)
-[![](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=ffffff)](https://html.spec.whatwg.org/multipage/)
-[![](https://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=sass&logoColor=ffffff)](https://sass-lang.com/)
-[![](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=ffffff)](https://getbootstrap.com/)
+> Snapshot date: 2026-03-01
 
+| Signal | Value |
+| --- | --- |
+| Public repositories | 123 |
+| Owned repositories (non-fork) | 46 public + 16 private |
+| Yearly contributions | 605 |
+| Yearly commits | 567 |
+| Merged pull requests | 22 |
+| External merged pull requests | 13 |
+| Active collaboration contexts | PDAS-team, SOSELAB |
 
+---
+
+## Role Fit Matrix
+
+| Target Role | Why I Fit | Evidence |
+| --- | --- | --- |
+| Backend Engineer | Service delivery with maintainability and reliability focus | [Selected Impact](#selected-impact), [Technical Scope](#technical-scope) |
+| Platform Engineer | Deployment-aware engineering and operational reliability mindset | [Why This Is Valuable for Hiring Teams](#why-this-is-valuable-for-hiring-teams), [Technical Scope](#technical-scope) |
+| Systems-Oriented SWE | Practical architecture decisions under real constraints | [60-Second Profile Summary](#60-second-profile-summary), [Open-Source Contributions (Selected)](#open-source-contributions-selected) |
+
+---
+
+## Why This Is Valuable for Hiring Teams
+
+- **Delivery with stability:** I design backend services for maintainability and runtime safety.
+- **Complexity control:** I reduce architecture entropy before it slows teams down.
+- **Execution discipline:** I prefer measurable iteration over speculative complexity.
+- **Cross-context collaboration:** I can ship within product teams and open-source workflows.
+
+---
+
+## Selected Impact
+
+| Project | Value delivered | Stack |
+| --- | --- | --- |
+| [HideReplier](https://github.com/DF-wu/HideReplier) | End-to-end project delivery with integrated backend logic and workflow implementation. | Java |
+| [CCTS](https://github.com/DF-wu/CCTS) | Ongoing architecture practice focused on maintainability and extensibility. | Java |
+| [myServices](https://github.com/DF-wu/myServices) | Deployment-oriented service composition in practical home-lab engineering. | Python, Docker |
+| [iDRACFanSpeedControl](https://github.com/DF-wu/iDRACFanSpeedControl) | Automation of repetitive server thermal operations. | Shell |
+| [BehaviorMonitor](https://github.com/DF-wu/BehaviorMonitor) | AI-assisted prototyping and practical implementation loop. | TypeScript |
+
+---
+
+## Open-Source Contributions (Selected)
+
+| PR | Repository | Contribution |
+| --- | --- | --- |
+| [#5](https://github.com/stanley2058/lilac-mono/pull/5) | `stanley2058/lilac-mono` | Cleanup and quality refinement |
+| [#4](https://github.com/stanley2058/lilac-mono/pull/4) | `stanley2058/lilac-mono` | Custom Tavily API endpoint support |
+| [#1](https://github.com/stanley2058/lilac-mono/pull/1) | `stanley2058/lilac-mono` | Exa web search provider integration |
+| [#138](https://github.com/Minidoracat/mcp-feedback-enhanced/pull/138) | `Minidoracat/mcp-feedback-enhanced` | Localization and docs enhancement |
+| [#111](https://github.com/yym68686/ChatGPT-Telegram-Bot/pull/111) | `yym68686/ChatGPT-Telegram-Bot` | Documentation correctness fix |
+| [#19293](https://github.com/is-a-dev/register/pull/19293) | `is-a-dev/register` | Custom domain registration contribution |
+
+---
+
+## Technical Scope
+
+### Languages
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+### Backend, Data, Infrastructure
+
+![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Windows 10](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
-![Visual Studio](https://img.shields.io/badge/VisualStudio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
-![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
-[![](https://img.shields.io/badge/-Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=ffffff)](https://maven.apache.org/)
-[![](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=Docker&logoColor=ffffff)](https://www.docker.com/)
-[![](https://img.shields.io/badge/-Nginx-269539?style=flat-square&logo=Nginx&logoColor=ffffff)](https://nginx.org/)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
-[![](https://img.shields.io/badge/-MariaDB-003545?style=flat-square&logo=mariadb&logoColor=ffffff)](https://mariadb.org/)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4ea94b?style=for-the-badge&logo=mongodb&logoColor=white)
 
+---
 
-![Bitbucket](https://img.shields.io/badge/bitbucket-%230047B3.svg?style=for-the-badge&logo=bitbucket&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
-![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
-![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+## Collaboration & Contact
 
-## Professional Portfolio & Resume
+- Resume: [CHUFEIWU_Resume.pdf](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf)
+- Portfolio: [DF-wu/resume](https://github.com/DF-wu/resume)
+- LinkedIn: [chufei-wu-b33990164](https://www.linkedin.com/in/chufei-wu-b33990164/)
+- Website: [df.is-a.dev](https://df.is-a.dev)
+- Mastodon: [@df@g0v.social](https://g0v.social/@df)
 
-[![View My Resume](https://img.shields.io/badge/View%20Resume-PDF-blue?style=for-the-badge&logo=adobe-acrobat-reader)](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf) &nbsp;&nbsp;&nbsp;&nbsp; ←    Click this to see my Resume 
-[![Portfolio Details](https://img.shields.io/badge/Portfolio-Details-success?style=for-the-badge&logo=github)](https://github.com/DF-wu/resume) ← Click this to see my simple self-promotion 
+## First 90 Days Contribution Style
 
+- First 30 days: understand architecture boundaries and highest-friction workflows.
+- First 60 days: reduce backend delivery friction with targeted improvements.
+- First 90 days: deliver measurable reliability and maintainability gains.
 
-> 🎯 Specialized in backend development and system architecture design, excelling at solving complex technical challenges
-> 
-> 💼 Click above to view my complete resume and portfolio
+If your team is hiring for backend/platform roles and values reliable execution, I would be glad to connect.
 
-## Github Public Activity Charts
-[![](./profile-summary-card-output/monokai/0-profile-details.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
-[![](./profile-summary-card-output/monokai/1-repos-per-language.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
-[![](./profile-summary-card-output/monokai/2-most-commit-language.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
-[![](./profile-summary-card-output/monokai/3-stats.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
-[![](./profile-summary-card-output/monokai/4-productive-time.svg)](https://www.linkedin.com/in/chufei-wu-b33990164/)
+---
 
-## Wakatime analysis
+<details>
+<summary><strong>Extended Engineering Evidence (GitHub Analytics)</strong></summary>
 
-<figure><embed src="https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/d210fe3c-7b63-47b5-a4d4-b70bb8300fcb.svg"></embed></figure>
+<br />
 
+<div align="center">
 
-<!-- png version -->
-<!-- ![![](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/c87ff586-1aaf-406f-a5a8-af74266b864a.png)](https://www.linkedin.com/in/chufei-wu-b33990164/) -->
+[![DF's GitHub stats](https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu&layout=compact&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
 
-<!-- Example: <img src="https://github.com/avinal/avinal/blob/main/images/stat.svg" alt="Avinal WakaTime Activity"/> -->
+</div>
 
- <!-- waka-box start -->
- <!-- waka-box end -->
- 
-## Additional Information
-Thank you for visiting my profile! Feel free to reach out through the links above for collaboration opportunities. Let's create something amazing together!
+[![](./profile-summary-card-output/monokai/0-profile-details.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/1-repos-per-language.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/2-most-commit-language.svg)](https://github.com/DF-wu)
+[![](./profile-summary-card-output/monokai/3-stats.svg)](https://github.com/DF-wu)
 
+[![WakaTime](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/d210fe3c-7b63-47b5-a4d4-b70bb8300fcb.svg)](https://wakatime.com/)
 
-## Achievements
-> Summarized from the resume and page image:
-> - Published relevant technical papers at international conferences
-> - Executed large-scale cloud projects and multiple microservices architecture designs
+<!-- waka-box start -->
+<!-- waka-box end -->
 
-## Credit
-[More Info about the template author](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+</details>
+
+---
+
+## Credits
+
+- Summary cards powered by [vn7n24fzkq/github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)
