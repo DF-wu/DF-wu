@@ -281,6 +281,8 @@ body::after {
 .identity-panel,
 .signal-card,
 .experience-card,
+.lab-card,
+.lab-grid article,
 .paper-card,
 .compact-paper,
 .project-card,
@@ -528,10 +530,71 @@ body::after {
 
 .research-list,
 .experience-list,
+.lab-panel,
 .stack-board,
 .contribution-list {
   display: grid;
   gap: 14px;
+}
+
+.lab-panel {
+  align-content: start;
+}
+
+.lab-card,
+.lab-grid article {
+  padding: 24px;
+}
+
+.lab-card span,
+.lab-grid strong {
+  display: block;
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.lab-card h3 {
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 1.45rem;
+  line-height: 1.18;
+}
+
+.lab-card p,
+.lab-grid p {
+  margin-top: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.lab-grid strong {
+  color: var(--brass);
+}
+
+.lab-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.lab-links a {
+  border: 1px solid rgba(79, 215, 199, 0.34);
+  border-radius: 999px;
+  padding: 8px 10px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  background: rgba(79, 215, 199, 0.08);
 }
 
 .experience-list {
@@ -937,6 +1000,7 @@ body::after {
   }
 
   .proof-strip,
+  .lab-grid,
   .stack-board {
     grid-template-columns: 1fr;
   }

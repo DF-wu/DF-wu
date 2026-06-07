@@ -31,6 +31,26 @@ export const profile = {
     thesis: 'Contract testing for event-driven microservice systems (CCTS)',
   },
 
+  lab: {
+    name: 'SOSELab — Service-Oriented Software Engineering Laboratory',
+    url: 'https://soselab.cs.ntou.edu.tw/',
+    school: 'National Taiwan Ocean University, Department of Computer Science and Engineering',
+    description:
+      'SOSELab studies software engineering techniques and service-oriented computing applications, with research directions that include microservice testing, monitoring, retrieval/search, service-oriented architecture, and chatbot application architecture.',
+    advisor: 'Prof. Shang-Pin Ma',
+    advisorUrl: 'https://soselab.cs.ntou.edu.tw/director/',
+    thesisRecord: '碩士論文：事件驅動微服務系統之契約測試暨端到端測試研究 · 2022/7',
+    publicationRecord:
+      'SOSELab publication records list the CCTS APSEC 2022 work, the TCSE 2022 Best Chinese Paper, NCS 2021 personal-data valuation/payment work, and ICS 2020 PDAS work.',
+    researchDirections: [
+      'Microservice Testing',
+      'Microservice Monitoring',
+      'Microservice Retrieval and Search',
+      'Service-Oriented Architecture',
+      'Chatbot Application Architecture',
+    ],
+  },
+
   publications: [
     {
       title: 'Testing for Event-Driven Microservices Based on Consumer-Driven Contracts and State Models',
@@ -294,6 +314,9 @@ export const profile = {
   evidenceSources: [
     { label: 'Resume PDF', url: 'https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf' },
     { label: 'GitHub API profile snapshot', url: 'https://api.github.com/users/DF-wu' },
+    { label: 'SOSELab website', url: 'https://soselab.cs.ntou.edu.tw/' },
+    { label: 'SOSELab postgraduates', url: 'https://soselab.cs.ntou.edu.tw/postgraduates/' },
+    { label: 'SOSELab publications', url: 'https://soselab.cs.ntou.edu.tw/publications/' },
     { label: 'CCTS repository', url: 'https://github.com/DF-wu/CCTS' },
     { label: 'IEEE APSEC 2022 paper', url: 'https://ieeexplore.ieee.org/document/10043304/' },
     { label: 'IEEE ICS 2020 paper', url: 'https://ieeexplore.ieee.org/document/9359082/' },

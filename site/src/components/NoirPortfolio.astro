@@ -119,6 +119,40 @@ const operatingSignals = [
       ))}
     </section>
 
+    <section class="section-band split-section" aria-labelledby="lab-title">
+      <div class="section-heading sticky-heading">
+        <p class="eyebrow">Research environment</p>
+        <h2 id="lab-title">SOSELab is the context behind the CCTS and PDAS line.</h2>
+        <p>
+          The lab connection matters because it explains why my backend work keeps returning to service-oriented architecture, event flow, testing, and reliability.
+        </p>
+      </div>
+      <div class="lab-panel">
+        <article class="lab-card">
+          <span>{profile.lab.school}</span>
+          <h3>{profile.lab.name}</h3>
+          <p>{profile.lab.description}</p>
+          <div class="lab-links">
+            <a href={profile.lab.url} target="_blank" rel="noopener">Lab site</a>
+            <a href={profile.lab.advisorUrl} target="_blank" rel="noopener">{profile.lab.advisor}</a>
+          </div>
+        </article>
+        <div class="lab-grid">
+          <article>
+            <strong>Thesis record</strong>
+            <p>{profile.lab.thesisRecord}</p>
+          </article>
+          <article>
+            <strong>Publication trail</strong>
+            <p>{profile.lab.publicationRecord}</p>
+          </article>
+        </div>
+        <div class="tag-cloud large-tags">
+          {profile.lab.researchDirections.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+    </section>
+
     <section class="section-band split-section" aria-labelledby="experience-title">
       <div class="section-heading sticky-heading">
         <p class="eyebrow">Experience map</p>
