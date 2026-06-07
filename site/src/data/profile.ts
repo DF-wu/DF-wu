@@ -315,12 +315,11 @@ export const profile = {
     { label: 'Resume PDF', url: 'https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf' },
     { label: 'GitHub API profile snapshot', url: 'https://api.github.com/users/DF-wu' },
     { label: 'SOSELab website', url: 'https://soselab.cs.ntou.edu.tw/' },
-    { label: 'SOSELab postgraduates', url: 'https://soselab.cs.ntou.edu.tw/postgraduates/' },
+    { label: 'SOSELab lab members', url: 'https://soselab.cs.ntou.edu.tw/lab-members/' },
     { label: 'SOSELab publications', url: 'https://soselab.cs.ntou.edu.tw/publications/' },
     { label: 'CCTS repository', url: 'https://github.com/DF-wu/CCTS' },
     { label: 'IEEE APSEC 2022 paper', url: 'https://ieeexplore.ieee.org/document/10043304/' },
     { label: 'IEEE ICS 2020 paper', url: 'https://ieeexplore.ieee.org/document/9359082/' },
-    { label: 'TCSE 2022 award recap', url: 'https://tcse2022.github.io/recap/recap' },
   ],
 } as const;
 

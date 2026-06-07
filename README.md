@@ -66,7 +66,7 @@ flowchart LR
 
 I did my graduate research in [SOSELab](https://soselab.cs.ntou.edu.tw/) at NTOU CSE, advised by [Prof. Shang-Pin Ma](https://soselab.cs.ntou.edu.tw/director/). The lab's public research directions include microservice testing, microservice monitoring, microservice retrieval/search, service-oriented architecture, and chatbot application architecture.
 
-SOSELab's [postgraduates page](https://soselab.cs.ntou.edu.tw/postgraduates/) lists my thesis record:
+SOSELab's [postgraduates page](https://soselab.cs.ntou.edu.tw/lab-members/) lists my thesis record:
 **事件驅動微服務系統之契約測試暨端到端測試研究** (2022/7).
 
 SOSELab's [publications page](https://soselab.cs.ntou.edu.tw/publications/) also gives the cleanest public trail for my research line: APSEC 2022 CCTS, TCSE 2022 Best Chinese Paper, NCS 2021 personal-data valuation/payment, and ICS 2020 PDAS.
@@ -193,12 +193,11 @@ At ITRI / PDAS-team, I worked on personal-data authorization and valuation/payme
 - [Resume PDF](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf)
 - [Live profile page](https://df.is-a.dev)
 - [SOSELab website](https://soselab.cs.ntou.edu.tw/)
-- [SOSELab postgraduates](https://soselab.cs.ntou.edu.tw/postgraduates/)
+- [SOSELab postgraduates](https://soselab.cs.ntou.edu.tw/lab-members/)
 - [SOSELab publications](https://soselab.cs.ntou.edu.tw/publications/)
 - [CCTS repository](https://github.com/DF-wu/CCTS)
 - [IEEE APSEC 2022 paper](https://ieeexplore.ieee.org/document/10043304/)
 - [IEEE ICS 2020 paper](https://ieeexplore.ieee.org/document/9359082/)
-- [TCSE 2022 award recap](https://tcse2022.github.io/recap/recap)
 
 ## Contact
 
