@@ -280,6 +280,7 @@ body::after {
 
 .identity-panel,
 .signal-card,
+.experience-card,
 .paper-card,
 .compact-paper,
 .project-card,
@@ -526,10 +527,51 @@ body::after {
 }
 
 .research-list,
+.experience-list,
 .stack-board,
 .contribution-list {
   display: grid;
   gap: 14px;
+}
+
+.experience-list {
+  grid-template-columns: 1fr;
+}
+
+.experience-card {
+  padding: 24px;
+}
+
+.experience-card span,
+.experience-card strong {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.experience-card span {
+  color: var(--cyan);
+}
+
+.experience-card strong {
+  margin-top: 10px;
+  color: var(--brass);
+}
+
+.experience-card h3 {
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  line-height: 1.18;
+}
+
+.experience-card p {
+  max-width: 78ch;
+  margin-top: 14px;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .paper-card {
@@ -542,6 +584,7 @@ body::after {
 }
 
 .paper-card:hover,
+.experience-card:hover,
 .project-card:hover,
 .contribution-row:hover,
 .role-card:hover {
@@ -779,6 +822,30 @@ body::after {
 .contact-panel p {
   max-width: 58ch;
   margin-top: 18px;
+}
+
+.source-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.source-list a {
+  border: 1px solid rgba(244, 239, 228, 0.14);
+  border-radius: 999px;
+  padding: 8px 10px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  background: rgba(5, 6, 8, 0.44);
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.source-list a:hover {
+  border-color: rgba(79, 215, 199, 0.46);
+  color: var(--text);
 }
 
 .footer {

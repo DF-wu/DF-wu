@@ -4,13 +4,14 @@ export const profile = {
   nameZh: '吳朱飛',
   title: 'Backend & Platform Engineer',
   location: 'Taipei, Taiwan',
-  tagline: 'Building backend systems that stay stable, maintainable, and deployable as complexity grows.',
+  tagline: 'Backend and platform engineer connecting event-driven research, production delivery, and home-lab operations.',
   motto: "It's not a bug, it's a feature.",
 
   about: [
-    'I focus on what happens after you ship. Will the person who inherits this codebase understand what I was thinking? Will the ops team trust it at 3am? That mindset shapes everything I build.',
-    'My research and work have converged on one theme: making distributed systems predictable. At NTOU I designed a testing framework for event-driven microservices. In industry I build platform infrastructure that reduces delivery friction. The goal is the same either way — remove surprise from production.',
-    "I'm active in Taiwan's civic tech community through g0v.social, and I run a home-lab where every service is my own code. If something breaks at 3am, I'm the one who knows why.",
+    'I am a software engineer and service developer with an M.S. and B.S. in Computer Science and Engineering from National Taiwan Ocean University. My strongest through-line is reliability: service design, event flow validation, deployment, and operations.',
+    'At SOSELAB, my thesis work became CCTS, a Composite Contract Testing Service for event-driven microservices. It combines Pact contracts, runtime event logs, and state-model validation so testers can detect missing transitions and execution failures instead of trusting happy-path demos.',
+    'At ITRI, I worked on the Personal Data Authorization System and a personal-data valuation/payment platform. The work touched logging, payment, blockchain, third-party fintech, CI/CD, infrastructure, and delivery on Azure Kubernetes Service.',
+    'Outside formal roles, I run a home-lab with 30+ services across storage, DNS, monitoring, media, albums, and home automation. That environment keeps my platform work honest because I live with the operational consequences.',
   ],
 
   philosophy: [
@@ -21,9 +22,9 @@ export const profile = {
   ],
 
   education: {
-    degree: 'M.S. in Computer Science',
+    degree: 'M.S. / B.S. in Computer Science and Engineering',
     school: 'National Taiwan Ocean University (NTOU)',
-    graduated: '2022',
+    graduated: '2016 - 2022',
     focus: 'Event-driven microservices architecture and testing methodology',
     advisor: 'Prof. Shang-Pin Ma',
     lab: 'SOSELAB — Service-Oriented Software Engineering Laboratory',
@@ -96,8 +97,9 @@ export const profile = {
   ],
 
   researchHighlights: [
-    'Designed CCTS — a tool combining Pact consumer-driven contract testing with SAGA-style state-machine assertions for event-driven architectures',
-    'Core member of the PDAS-team building a digital-signature-based authorization platform for personal data, published at IEEE ICS 2020 and adopted in follow-up pricing/payment research',
+    'Designed and implemented CCTS — an 8k+ LOC Spring Boot service combining Pact consumer-driven contracts, RabbitMQ event logs, MongoDB persistence, and state-model assertions for event-driven microservices',
+    'Validated CCTS against execution-failure and common-error scenarios; the work became an IEEE APSEC 2022 paper and received the 2022 TCSE Best Chinese Paper Award',
+    'Core contributor on PDAS and the personal-data valuation/payment platform — a 40k+ LOC AKS-delivered system touching logging, payment, blockchain, third-party fintech, CI/CD, and infrastructure',
     'Received the 2022 Best Chinese Paper Award at the Taiwan Conference on Software Engineering for the CCTS research',
     'Two IEEE international publications (APSEC 2022, ICS 2020) plus three domestic-conference papers across event-driven microservice testing and personal data authorization systems',
   ],
@@ -114,22 +116,27 @@ export const profile = {
   },
 
   stats: {
-    publicRepos: 123,
-    ownedRepos: '46 + 16',
+    snapshotDate: '2026-06-07',
+    publicRepos: 127,
+    nonForkRepos: 64,
     yearlyContributions: 605,
     yearlyCommits: 567,
-    mergedPRs: 22,
-    externalPRs: 13,
+    mergedPRs: 23,
+    externalPRs: 12,
     ieeepapers: 2,
     publications: 5,
     ossProjects: 5,
+    homeLabServices: '30+',
+    cctsLoc: '8k+',
+    pdasLoc: '40k+',
+    availability: '99%',
   },
 
   skills: {
-    languages: ['Java', 'Python', 'Go', 'TypeScript', 'JavaScript'],
-    frameworks: ['Spring Boot', 'Gin'],
-    infrastructure: ['Docker', 'Linux', 'Nginx', 'Jenkins'],
-    data: ['MySQL', 'MongoDB', 'SQLite', 'MariaDB', 'RabbitMQ'],
+    languages: ['Java', 'Go', 'Python', 'Shell', 'TypeScript', 'JavaScript', 'C', 'Solidity'],
+    frameworks: ['Spring Boot', 'Gin', 'Django', 'Node.js', 'Express', 'Angular', 'Vue'],
+    infrastructure: ['Docker', 'Linux', 'Nginx', 'Jenkins', 'Kubernetes', 'AKS', 'ESXi', 'Unraid', 'TrueNAS'],
+    data: ['MongoDB', 'MariaDB', 'MySQL', 'Redis', 'PostgreSQL', 'SQLite', 'RabbitMQ', 'Kafka'],
     practices: [
       'Microservices architecture',
       'Event-driven design',
@@ -145,36 +152,40 @@ export const profile = {
       url: 'https://github.com/DF-wu/CCTS',
       stack: 'Java · Spring Boot · RabbitMQ · MongoDB',
       description:
-        'Composite Contract Testing Service — the research system behind my APSEC 2022 paper. Combines Pact consumer-driven contracts, event-log sequence validation, and SAGA-style state assertions into one verification framework.',
-      highlight: 'Research paper published',
+        'Composite Contract Testing Service — my NTOU thesis system and APSEC 2022 paper implementation. It combines Pact contracts, event-log sequence validation, and state-model checks to catch missing transitions and execution failures in event-driven microservices.',
+      highlight: 'APSEC 2022 · TCSE Best Chinese Paper · 8k+ LOC',
     },
     {
       name: 'HideReplier',
       url: 'https://github.com/DF-wu/HideReplier',
-      stack: 'Java',
+      stack: 'Java · Spring Boot · Docker · Fly.io',
       description:
-        'Full lifecycle delivery — backend logic, workflow design, deployment. My most complete end-to-end ship. Demonstrates what ownership looks like when there is no one else to hand things off to.',
+        'Anonymous Discord reply bot built for the NTOU CS Discord context. It grew from a course project into a containerized service with CI/CD, Docker Hub image flow, and Fly.io deployment.',
+      highlight: 'Full lifecycle side project · 10 stars',
     },
     {
       name: 'myServices',
       url: 'https://github.com/DF-wu/myServices',
-      stack: 'Python · Docker',
+      stack: 'Docker · Linux · NAS · MariaDB · SDN',
       description:
-        "Docker-based home-lab infrastructure. Real services I depend on daily — not a portfolio piece. When I say 'deployment-oriented,' I mean I live with the consequences.",
+        'Home-lab service configuration and operations notes. The broader environment runs 30+ services across storage, DNS, monitoring, media, albums, and home automation with VM/container integration.',
+      highlight: '30+ services · real operating environment',
     },
     {
       name: 'iDRACFanSpeedControl',
       url: 'https://github.com/DF-wu/iDRACFanSpeedControl',
-      stack: 'Shell',
+      stack: 'Shell · Docker · IPMI · ESXi · NVIDIA',
       description:
-        "Server thermal automation. Wrote it once, forgot about it. My server room is quiet. That's what good automation looks like.",
+        'Dell PowerEdge fan control through iDRAC/IPMI with Docker deployment, NVMe/GPU temperature inputs, configurable thresholds, and a recent README/code audit around fail-safe behavior.',
+      highlight: 'Dell R730XD tested · 10 stars',
     },
     {
       name: 'BehaviorMonitor',
       url: 'https://github.com/DF-wu/BehaviorMonitor',
-      stack: 'TypeScript',
+      stack: 'React 19 · TypeScript · Firebase · GitHub Pages',
       description:
-        'AI-assisted prototyping. Using AI as a practical engineering tool, not a buzzword. Fast iteration with production-quality thinking underneath.',
+        'A behavior tracking and management system with real-time score display, admin panel, charts, logs, lazy updates, Firebase backend, and GitHub Pages deployment.',
+      highlight: 'Full-stack AI-assisted prototype',
     },
   ],
 
@@ -229,14 +240,28 @@ export const profile = {
       org: 'SOSELAB, NTOU CSE',
       period: '2020 – 2022',
       summary:
-        'Designed and implemented CCTS — a contract-testing framework for event-driven microservice systems. Published at IEEE APSEC 2022 and received the 2022 Best Chinese Paper Award at TCSE.',
+        'Designed and implemented CCTS — a contract-testing framework for event-driven microservice systems. Published at IEEE APSEC 2022, received the 2022 TCSE Best Chinese Paper Award, and maintained related PoC services for orchestrator/payment/points/logging flows.',
     },
     {
-      role: 'Core Contributor',
-      org: 'PDAS-team (NTOU × ITRI collaboration)',
-      period: '2020 – 2021',
+      role: 'Software Engineer Intern',
+      org: 'Industrial Technology Research Institute (ITRI) · PDAS-team',
+      period: 'Jul 2021 – Dec 2021',
       summary:
-        'Worked on the Personal Data Authorization System — digital-signature-based, blockchain-anchored authorization contracts for personal data. Joint research with Industrial Technology Research Institute (ITRI). Published at IEEE ICS 2020 and two domestic conferences.',
+        'Researched, designed, implemented, and delivered personal-data authorization and valuation/payment systems. Worked across decentralized architecture, microservices, event-driven design, CI/CD, security, blockchain, third-party finance, AKS deployment, and delivery documentation.',
+    },
+    {
+      role: 'MIS / Internal Systems Maintainer',
+      org: 'Ming-Chyuan Ltd.',
+      period: 'Jul 2012 – Present',
+      summary:
+        'Maintains and modernizes digital systems for CNC manufacturing workflows, moving legacy products toward more reliable internal architecture while targeting high availability.',
+    },
+    {
+      role: 'Teaching Assistant',
+      org: 'National Taiwan Ocean University',
+      period: 'After graduation',
+      summary:
+        'Helped migrate legacy course content into a newer content-management workflow and supported professors with lesson design and assigned customization.',
     },
     {
       role: 'Open-source Collaborator',
@@ -248,9 +273,9 @@ export const profile = {
   ],
 
   roles: [
-    { title: 'Backend Engineer', evidence: 'HideReplier, CCTS', why: 'Service delivery with maintainability and reliability focus' },
-    { title: 'Platform Engineer', evidence: 'myServices, iDRACFanSpeedControl', why: 'Deployment-aware engineering and operational mindset' },
-    { title: 'Systems-Oriented SWE', evidence: 'OSS contributions, PDAS-team', why: 'Practical architecture under real constraints' },
+    { title: 'Backend Engineer', evidence: 'CCTS, PDAS, HideReplier', why: 'Service delivery with microservice, event-driven, API, messaging, and persistence experience' },
+    { title: 'Platform Engineer', evidence: 'HomeLab, AKS delivery, iDRACFanSpeedControl', why: 'Deployment-aware engineering across containers, Linux, storage, network, and operational automation' },
+    { title: 'Systems-Oriented SWE', evidence: 'SOSELAB, ITRI, OSS contributions', why: 'Practical architecture decisions under research, customer-delivery, and public collaboration constraints' },
   ],
 
   rampUp: [
@@ -264,6 +289,15 @@ export const profile = {
     'Home-lab infrastructure and self-hosting',
     'Civic tech (g0v community)',
     'Archery — former university club leader',
+  ],
+
+  evidenceSources: [
+    { label: 'Resume PDF', url: 'https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf' },
+    { label: 'GitHub API profile snapshot', url: 'https://api.github.com/users/DF-wu' },
+    { label: 'CCTS repository', url: 'https://github.com/DF-wu/CCTS' },
+    { label: 'IEEE APSEC 2022 paper', url: 'https://ieeexplore.ieee.org/document/10043304/' },
+    { label: 'IEEE ICS 2020 paper', url: 'https://ieeexplore.ieee.org/document/9359082/' },
+    { label: 'TCSE 2022 award recap', url: 'https://tcse2022.github.io/recap/recap' },
   ],
 } as const;
 

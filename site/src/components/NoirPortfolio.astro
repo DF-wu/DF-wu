@@ -2,10 +2,10 @@
 import { profile } from '../data/profile';
 
 const proofStats = [
-  { value: profile.stats.publicRepos, label: 'public repos' },
-  { value: profile.stats.yearlyContributions, label: 'contributions / year' },
-  { value: profile.stats.ieeepapers, label: 'IEEE papers' },
-  { value: profile.stats.mergedPRs, label: 'merged PRs' },
+  { value: profile.stats.cctsLoc, label: 'CCTS research system LOC' },
+  { value: profile.stats.pdasLoc, label: 'PDAS / payment platform LOC' },
+  { value: profile.stats.homeLabServices, label: 'home-lab services operated' },
+  { value: profile.stats.publicRepos, label: 'public GitHub repositories' },
 ];
 
 const stackGroups = [
@@ -18,19 +18,19 @@ const stackGroups = [
 
 const operatingSignals = [
   {
-    title: 'Research-grade backend design',
-    body: 'CCTS turns event-driven behavior into contract checks and state-model validation, tying thesis work to production-minded reliability.',
-    proof: 'APSEC 2022 · TCSE Best Chinese Paper',
+    title: 'CCTS: thesis into verification tooling',
+    body: 'An 8k+ LOC Spring Boot service that joins Pact contracts, event logs, MongoDB, RabbitMQ, and state-model checks for event-driven microservice testing.',
+    proof: 'APSEC 2022 · TCSE Best Chinese Paper · NTOU thesis',
   },
   {
-    title: 'Deployment-aware ownership',
-    body: 'Home-lab services, Docker composition, server automation, and day-two operations shape how I design backend systems.',
-    proof: 'myServices · iDRACFanSpeedControl',
+    title: 'PDAS: research with customer delivery pressure',
+    body: 'Worked across logging, payment, blockchain, fintech integration, CI/CD, infrastructure, and AKS delivery for personal-data authorization and valuation/payment systems.',
+    proof: 'ITRI intern · PDAS-team · ICS 2020',
   },
   {
-    title: 'Open-source collaboration',
-    body: 'I tend to contribute where correctness, integrations, localization, and maintainability unblock real users.',
-    proof: '13 external merged PRs',
+    title: 'Operations as a real feedback loop',
+    body: 'Runs 30+ home-lab services and maintains internal CNC manufacturing systems, so platform decisions are tested by actual uptime, storage, network, and maintenance constraints.',
+    proof: 'HomeLab · Ming-Chyuan MIS · iDRAC automation',
   },
 ];
 ---
@@ -60,7 +60,7 @@ const operatingSignals = [
           <h1 id="hero-title">{profile.fullName}</h1>
           <p class="hero-lede">{profile.tagline}</p>
           <p class="hero-note">
-            I build systems with readable architecture, measurable reliability, and enough operational discipline to survive the handoff.
+            I am strongest where software architecture has to meet deployment, messaging, data, and real operational consequences.
           </p>
           <div class="hero-actions" aria-label="Primary links">
             <a class="button button-primary" href={profile.links.linkedin} target="_blank" rel="noopener">Connect</a>
@@ -75,8 +75,8 @@ const operatingSignals = [
           </div>
           <div class="identity-copy">
             <p class="panel-label">Current signal</p>
-            <h2>Backend systems, platform habits, research evidence.</h2>
-            <p>{profile.motto}</p>
+            <h2>Research evidence, shipped systems, operational memory.</h2>
+            <p>GitHub API snapshot: {profile.stats.snapshotDate}</p>
           </div>
           <div class="runtime-grid" aria-label="Engineering focus">
             <span>contracts</span>
@@ -102,7 +102,7 @@ const operatingSignals = [
     <section class="section-band intro-grid" id="evidence" aria-labelledby="evidence-title">
       <div class="section-heading">
         <p class="eyebrow">Engineering dossier</p>
-        <h2 id="evidence-title">Reliability is the through-line.</h2>
+        <h2 id="evidence-title">The story is not just stability. It is proof under pressure.</h2>
       </div>
       <div class="intro-copy">
         {profile.about.map((text) => <p>{text}</p>)}
@@ -119,12 +119,32 @@ const operatingSignals = [
       ))}
     </section>
 
+    <section class="section-band split-section" aria-labelledby="experience-title">
+      <div class="section-heading sticky-heading">
+        <p class="eyebrow">Experience map</p>
+        <h2 id="experience-title">Research, internship delivery, internal systems, and public collaboration.</h2>
+        <p>
+          These are the contexts behind the portfolio claims, not decorative labels.
+        </p>
+      </div>
+      <div class="experience-list">
+        {profile.experience.map((item) => (
+          <article class="experience-card">
+            <span>{item.period}</span>
+            <h3>{item.role}</h3>
+            <strong>{item.org}</strong>
+            <p>{item.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
     <section class="section-band split-section" aria-labelledby="research-title">
       <div class="section-heading sticky-heading">
         <p class="eyebrow">Published research</p>
-        <h2 id="research-title">Event-driven systems, authorization, and testability.</h2>
+        <h2 id="research-title">Event-driven systems, authorization, payment, and testability.</h2>
         <p>
-          Two IEEE publications and three domestic conference papers connect my backend work to formal software engineering research.
+          Two IEEE publications and three domestic conference papers connect backend engineering to formal software engineering research.
         </p>
       </div>
       <div class="research-list">
@@ -157,7 +177,7 @@ const operatingSignals = [
     <section class="section-band" id="work" aria-labelledby="work-title">
       <div class="section-heading wide-heading">
         <p class="eyebrow">Selected work</p>
-        <h2 id="work-title">Projects that show ownership under real constraints.</h2>
+        <h2 id="work-title">Projects that show different kinds of ownership.</h2>
       </div>
       <div class="project-grid">
         {profile.projects.map((project) => (
@@ -174,9 +194,9 @@ const operatingSignals = [
     <section class="section-band split-section" id="stack" aria-labelledby="stack-title">
       <div class="section-heading sticky-heading">
         <p class="eyebrow">Technical surface</p>
-        <h2 id="stack-title">Backend depth with platform instincts.</h2>
+        <h2 id="stack-title">Backend depth with platform, SQA, and operations range.</h2>
         <p>
-          I am strongest where code quality, runtime behavior, deployment pressure, and team handoff all meet.
+          The stack is broad because the work has ranged from microservice research and AKS delivery to CNC internal systems and home-lab operations.
         </p>
       </div>
       <div class="stack-board">
@@ -194,7 +214,7 @@ const operatingSignals = [
     <section class="section-band split-section" aria-labelledby="oss-title">
       <div class="section-heading sticky-heading">
         <p class="eyebrow">Collaboration trail</p>
-        <h2 id="oss-title">Small PRs, clear intent, durable value.</h2>
+        <h2 id="oss-title">Contributions show a pattern: integrate, correct, localize, document.</h2>
       </div>
       <div class="contribution-list">
         {profile.contributions.map((item) => (
@@ -210,7 +230,7 @@ const operatingSignals = [
     <section class="section-band role-lab" aria-labelledby="roles-title">
       <div class="section-heading wide-heading">
         <p class="eyebrow">Hiring fit</p>
-        <h2 id="roles-title">Where I can create leverage quickly.</h2>
+        <h2 id="roles-title">Where this background creates leverage quickly.</h2>
       </div>
       <div class="role-grid">
         {profile.roles.map((role) => (
@@ -243,13 +263,18 @@ const operatingSignals = [
 
     <section class="contact-panel" id="contact" aria-labelledby="contact-title">
       <p class="eyebrow">Contact</p>
-      <h2 id="contact-title">Looking for backend execution with production memory?</h2>
-      <p>Teams building reliable services, platform infrastructure, or research-backed systems are the best fit.</p>
+      <h2 id="contact-title">Looking for backend execution with research discipline and operational memory?</h2>
+      <p>Teams building reliable services, platform infrastructure, event-driven systems, or data authorization/payment workflows are the best fit.</p>
       <div class="contact-links">
         <a class="button button-primary" href={profile.links.email}>{profile.links.emailAddress}</a>
         <a class="button" href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
         <a class="button" href={profile.links.paper} target="_blank" rel="noopener">IEEE Paper</a>
         <a class="button" href={profile.links.mastodon} target="_blank" rel="noopener">Mastodon</a>
+      </div>
+      <div class="source-list" aria-label="Evidence sources">
+        {profile.evidenceSources.map((source) => (
+          <a href={source.url} target="_blank" rel="noopener">{source.label}</a>
+        ))}
       </div>
     </section>
   </main>
