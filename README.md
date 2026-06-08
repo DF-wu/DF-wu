@@ -1,8 +1,4 @@
 <div align="center">
-  <a href="https://df.is-a.dev">
-    <img src="https://github.com/DF-wu.png?size=180" width="132" height="132" alt="ChuFei Wu avatar" />
-  </a>
-
   <h1>吳朱飛 · ChuFei Wu · DF Wu</h1>
 
   <p>
@@ -11,7 +7,7 @@
   </p>
 
   <p>
-    <a href="https://df.is-a.dev"><img alt="Live profile" src="https://img.shields.io/badge/Live_Profile-df.is--a.dev-d6a84f?style=for-the-badge&logo=vercel&logoColor=111111" /></a>
+    <a href="https://df.is-a.dev"><img alt="Live profile" src="https://img.shields.io/badge/Live_Profile-df.is--a.dev-d6a84f?style=for-the-badge&logo=githubpages&logoColor=111111" /></a>
     <a href="https://github.com/DF-wu"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-DF--wu-111111?style=for-the-badge&logo=github" /></a>
     <a href="https://www.linkedin.com/in/chufei-wu-b33990164/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-ChuFei_Wu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
     <a href="https://g0v.social/@df"><img alt="Mastodon" src="https://img.shields.io/badge/Mastodon-@df@g0v.social-6364FF?style=for-the-badge&logo=mastodon&logoColor=white" /></a>
