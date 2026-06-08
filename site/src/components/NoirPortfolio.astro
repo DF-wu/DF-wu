@@ -1,205 +1,320 @@
 ---
 import { profile } from '../data/profile';
+
+const proofStats = [
+  { value: profile.stats.cctsLoc, label: 'CCTS research system LOC' },
+  { value: profile.stats.pdasLoc, label: 'PDAS / payment platform LOC' },
+  { value: profile.stats.homeLabServices, label: 'home-lab services operated' },
+  { value: profile.stats.publicRepos, label: 'public GitHub repositories' },
+];
+
+const stackGroups = [
+  { label: 'Languages', items: profile.skills.languages },
+  { label: 'Runtime & Web', items: profile.skills.frameworks },
+  { label: 'Infrastructure', items: profile.skills.infrastructure },
+  { label: 'Data & Messaging', items: profile.skills.data },
+  { label: 'Engineering Practices', items: profile.skills.practices },
+];
+
+const operatingSignals = [
+  {
+    title: 'CCTS: thesis into verification tooling',
+    body: 'An 8k+ LOC Spring Boot service that joins Pact contracts, event logs, MongoDB, RabbitMQ, and state-model checks for event-driven microservice testing.',
+    proof: 'APSEC 2022 · TCSE Best Chinese Paper · NTOU thesis',
+  },
+  {
+    title: 'PDAS: research with customer delivery pressure',
+    body: 'Worked across logging, payment, blockchain, fintech integration, CI/CD, infrastructure, and AKS delivery for personal-data authorization and valuation/payment systems.',
+    proof: 'ITRI intern · PDAS-team · ICS 2020',
+  },
+  {
+    title: 'Operations as a real feedback loop',
+    body: 'Runs 30+ home-lab services and maintains internal CNC manufacturing systems, so platform decisions are tested by actual uptime, storage, network, and maintenance constraints.',
+    proof: 'HomeLab · Ming-Chyuan MIS · iDRAC automation',
+  },
+];
 ---
 
-<div class="wrap">
-  <nav class="nav">
-    <span class="nav-name">DF Wu</span>
+<div class="site-shell">
+  <nav class="nav" aria-label="Primary">
+    <a class="nav-brand" href="#top" aria-label="DF Wu home">
+      <span class="brand-mark">DF</span>
+      <span>
+        <strong>{profile.fullName}</strong>
+        <small>{profile.location}</small>
+      </span>
+    </a>
     <div class="nav-links">
-      <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
-      <a href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
-      <a href={profile.links.paper} target="_blank" rel="noopener">Paper</a>
-      <a href={profile.links.mastodon} target="_blank" rel="noopener">Mastodon</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <section class="hero">
-    <p class="hero-role">{profile.title} &middot; {profile.location}</p>
-    <h1>{profile.name}</h1>
-    <p class="hero-sub">{profile.tagline}</p>
-    <p class="hero-sub" style="font-style:italic;margin-top:0.5rem">"{profile.motto}"</p>
-  </section>
-
-  <section class="section">
-    <p class="section-label">About</p>
-    {profile.about.map((text) => <p>{text}</p>)}
-  </section>
-
-  <section class="section">
-    <p class="section-label">Education</p>
-    <div class="role">
-      <h3>{profile.education.degree}</h3>
-      <p>{profile.education.school} &middot; Graduated {profile.education.graduated}</p>
-      <div class="role-evidence">{profile.education.lab} &middot; Advisor: {profile.education.advisor}</div>
-      <p style="margin-top:0.5rem">Thesis focus: {profile.education.focus}</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="section-label">Publications · IEEE</p>
-    <div style="display:grid;gap:1rem">
-      {profile.publications.map((p) => (
-        <a class="project" href={p.url} target="_blank" rel="noopener" style="display:block">
-          <span class="project-stack">{p.publisher} &middot; {p.venue} &middot; {p.year}{p.location ? ` · ${p.location}` : ''}</span>
-          <h3>{p.title}</h3>
-          <p style="margin-bottom:0.5rem;font-size:0.9rem">{p.authors.join(', ')}</p>
-          <p style="font-size:0.85rem;margin-bottom:0.4rem">{p.abstract}</p>
-          <p style="font-size:0.78rem;color:var(--accent)">{p.role}</p>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="section-label">Conference Papers · Domestic</p>
-    <div class="contribs">
-      {profile.domesticPublications.map((p) => (
-        <div class="contrib" style="grid-template-columns:auto 1fr;gap:1rem;align-items:start">
-          <span class="contrib-type">{p.year}</span>
-          <div>
-            <strong style="display:block;font-size:0.95rem;margin-bottom:0.2rem">{p.title}</strong>
-            <span style="display:block;color:var(--muted);font-size:0.8rem;margin-bottom:0.2rem">{p.titleEn}</span>
-            <span class="contrib-repo">{p.authors.join('、')} &middot; {p.venue} &middot; {p.location}</span>
-            {p.award && <span style="display:inline-block;margin-top:0.35rem;font-size:0.72rem;color:var(--accent);font-weight:700">🏆 {p.award}</span>}
+  <main id="top">
+    <section class="hero section-band" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">{profile.title} / {profile.location}</p>
+          <h1 id="hero-title">{profile.fullName}</h1>
+          <p class="hero-lede">{profile.tagline}</p>
+          <p class="hero-note">
+            I am strongest where software architecture has to meet deployment, messaging, data, and real operational consequences.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button button-primary" href={profile.links.linkedin} target="_blank" rel="noopener">Connect</a>
+            <a class="button" href={profile.links.resume} target="_blank" rel="noopener">Resume</a>
+            <a class="button" href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
-      ))}
-    </div>
-  </section>
 
-  <section class="section">
-    <p class="section-label">Awards</p>
-    {profile.awards.map((a) => (
-      <div class="role" style="border-left-color:var(--accent)">
-        <h3>🏆 {a.title}</h3>
-        <p>{a.context}</p>
-        <div class="role-evidence">{a.year}</div>
+        <aside class="identity-panel" aria-label="Profile summary">
+          <div class="avatar-frame">
+            <img src="https://github.com/DF-wu.png?size=320" alt="Portrait avatar of ChuFei Wu" width="320" height="320" loading="eager" />
+          </div>
+          <div class="identity-copy">
+            <p class="panel-label">Current signal</p>
+            <h2>Research evidence, shipped systems, operational memory.</h2>
+            <p>GitHub API snapshot: {profile.stats.snapshotDate}</p>
+          </div>
+          <div class="runtime-grid" aria-label="Engineering focus">
+            <span>contracts</span>
+            <strong>verified</strong>
+            <span>deploys</span>
+            <strong>observable</strong>
+            <span>handoff</span>
+            <strong>readable</strong>
+          </div>
+        </aside>
       </div>
-    ))}
-  </section>
 
-  <section class="section">
-    <p class="section-label">Research Highlights</p>
-    <ul style="padding-left:1.2rem;color:var(--muted)">
-      {profile.researchHighlights.map((h) => <li style="margin-bottom:0.5rem">{h}</li>)}
-    </ul>
-  </section>
+      <div class="proof-strip" aria-label="Profile metrics">
+        {proofStats.map((stat) => (
+          <div class="proof-item">
+            <strong>{stat.value}</strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
 
-  <section class="section">
-    <p class="section-label">Signal</p>
-    <div class="stats">
-      <div class="stat"><div class="stat-value">{profile.stats.publicRepos}</div><div class="stat-label">Public Repos</div></div>
-      <div class="stat"><div class="stat-value">{profile.stats.ownedRepos}</div><div class="stat-label">Owned</div></div>
-      <div class="stat"><div class="stat-value">{profile.stats.yearlyContributions}</div><div class="stat-label">Contributions/yr</div></div>
-      <div class="stat"><div class="stat-value">{profile.stats.yearlyCommits}</div><div class="stat-label">Commits/yr</div></div>
-      <div class="stat"><div class="stat-value">{profile.stats.mergedPRs}</div><div class="stat-label">Merged PRs</div></div>
-      <div class="stat"><div class="stat-value">{profile.stats.ieeepapers}</div><div class="stat-label">IEEE Papers</div></div>
-    </div>
-  </section>
+    <section class="section-band intro-grid" id="evidence" aria-labelledby="evidence-title">
+      <div class="section-heading">
+        <p class="eyebrow">Engineering dossier</p>
+        <h2 id="evidence-title">The story is not just stability. It is proof under pressure.</h2>
+      </div>
+      <div class="intro-copy">
+        {profile.about.map((text) => <p>{text}</p>)}
+      </div>
+    </section>
 
-  <section class="section">
-    <p class="section-label">Stack</p>
-    <h2>Languages</h2>
-    <div class="skills-grid" style="margin-bottom:1rem">
-      {profile.skills.languages.map((s) => <span class="skill-tag">{s}</span>)}
-    </div>
-    <h2>Frameworks &amp; Infrastructure</h2>
-    <div class="skills-grid" style="margin-bottom:1rem">
-      {[...profile.skills.frameworks, ...profile.skills.infrastructure].map((s) => <span class="skill-tag">{s}</span>)}
-    </div>
-    <h2>Data</h2>
-    <div class="skills-grid" style="margin-bottom:1rem">
-      {profile.skills.data.map((s) => <span class="skill-tag">{s}</span>)}
-    </div>
-    <h2>Practices</h2>
-    <div class="skills-grid">
-      {profile.skills.practices.map((s) => <span class="skill-tag">{s}</span>)}
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="section-label">Selected Work</p>
-    <div class="projects">
-      {profile.projects.map((p) => (
-        <a class="project" href={p.url} target="_blank" rel="noopener">
-          <span class="project-stack">{p.stack}</span>
-          <h3>{p.name}</h3>
-          <p>{p.description}</p>
-        </a>
+    <section class="section-band signal-grid" aria-label="Operating evidence">
+      {operatingSignals.map((signal) => (
+        <article class="signal-card">
+          <span class="signal-index">{signal.proof}</span>
+          <h3>{signal.title}</h3>
+          <p>{signal.body}</p>
+        </article>
       ))}
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <p class="section-label">Experience</p>
-    <div class="roles">
-      {profile.experience.map((e) => (
-        <div class="role">
-          <h3>{e.role} &middot; {e.org}</h3>
-          <p>{e.summary}</p>
-          <div class="role-evidence">{e.period}</div>
+    <section class="section-band split-section" aria-labelledby="lab-title">
+      <div class="section-heading sticky-heading">
+        <p class="eyebrow">Research environment</p>
+        <h2 id="lab-title">SOSELab is the context behind the CCTS and PDAS line.</h2>
+        <p>
+          The lab connection matters because it explains why my backend work keeps returning to service-oriented architecture, event flow, testing, and reliability.
+        </p>
+      </div>
+      <div class="lab-panel">
+        <article class="lab-card">
+          <span>{profile.lab.school}</span>
+          <h3>{profile.lab.name}</h3>
+          <p>{profile.lab.description}</p>
+          <div class="lab-links">
+            <a href={profile.lab.url} target="_blank" rel="noopener">Lab site</a>
+            <a href={profile.lab.advisorUrl} target="_blank" rel="noopener">{profile.lab.advisor}</a>
+          </div>
+        </article>
+        <div class="lab-grid">
+          <article>
+            <strong>Thesis record</strong>
+            <p>{profile.lab.thesisRecord}</p>
+          </article>
+          <article>
+            <strong>Publication trail</strong>
+            <p>{profile.lab.publicationRecord}</p>
+          </article>
         </div>
-      ))}
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="section-label">Open Source</p>
-    <div class="contribs">
-      {profile.contributions.map((c) => (
-        <a class="contrib" href={c.url} target="_blank" rel="noopener">
-          <span class="contrib-type">{c.type}</span>
-          <span>{c.description}</span>
-          <span class="contrib-repo">{c.repo} {c.pr}</span>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="section-label">Role Fit</p>
-    <div class="roles">
-      {profile.roles.map((r) => (
-        <div class="role">
-          <h3>{r.title}</h3>
-          <p>{r.why}</p>
-          <div class="role-evidence">{r.evidence}</div>
+        <div class="tag-cloud large-tags">
+          {profile.lab.researchDirections.map((item) => <span>{item}</span>)}
         </div>
-      ))}
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section class="section">
-    <p class="section-label">First 90 Days</p>
-    <div class="ramp">
-      {profile.rampUp.map((r) => (
-        <div class="ramp-item">
-          <span class="ramp-phase">{r.phase}</span>
-          <span class="ramp-focus">{r.focus}</span>
+    <section class="section-band split-section" aria-labelledby="experience-title">
+      <div class="section-heading sticky-heading">
+        <p class="eyebrow">Experience map</p>
+        <h2 id="experience-title">Research, internship delivery, internal systems, and public collaboration.</h2>
+        <p>
+          These are the contexts behind the portfolio claims, not decorative labels.
+        </p>
+      </div>
+      <div class="experience-list">
+        {profile.experience.map((item) => (
+          <article class="experience-card">
+            <span>{item.period}</span>
+            <h3>{item.role}</h3>
+            <strong>{item.org}</strong>
+            <p>{item.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-band split-section" aria-labelledby="research-title">
+      <div class="section-heading sticky-heading">
+        <p class="eyebrow">Published research</p>
+        <h2 id="research-title">Event-driven systems, authorization, payment, and testability.</h2>
+        <p>
+          Two IEEE publications and three domestic conference papers connect backend engineering to formal software engineering research.
+        </p>
+      </div>
+      <div class="research-list">
+        {profile.publications.map((paper) => (
+          <a class="paper-card" href={paper.url} target="_blank" rel="noopener">
+            <div>
+              <span class="paper-meta">{paper.publisher} · {paper.venue} · {paper.year}</span>
+              <h3>{paper.title}</h3>
+              <p>{paper.abstract}</p>
+            </div>
+            <span class="paper-role">{paper.role}</span>
+          </a>
+        ))}
+        <div class="domestic-stack" aria-label="Domestic publications">
+          {profile.domesticPublications.map((paper) => (
+            <article class="compact-paper">
+              <span>{paper.year}</span>
+              <div>
+                <h3>{paper.title}</h3>
+                <p>{paper.titleEn}</p>
+                <small>{paper.venue} · {paper.location}</small>
+                {paper.award && <strong>{paper.award}</strong>}
+              </div>
+            </article>
+          ))}
         </div>
-      ))}
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section class="section">
-    <p class="section-label">Beyond Code</p>
-    <div class="skills-grid">
-      {profile.interests.map((i) => <span class="skill-tag">{i}</span>)}
-    </div>
-  </section>
+    <section class="section-band" id="work" aria-labelledby="work-title">
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="work-title">Projects that show different kinds of ownership.</h2>
+      </div>
+      <div class="project-grid">
+        {profile.projects.map((project) => (
+          <a class="project-card" href={project.url} target="_blank" rel="noopener">
+            <span class="project-stack">{project.stack}</span>
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+            {project.highlight && <strong>{project.highlight}</strong>}
+          </a>
+        ))}
+      </div>
+    </section>
 
-  <section class="contact">
-    <h2>Let's connect.</h2>
-    <p>Teams that value stable systems over fast demos — I'd like to hear about the role.</p>
-    <div class="contact-links">
-      <a class="primary" href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
-      <a href={profile.links.email}>{profile.links.emailAddress}</a>
-      <a href={profile.links.resume} target="_blank" rel="noopener">Resume</a>
-      <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </section>
+    <section class="section-band split-section" id="stack" aria-labelledby="stack-title">
+      <div class="section-heading sticky-heading">
+        <p class="eyebrow">Technical surface</p>
+        <h2 id="stack-title">Backend depth with platform, SQA, and operations range.</h2>
+        <p>
+          The stack is broad because the work has ranged from microservice research and AKS delivery to CNC internal systems and home-lab operations.
+        </p>
+      </div>
+      <div class="stack-board">
+        {stackGroups.map((group) => (
+          <article class="stack-group">
+            <h3>{group.label}</h3>
+            <div class="tag-cloud">
+              {group.items.map((item) => <span>{item}</span>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-band split-section" aria-labelledby="oss-title">
+      <div class="section-heading sticky-heading">
+        <p class="eyebrow">Collaboration trail</p>
+        <h2 id="oss-title">Contributions show a pattern: integrate, correct, localize, document.</h2>
+      </div>
+      <div class="contribution-list">
+        {profile.contributions.map((item) => (
+          <a class="contribution-row" href={item.url} target="_blank" rel="noopener">
+            <span>{item.type}</span>
+            <strong>{item.description}</strong>
+            <small>{item.repo} {item.pr}</small>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-band role-lab" aria-labelledby="roles-title">
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Hiring fit</p>
+        <h2 id="roles-title">Where this background creates leverage quickly.</h2>
+      </div>
+      <div class="role-grid">
+        {profile.roles.map((role) => (
+          <article class="role-card">
+            <span>{role.evidence}</span>
+            <h3>{role.title}</h3>
+            <p>{role.why}</p>
+          </article>
+        ))}
+      </div>
+      <div class="ramp-track" aria-label="First 90 days plan">
+        {profile.rampUp.map((item) => (
+          <article>
+            <strong>{item.phase}</strong>
+            <p>{item.focus}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-band beyond-grid" aria-labelledby="beyond-title">
+      <div class="section-heading">
+        <p class="eyebrow">Beyond code</p>
+        <h2 id="beyond-title">Systems thinking does not stop at the repo.</h2>
+      </div>
+      <div class="tag-cloud large-tags">
+        {profile.interests.map((interest) => <span>{interest}</span>)}
+      </div>
+    </section>
+
+    <section class="contact-panel" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Looking for backend execution with research discipline and operational memory?</h2>
+      <p>Teams building reliable services, platform infrastructure, event-driven systems, or data authorization/payment workflows are the best fit.</p>
+      <div class="contact-links">
+        <a class="button button-primary" href={profile.links.email}>{profile.links.emailAddress}</a>
+        <a class="button" href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <a class="button" href={profile.links.paper} target="_blank" rel="noopener">IEEE Paper</a>
+        <a class="button" href={profile.links.mastodon} target="_blank" rel="noopener">Mastodon</a>
+      </div>
+      <div class="source-list" aria-label="Evidence sources">
+        {profile.evidenceSources.map((source) => (
+          <a href={source.url} target="_blank" rel="noopener">{source.label}</a>
+        ))}
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>&copy; {new Date().getFullYear()} {profile.fullName} &middot; {profile.location}</p>
+    <span>{profile.nameZh} · {profile.fullName}</span>
+    <span>{new Date().getFullYear()} · {profile.location}</span>
   </footer>
 </div>
