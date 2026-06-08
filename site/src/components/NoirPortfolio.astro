@@ -290,8 +290,14 @@ const operatingSignals = [
         <p class="eyebrow">Beyond code</p>
         <h2 id="beyond-title">Systems thinking does not stop at the repo.</h2>
       </div>
-      <div class="tag-cloud large-tags">
-        {profile.interests.map((interest) => <span>{interest}</span>)}
+      <div class="interest-panel" aria-label="Beyond code interests">
+        <div class="interest-panel-head">
+          <span>Off-repo inputs</span>
+          <strong>{profile.interests.length.toString().padStart(2, '0')} signals</strong>
+        </div>
+        <div class="interest-list">
+          {profile.interests.map((interest) => <span>{interest}</span>)}
+        </div>
       </div>
     </section>
 
