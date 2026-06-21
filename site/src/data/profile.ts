@@ -3,7 +3,7 @@ export const profile = {
   fullName: 'ChuFei Wu',
   nameZh: '吳朱飛',
   title: 'Backend & Platform Engineer',
-  location: 'Taipei, Taiwan',
+  location: 'Tainan, Taiwan',
   tagline: 'Backend and platform engineer connecting event-driven research, production delivery, and home-lab operations.',
   motto: "It's not a bug, it's a feature.",
 
