@@ -199,14 +199,6 @@ export const profile = {
         'Dell PowerEdge fan control through iDRAC/IPMI with Docker deployment, NVMe/GPU temperature inputs, configurable thresholds, and a recent README/code audit around fail-safe behavior.',
       highlight: 'Dell R730XD tested · 10 stars',
     },
-    {
-      name: 'BehaviorMonitor',
-      url: 'https://github.com/DF-wu/BehaviorMonitor',
-      stack: 'React 19 · TypeScript · Firebase · GitHub Pages',
-      description:
-        'A behavior tracking and management system with real-time score display, admin panel, charts, logs, lazy updates, Firebase backend, and GitHub Pages deployment.',
-      highlight: 'Full-stack AI-assisted prototype',
-    },
   ],
 
   contributions: [
