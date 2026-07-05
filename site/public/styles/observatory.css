@@ -1,0 +1,288 @@
+@import './global.css';
+
+:root {
+  color-scheme: dark;
+  --bg: #090b0c;
+  --text: #f5f1e8;
+  --muted: #b6b4a9;
+  --surface: rgba(245, 241, 232, 0.06);
+  --line: rgba(245, 241, 232, 0.13);
+  --accent: #7de2c4;
+  --accent2: #f4c66a;
+  --magenta: #d46aa0;
+  --font: 'Inter', 'Noto Sans TC', sans-serif;
+  --mono: 'Azeret Mono', 'Noto Sans TC', monospace;
+  --radius: 8px;
+  --max-w: 1180px;
+  --intel-bg: #0d1010;
+  --intel-text: var(--text);
+  --intel-muted: var(--muted);
+  --intel-surface: var(--surface);
+  --intel-line: var(--line);
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  color: var(--text);
+  font-family: var(--font);
+  background:
+    repeating-linear-gradient(115deg, transparent 0 28px, rgba(125, 226, 196, 0.055) 28px 29px, transparent 29px 120px),
+    linear-gradient(135deg, #090b0c, #101410 52%, #16110d);
+}
+
+.observatory-shell {
+  width: min(var(--max-w), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.observatory-nav,
+.observatory-nav div,
+.observatory-contact {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.observatory-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 74px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(9, 11, 12, 0.86);
+  backdrop-filter: blur(16px);
+}
+
+.observatory-nav div {
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.observatory-nav a,
+.observatory-contact a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.65rem 0.85rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.observatory-hero {
+  min-height: calc(100dvh - 74px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.74fr);
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.observatory-kicker,
+.source-ledger span,
+.variant-grid span,
+.radar-chart span {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.observatory-hero h1,
+.observatory-head h2,
+.observatory-contact h2 {
+  max-width: 12ch;
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.observatory-hero p,
+.observatory-head p,
+.source-ledger small,
+.variant-grid p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.observatory-hero p {
+  max-width: 58ch;
+  margin-top: 1.2rem;
+  font-size: 1.12rem;
+}
+
+.radar-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.radar-card img {
+  width: 100%;
+  aspect-ratio: 1.2;
+  border-radius: var(--radius);
+  object-fit: cover;
+  filter: grayscale(22%) contrast(1.08);
+}
+
+.radar-chart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.radar-chart span {
+  display: grid;
+  place-items: center;
+  min-height: 76px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text);
+  background:
+    linear-gradient(90deg, var(--tone, var(--accent)) var(--score), transparent var(--score)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.tone-research { --tone: rgba(125, 226, 196, 0.22); }
+.tone-delivery { --tone: rgba(244, 198, 106, 0.22); }
+.tone-operations { --tone: rgba(98, 173, 227, 0.22); }
+.tone-collaboration { --tone: rgba(212, 106, 160, 0.22); }
+
+.observatory-section {
+  padding: 5.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.observatory-head {
+  margin-bottom: 2rem;
+}
+
+.metric-wall,
+.source-ledger,
+.variant-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.metric-wall {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.metric-wall article,
+.variant-grid article,
+.source-ledger a {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem;
+  background: var(--surface);
+}
+
+.metric-wall strong {
+  display: block;
+  color: var(--accent2);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.metric-wall span {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: 3rem;
+}
+
+.sticky {
+  position: sticky;
+  top: 96px;
+}
+
+.source-ledger {
+  grid-template-columns: 1fr 1fr;
+}
+
+.source-ledger small {
+  display: block;
+  margin-top: 0.45rem;
+  overflow-wrap: anywhere;
+}
+
+.variant-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.variant-grid h3 {
+  margin: 0.7rem 0;
+}
+
+.variant-grid small {
+  color: var(--accent2);
+  overflow-wrap: anywhere;
+}
+
+.observatory-contact {
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 4rem 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(125, 226, 196, 0.13), rgba(212, 106, 160, 0.1));
+}
+
+.observatory-contact a {
+  color: #09100e;
+  background: var(--accent);
+}
+
+@media (max-width: 1060px) {
+  .metric-wall,
+  .variant-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .observatory-hero,
+  .split,
+  .source-ledger {
+    grid-template-columns: 1fr;
+  }
+
+  .sticky {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .observatory-shell {
+    width: min(100% - 28px, var(--max-w));
+  }
+
+  .observatory-hero h1,
+  .observatory-head h2,
+  .observatory-contact h2 {
+    font-size: 2.45rem;
+  }
+
+  .metric-wall,
+  .variant-grid,
+  .radar-chart {
+    grid-template-columns: 1fr;
+  }
+}
