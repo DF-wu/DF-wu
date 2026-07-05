@@ -1,0 +1,97 @@
+---
+import { profile } from '../data/profile';
+import { insightArticles, timeline } from '../data/portfolio-content';
+---
+
+<div class="archive-shell">
+  <nav class="archive-nav" aria-label="Primary">
+    <a href="#archive-top">DF Wu Archive</a>
+    <div>
+      <a href="#essays">Essays</a>
+      <a href="#papers">Papers</a>
+      <a href="#index">Index</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="archive-top">
+    <section class="archive-hero" aria-labelledby="archive-title">
+      <div>
+        <p class="archive-kicker">{profile.nameZh} / {profile.title}</p>
+        <h1 id="archive-title">A knowledge journal for systems that need to stay understandable.</h1>
+        <p>{profile.tagline}</p>
+      </div>
+      <figure>
+        <img src="https://github.com/DF-wu.png?size=360" alt="Portrait avatar of ChuFei Wu" width="360" height="360" loading="eager" />
+        <figcaption>{profile.fullName} / {profile.location}</figcaption>
+      </figure>
+    </section>
+
+    <section class="archive-section" id="essays" aria-labelledby="essays-title">
+      <div class="archive-section-head">
+        <p class="archive-kicker">Featured essays</p>
+        <h2 id="essays-title">Long-form proof, compressed for scanning.</h2>
+      </div>
+      <div class="essay-grid">
+        {insightArticles.map((article, index) => (
+          <article class={index === 0 ? 'feature' : ''}>
+            <span>{article.category} / {article.readingTime}</span>
+            <h3>{article.title}</h3>
+            <p>{article.summary}</p>
+            <div>{article.tags.map((tag) => <small>{tag}</small>)}</div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="archive-section split" id="papers" aria-labelledby="papers-title">
+      <div class="archive-section-head sticky">
+        <p class="archive-kicker">Publication shelf</p>
+        <h2 id="papers-title">Research explains the engineering bias.</h2>
+      </div>
+      <div class="paper-shelf">
+        {profile.publications.map((paper) => (
+          <a href={paper.url} target="_blank" rel="noopener">
+            <span>{paper.publisher} / {paper.year}</span>
+            <h3>{paper.title}</h3>
+            <p>{paper.abstract}</p>
+            <strong>{paper.role}</strong>
+          </a>
+        ))}
+        {profile.domesticPublications.map((paper) => (
+          <article>
+            <span>{paper.year}</span>
+            <h3>{paper.title}</h3>
+            <p>{paper.titleEn}</p>
+            {paper.award && <strong>{paper.award}</strong>}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="archive-section" id="index" aria-labelledby="index-title">
+      <div class="archive-section-head">
+        <p class="archive-kicker">Chronology</p>
+        <h2 id="index-title">A reading index for the person behind the projects.</h2>
+      </div>
+      <div class="archive-index">
+        {timeline.map((item) => (
+          <article>
+            <time>{item.period}</time>
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="archive-contact" id="contact">
+      <h2>For teams that value clear systems and clear writing.</h2>
+      <div>
+        <a href="/api/feed.json">JSON feed</a>
+        <a href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <a href={profile.links.resume} target="_blank" rel="noopener">Resume</a>
+      </div>
+    </section>
+  </main>
+</div>

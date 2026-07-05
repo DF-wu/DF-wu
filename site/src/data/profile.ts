@@ -315,9 +315,9 @@ export const profile = {
   ],
 } as const;
 
-export type StyleKey = 'noir' | 'linen' | 'glass' | 'ink' | 'dusk' | 'atlas';
+export type StyleKey = 'noir' | 'linen' | 'glass' | 'ink' | 'dusk' | 'atlas' | 'signal' | 'forge' | 'observatory' | 'archive';
 
-export const STYLE_KEYS: readonly StyleKey[] = ['noir', 'linen', 'glass', 'ink', 'dusk', 'atlas'] as const;
+export const STYLE_KEYS: readonly StyleKey[] = ['noir', 'linen', 'glass', 'ink', 'dusk', 'atlas', 'signal', 'forge', 'observatory', 'archive'] as const;
 
 export const DEFAULT_STYLE: StyleKey = 'linen';
 
