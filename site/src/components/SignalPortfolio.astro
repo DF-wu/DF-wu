@@ -1,0 +1,116 @@
+---
+import { profile } from '../data/profile';
+import { impactSignals, insightArticles, timeline } from '../data/portfolio-content';
+
+const opsMetrics = [
+  { label: 'Home-lab services', value: profile.stats.homeLabServices },
+  { label: 'CCTS LOC', value: profile.stats.cctsLoc },
+  { label: 'PDAS LOC', value: profile.stats.pdasLoc },
+  { label: 'External PRs', value: profile.stats.externalPRs },
+];
+---
+
+<div class="signal-shell">
+  <nav class="signal-nav" aria-label="Primary">
+    <a href="#signal-top" class="signal-brand">DF Wu / Signal Desk</a>
+    <div>
+      <a href="#signals">Signals</a>
+      <a href="#incidents">Timeline</a>
+      <a href="#briefings">Briefings</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="signal-top">
+    <section class="signal-hero" aria-labelledby="signal-title">
+      <div>
+        <p class="signal-kicker">{profile.title} / {profile.location}</p>
+        <h1 id="signal-title">Reliability signals before the incident.</h1>
+        <p>
+          I read engineering systems as operational surfaces: contracts, event streams, deployment paths, maintenance habits,
+          and the evidence trail a team can use when pressure arrives.
+        </p>
+        <div class="signal-actions">
+          <a href={profile.links.linkedin} target="_blank" rel="noopener">Connect</a>
+          <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
+          <a href="/api/metrics.json">Metrics API</a>
+        </div>
+      </div>
+      <aside class="operator-card" aria-label="Identity card">
+        <img src="https://github.com/DF-wu.png?size=320" alt="Portrait avatar of ChuFei Wu" width="320" height="320" loading="eager" />
+        <div>
+          <span>Operator profile</span>
+          <strong>{profile.nameZh} / {profile.fullName}</strong>
+          <p>{profile.tagline}</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="ops-strip" aria-label="Operational metrics">
+      {opsMetrics.map((metric) => (
+        <article>
+          <strong>{metric.value}</strong>
+          <span>{metric.label}</span>
+        </article>
+      ))}
+    </section>
+
+    <section class="signal-section" id="signals" aria-labelledby="signals-title">
+      <div class="section-head">
+        <p class="signal-kicker">Signal board</p>
+        <h2 id="signals-title">Four evidence channels define the work.</h2>
+      </div>
+      <div class="signal-grid">
+        {impactSignals.map((signal) => (
+          <article class={`signal-card tone-${signal.tone}`}>
+            <span>{signal.label}</span>
+            <strong>{signal.value}</strong>
+            <div aria-hidden="true"><i style={`--value:${signal.value}%`}></i></div>
+            <p>{signal.detail}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="signal-section split" id="incidents" aria-labelledby="incident-title">
+      <div class="section-head sticky">
+        <p class="signal-kicker">Incident memory</p>
+        <h2 id="incident-title">Timeline as operational context.</h2>
+        <p>Every system claim is mapped to where it was learned: research, delivery, internal systems, or living infrastructure.</p>
+      </div>
+      <div class="event-feed">
+        {timeline.map((item) => (
+          <article>
+            <time>{item.period}</time>
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="signal-section" id="briefings" aria-labelledby="briefings-title">
+      <div class="section-head">
+        <p class="signal-kicker">Briefings</p>
+        <h2 id="briefings-title">Short essays for teams evaluating fit.</h2>
+      </div>
+      <div class="briefing-grid">
+        {insightArticles.map((article) => (
+          <article>
+            <span>{article.category} / {article.readingTime}</span>
+            <h3>{article.title}</h3>
+            <p>{article.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="signal-contact" id="contact">
+      <h2>Bring me to the architecture review before the pager starts talking.</h2>
+      <div>
+        <a href={profile.links.email}>{profile.links.emailAddress}</a>
+        <a href={profile.links.resume} target="_blank" rel="noopener">Resume</a>
+      </div>
+    </section>
+  </main>
+</div>
