@@ -1,0 +1,118 @@
+---
+import { profile } from '../data/profile';
+import { capabilityMatrix, insightArticles, timeline } from '../data/portfolio-content';
+
+const pipeline = [
+  { step: '01', label: 'Observe', detail: 'Find where runtime behavior and team expectations diverge.' },
+  { step: '02', label: 'Model', detail: 'Turn flows into contracts, event paths, deployment notes, or testable boundaries.' },
+  { step: '03', label: 'Build', detail: 'Ship the smallest durable system that reduces operational uncertainty.' },
+  { step: '04', label: 'Harden', detail: 'Document, monitor, and remove friction before complexity compounds.' },
+];
+---
+
+<div class="forge-shell">
+  <nav class="forge-nav" aria-label="Primary">
+    <a href="#forge-top" class="forge-brand">DF Wu / Forge</a>
+    <div>
+      <a href="#bench">Workbench</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#notes">Notes</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="forge-top">
+    <section class="forge-hero" aria-labelledby="forge-title">
+      <div class="forge-copy">
+        <p class="forge-kicker">{profile.title}</p>
+        <h1 id="forge-title">Research ideas forged into deployable systems.</h1>
+        <p>{profile.tagline}</p>
+      </div>
+      <aside class="forge-plate">
+        <img src="https://github.com/DF-wu.png?size=320" alt="Portrait avatar of ChuFei Wu" width="320" height="320" loading="eager" />
+        <div>
+          <strong>{profile.fullName}</strong>
+          <span>{profile.location}</span>
+          <p>{profile.motto}</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="forge-section" id="bench" aria-labelledby="bench-title">
+      <div class="forge-section-head">
+        <p class="forge-kicker">Workbench</p>
+        <h2 id="bench-title">Projects grouped by what they prove.</h2>
+      </div>
+      <div class="tool-grid">
+        {profile.projects.map((project) => (
+          <a href={project.url} target="_blank" rel="noopener">
+            <span>{project.stack}</span>
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+            <strong>{project.highlight}</strong>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="forge-section" id="pipeline" aria-labelledby="pipeline-title">
+      <div class="forge-section-head">
+        <p class="forge-kicker">Build pipeline</p>
+        <h2 id="pipeline-title">A repeatable path from ambiguity to operable software.</h2>
+      </div>
+      <div class="pipeline-grid">
+        {pipeline.map((item) => (
+          <article>
+            <span>{item.step}</span>
+            <h3>{item.label}</h3>
+            <p>{item.detail}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="forge-section split" aria-labelledby="timeline-title">
+      <div class="forge-section-head sticky">
+        <p class="forge-kicker">Material history</p>
+        <h2 id="timeline-title">The craft came from multiple pressure types.</h2>
+      </div>
+      <div class="forge-timeline">
+        {timeline.map((item) => (
+          <article>
+            <time>{item.period}</time>
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="forge-section" id="notes" aria-labelledby="notes-title">
+      <div class="forge-section-head">
+        <p class="forge-kicker">Shop notes</p>
+        <h2 id="notes-title">What the system should leave behind.</h2>
+      </div>
+      <div class="note-grid">
+        {capabilityMatrix.map((item) => (
+          <article>
+            <h3>{item.feature}</h3>
+            <p>{item.note}</p>
+            <span>{item.status}</span>
+          </article>
+        ))}
+        {insightArticles.slice(0, 2).map((item) => (
+          <article>
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+            <span>{item.readingTime}</span>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="forge-contact" id="contact">
+      <h2>Give me the messy system and the real constraints.</h2>
+      <a href={profile.links.linkedin} target="_blank" rel="noopener">Start a conversation</a>
+    </section>
+  </main>
+</div>

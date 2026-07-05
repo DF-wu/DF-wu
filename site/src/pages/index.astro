@@ -7,6 +7,11 @@ import GlassPortfolio from '../components/GlassPortfolio.astro';
 import InkPortfolio from '../components/InkPortfolio.astro';
 import DuskPortfolio from '../components/DuskPortfolio.astro';
 import AtlasPortfolio from '../components/AtlasPortfolio.astro';
+import SignalPortfolio from '../components/SignalPortfolio.astro';
+import ForgePortfolio from '../components/ForgePortfolio.astro';
+import ObservatoryPortfolio from '../components/ObservatoryPortfolio.astro';
+import ArchivePortfolio from '../components/ArchivePortfolio.astro';
+import PortfolioIntelligence from '../components/PortfolioIntelligence.astro';
 
 const style = resolveStyle();
 const description = `${profile.fullName} — ${profile.title} based in ${profile.location}. ${profile.tagline}`;
@@ -24,4 +29,9 @@ const stylesheets = [`/styles/${style}.css`];
   {style === 'ink' && <InkPortfolio />}
   {style === 'dusk' && <DuskPortfolio />}
   {style === 'atlas' && <AtlasPortfolio />}
+  {style === 'signal' && <SignalPortfolio />}
+  {style === 'forge' && <ForgePortfolio />}
+  {style === 'observatory' && <ObservatoryPortfolio />}
+  {style === 'archive' && <ArchivePortfolio />}
+  <PortfolioIntelligence />
 </Base>
