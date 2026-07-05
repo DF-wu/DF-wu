@@ -1,0 +1,235 @@
+---
+import { profile } from '../data/profile';
+
+const metrics = [
+  { value: profile.stats.ieeepapers, label: 'IEEE papers' },
+  { value: profile.stats.publications, label: 'publications' },
+  { value: profile.stats.homeLabServices, label: 'services operated' },
+  { value: profile.stats.externalPRs, label: 'external PRs' },
+];
+
+const routes = [
+  {
+    label: 'Research route',
+    title: 'Event-driven systems need observable contracts.',
+    body: 'CCTS connects Pact contracts, runtime event logs, RabbitMQ, MongoDB, and state-model assertions so execution paths can be checked instead of guessed.',
+    proof: 'APSEC 2022 / TCSE Best Chinese Paper',
+  },
+  {
+    label: 'Delivery route',
+    title: 'Production pressure shaped the platform instinct.',
+    body: 'PDAS and the valuation/payment platform pushed work across logging, payment, blockchain, fintech integration, CI/CD, infrastructure, and AKS delivery.',
+    proof: 'ITRI / PDAS-team / ICS 2020',
+  },
+  {
+    label: 'Operations route',
+    title: 'Home-lab work keeps the architecture honest.',
+    body: 'Thirty-plus self-hosted services make reliability personal: storage, DNS, monitoring, media, albums, automation, and server control all have consequences.',
+    proof: 'HomeLab / iDRAC / internal systems',
+  },
+  {
+    label: 'Collaboration route',
+    title: 'Public work trends toward integration and correctness.',
+    body: 'The open-source trail is not random volume. It is a pattern of adding missing integrations, improving localization, and fixing inaccurate docs.',
+    proof: '23 merged PRs / 12 external',
+  },
+];
+
+const stackGroups = [
+  { label: 'Languages', items: profile.skills.languages },
+  { label: 'Systems', items: profile.skills.infrastructure },
+  { label: 'Data flow', items: profile.skills.data },
+  { label: 'Practice', items: profile.skills.practices },
+];
+---
+
+<div class="atlas-shell">
+  <nav class="atlas-nav" aria-label="Primary">
+    <a class="atlas-brand" href="#top" aria-label="DF Wu home">
+      <span class="brand-token">DF</span>
+      <span>{profile.fullName}</span>
+    </a>
+    <div class="atlas-links">
+      <a href="#routes">Routes</a>
+      <a href="#systems">Systems</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="atlas-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">{profile.title} / {profile.location}</p>
+        <h1 id="hero-title">{profile.fullName}</h1>
+        <p class="hero-lede">
+          I build backend and platform systems with a researcher's test discipline, a delivery engineer's constraint awareness, and an operator's memory.
+        </p>
+        <div class="hero-actions" aria-label="Primary links">
+          <a class="primary-action" href={profile.links.linkedin} target="_blank" rel="noopener">Connect</a>
+          <a href={profile.links.resume} target="_blank" rel="noopener">Resume</a>
+          <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <aside class="hero-visual" aria-label="Profile portrait and evidence map">
+        <div class="portrait-band">
+          <img src="https://github.com/DF-wu.png?size=360" alt="Portrait avatar of ChuFei Wu" width="360" height="360" loading="eager" />
+          <div>
+            <span>Identity</span>
+            <strong>{profile.nameZh} / {profile.fullName}</strong>
+            <p>{profile.tagline}</p>
+          </div>
+        </div>
+        <div class="map-lines" aria-label="Engineering through-line">
+          <span>contracts</span>
+          <span>events</span>
+          <span>delivery</span>
+          <span>ops</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="metric-ribbon" aria-label="Profile metrics">
+      {metrics.map((metric) => (
+        <article>
+          <strong>{metric.value}</strong>
+          <span>{metric.label}</span>
+        </article>
+      ))}
+    </section>
+
+    <section class="atlas-section thesis" aria-labelledby="thesis-title">
+      <div class="section-copy">
+        <p class="kicker">Operating thesis</p>
+        <h2 id="thesis-title">The through-line is reliability, but the habit is clarity.</h2>
+      </div>
+      <div class="thesis-copy">
+        {profile.about.slice(0, 3).map((text) => <p>{text}</p>)}
+      </div>
+    </section>
+
+    <section class="atlas-section" id="routes" aria-labelledby="routes-title">
+      <div class="section-copy">
+        <p class="kicker">Evidence routes</p>
+        <h2 id="routes-title">Four paths describe the same engineering personality.</h2>
+      </div>
+      <div class="route-grid">
+        {routes.map((route) => (
+          <article class="route-card">
+            <span>{route.label}</span>
+            <h3>{route.title}</h3>
+            <p>{route.body}</p>
+            <strong>{route.proof}</strong>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="atlas-section split" id="systems" aria-labelledby="systems-title">
+      <div class="section-copy sticky-copy">
+        <p class="kicker">Selected systems</p>
+        <h2 id="systems-title">Projects are organized as proof, not decoration.</h2>
+        <p>Each selected project shows a different pressure: research validation, complete ownership, home-lab operations, or server automation.</p>
+      </div>
+      <div class="system-list">
+        {profile.projects.map((project) => (
+          <a class="system-row" href={project.url} target="_blank" rel="noopener">
+            <span>{project.stack}</span>
+            <div>
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+            </div>
+            {project.highlight && <strong>{project.highlight}</strong>}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="atlas-section split" id="research" aria-labelledby="research-title">
+      <div class="section-copy sticky-copy">
+        <p class="kicker">Research trail</p>
+        <h2 id="research-title">The academic line reinforces the system line.</h2>
+        <p>{profile.lab.description}</p>
+      </div>
+      <div class="research-stack">
+        {profile.publications.map((paper) => (
+          <a class="paper-row" href={paper.url} target="_blank" rel="noopener">
+            <span>{paper.publisher} / {paper.year}</span>
+            <h3>{paper.title}</h3>
+            <p>{paper.abstract}</p>
+            <strong>{paper.role}</strong>
+          </a>
+        ))}
+        {profile.domesticPublications.map((paper) => (
+          <article class="paper-row domestic">
+            <span>{paper.year}</span>
+            <h3>{paper.title}</h3>
+            <p>{paper.titleEn}</p>
+            {paper.award && <strong>{paper.award}</strong>}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="atlas-section split" aria-labelledby="stack-title">
+      <div class="section-copy sticky-copy">
+        <p class="kicker">Technical surface</p>
+        <h2 id="stack-title">Broad stack, narrow engineering taste.</h2>
+        <p>Tools change by context, but the patterns stay consistent: clear contracts, explicit data flow, deployable systems, and maintainable handoffs.</p>
+      </div>
+      <div class="stack-matrix">
+        {stackGroups.map((group) => (
+          <article>
+            <h3>{group.label}</h3>
+            <div>
+              {group.items.map((item) => <span>{item}</span>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="atlas-section split" aria-labelledby="collab-title">
+      <div class="section-copy sticky-copy">
+        <p class="kicker">Collaboration ledger</p>
+        <h2 id="collab-title">Public contributions show how I touch unfamiliar code.</h2>
+      </div>
+      <div class="ledger">
+        {profile.contributions.map((item) => (
+          <a href={item.url} target="_blank" rel="noopener">
+            <span>{item.type}</span>
+            <strong>{item.description}</strong>
+            <small>{item.repo} {item.pr}</small>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="atlas-section role-fit" aria-labelledby="fit-title">
+      <div class="section-copy">
+        <p class="kicker">Role fit</p>
+        <h2 id="fit-title">Best fit: backend, platform, and systems-oriented engineering.</h2>
+      </div>
+      <div class="fit-grid">
+        {profile.roles.map((role) => (
+          <article>
+            <h3>{role.title}</h3>
+            <p>{role.why}</p>
+            <span>{role.evidence}</span>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="atlas-contact" id="contact" aria-labelledby="contact-title">
+      <p class="kicker">Contact</p>
+      <h2 id="contact-title">If the team values stable systems and low entropy, we should talk.</h2>
+      <div>
+        <a class="primary-action" href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <a href={profile.links.email}>{profile.links.emailAddress}</a>
+        <a href={profile.links.mastodon} target="_blank" rel="noopener">Mastodon</a>
+      </div>
+    </section>
+  </main>
+</div>

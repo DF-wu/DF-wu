@@ -17,6 +17,10 @@ import { profile } from '../data/profile';
     <p class="hero-role">{profile.title} &middot; {profile.location}</p>
     <h1>Systems designed for clarity, built for the team that comes after me.</h1>
     <p class="hero-sub">{profile.tagline}</p>
+    <div class="hero-portrait" aria-label="Profile portrait">
+      <img src="https://github.com/DF-wu.png?size=180" alt="Portrait avatar of ChuFei Wu" width="180" height="180" loading="eager" />
+      <span>Research / Delivery / Operations</span>
+    </div>
   </section>
 
   <section class="section">
@@ -58,7 +62,7 @@ import { profile } from '../data/profile';
           <span style="color:var(--muted);font-size:0.82rem;font-style:italic">{p.titleEn}</span>
           <span style="color:var(--muted);font-size:0.8rem">{p.authors.join('、')}</span>
           <span class="contrib-type" style="background:transparent;padding:0">{p.venue} &middot; {p.location} &middot; {p.year}</span>
-          {p.award && <span style="font-size:0.78rem;color:var(--accent);font-weight:700">🏆 {p.award}</span>}
+          {p.award && <span style="font-size:0.78rem;color:var(--accent);font-weight:700">Award · {p.award}</span>}
         </div>
       ))}
     </div>
@@ -68,7 +72,7 @@ import { profile } from '../data/profile';
     <p class="section-label">Awards</p>
     {profile.awards.map((a) => (
       <div class="role" style="background:var(--accent-soft)">
-        <h3>🏆 {a.title}</h3>
+        <h3>Award · {a.title}</h3>
         <p>{a.context}</p>
         <div class="role-evidence">{a.year}</div>
       </div>

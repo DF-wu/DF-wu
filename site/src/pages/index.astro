@@ -6,6 +6,7 @@ import LinenPortfolio from '../components/LinenPortfolio.astro';
 import GlassPortfolio from '../components/GlassPortfolio.astro';
 import InkPortfolio from '../components/InkPortfolio.astro';
 import DuskPortfolio from '../components/DuskPortfolio.astro';
+import AtlasPortfolio from '../components/AtlasPortfolio.astro';
 
 const style = resolveStyle();
 const description = `${profile.fullName} — ${profile.title} based in ${profile.location}. ${profile.tagline}`;
@@ -22,4 +23,5 @@ const stylesheets = [`/styles/${style}.css`];
   {style === 'glass' && <GlassPortfolio />}
   {style === 'ink' && <InkPortfolio />}
   {style === 'dusk' && <DuskPortfolio />}
+  {style === 'atlas' && <AtlasPortfolio />}
 </Base>

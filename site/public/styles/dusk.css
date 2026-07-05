@@ -1,23 +1,23 @@
 @import './global.css';
 
 :root {
-  --text: #e8eaf6;
-  --muted: #9fa4c4;
+  --text: #f0f2ec;
+  --muted: #aab2a8;
   --accent: #5eead4;
-  --accent2: #c084fc;
+  --accent2: #f59e6b;
   --accent-soft: rgba(94,234,212,0.1);
   --surface: rgba(255,255,255,0.04);
   --border: rgba(255,255,255,0.07);
   --font: 'Inter', 'Noto Sans TC', sans-serif;
   --max-w: 980px;
   --gap: 1.25rem;
-  --radius: 20px;
+  --radius: 8px;
 }
 
 body {
   font-family: var(--font);
   color: var(--text);
-  background: linear-gradient(180deg, #0c0a1a 0%, #140e2e 30%, #1a1040 60%, #0f0820 100%);
+  background: linear-gradient(180deg, #0b1012 0%, #121b1d 36%, #1f1b17 68%, #0e0f12 100%);
   min-height: 100vh;
 }
 
@@ -26,8 +26,8 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 0%, rgba(94,234,212,0.08), transparent 50%),
-    radial-gradient(ellipse at 70% 80%, rgba(192,132,252,0.08), transparent 45%);
+    linear-gradient(118deg, transparent 0 38%, rgba(94,234,212,0.07) 38% 39%, transparent 39% 100%),
+    linear-gradient(24deg, transparent 0 68%, rgba(245,158,107,0.08) 68% 69%, transparent 69% 100%);
   pointer-events: none;
 }
 
@@ -43,12 +43,15 @@ body::before {
 /* ── HERO ── */
 .hero { padding: 5rem 0 3rem; text-align: center; }
 .hero-role { font-size: 0.82rem; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero h1 { font-size: 4rem; font-weight: 900; letter-spacing: 0; background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .hero-sub { color: var(--muted); font-size: 1.05rem; max-width: 48ch; margin: 1rem auto 0; }
 .hero-actions { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1.75rem; }
 .hero-actions a { padding: 0.65rem 1.3rem; border-radius: var(--radius); font-weight: 700; font-size: 0.88rem; transition: all 0.2s; }
 .hero-actions a.primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #0c0a1a; }
 .hero-actions a.secondary { border: 1px solid var(--border); color: var(--text); backdrop-filter: blur(8px); }
+.hero-portrait { width: min(330px, 100%); margin: 1.5rem auto 0; display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 0.9rem; align-items: center; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); text-align: left; }
+.hero-portrait img { width: 76px; height: 76px; border-radius: var(--radius); object-fit: cover; filter: grayscale(18%) contrast(1.08); }
+.hero-portrait span { color: var(--accent2); font-size: 0.76rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
 
 /* ── SECTION ── */
 .section { padding: 2.5rem 0; }

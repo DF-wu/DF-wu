@@ -1,14 +1,15 @@
 @import './global.css';
 
 :root {
-  --bg: #faf7f2;
-  --bg-soft: #f3efe8;
+  --bg: #f8f7f2;
+  --bg-soft: #e8edf0;
   --surface: #fff;
-  --border: rgba(120,100,70,0.12);
-  --text: #2c2418;
-  --muted: #6b5e4e;
-  --accent: #5a7247;
-  --accent-soft: rgba(90,114,71,0.1);
+  --border: rgba(34,45,52,0.13);
+  --text: #202325;
+  --muted: #626c72;
+  --accent: #25635a;
+  --accent-2: #3157a3;
+  --accent-soft: rgba(37,99,90,0.1);
   --serif: 'Playfair Display', 'Noto Sans TC', serif;
   --sans: 'Inter', 'Noto Sans TC', sans-serif;
   --max-w: 880px;
@@ -34,8 +35,11 @@ body {
 /* ── HERO ── */
 .hero { padding: 4rem 0 3rem; }
 .hero-role { font-size: 0.85rem; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; }
-.hero h1 { font-family: var(--serif); font-size: clamp(2.5rem, 6vw, 3.5rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; max-width: 16ch; }
+.hero h1 { font-family: var(--serif); font-size: 3.5rem; font-weight: 700; letter-spacing: 0; line-height: 1.1; max-width: 16ch; }
 .hero-sub { color: var(--muted); font-size: 1.05rem; max-width: 50ch; margin-top: 1rem; line-height: 1.7; }
+.hero-portrait { display: inline-grid; grid-template-columns: 72px minmax(0, 1fr); gap: 0.9rem; align-items: center; margin-top: 1.5rem; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; background: rgba(255,255,255,0.7); }
+.hero-portrait img { width: 72px; height: 72px; border-radius: 8px; object-fit: cover; filter: grayscale(12%) contrast(1.04); }
+.hero-portrait span { color: var(--accent-2); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
 
 /* ── SECTION ── */
 .section { padding: 3rem 0; border-top: 1px solid var(--border); }
@@ -46,17 +50,17 @@ body {
 
 /* ── STATS ── */
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--gap); }
-.stat { text-align: center; padding: 1.5rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+.stat { text-align: center; padding: 1.5rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
 .stat-value { font-family: var(--serif); font-size: 2rem; font-weight: 800; color: var(--text); }
 .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.06em; }
 
 /* ── SKILLS ── */
 .skills-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.skill-tag { padding: 0.35rem 0.75rem; background: var(--accent-soft); border-radius: 20px; font-size: 0.82rem; color: var(--accent); font-weight: 600; }
+.skill-tag { padding: 0.35rem 0.75rem; background: var(--accent-soft); border-radius: 8px; font-size: 0.82rem; color: var(--accent); font-weight: 600; }
 
 /* ── PROJECTS ── */
 .projects { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
-.project { padding: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; transition: box-shadow 0.3s; display: flex; flex-direction: column; }
+.project { padding: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; transition: box-shadow 0.3s; display: flex; flex-direction: column; }
 .project:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
 .project-stack { font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
 .project h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
@@ -64,14 +68,14 @@ body {
 
 /* ── CONTRIBUTIONS ── */
 .contribs { display: grid; gap: 0.65rem; }
-.contrib { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1.15rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; font-size: 0.88rem; transition: box-shadow 0.3s; }
+.contrib { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1.15rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-size: 0.88rem; transition: box-shadow 0.3s; }
 .contrib:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
 .contrib-type { font-size: 0.7rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; background: var(--accent-soft); padding: 0.15rem 0.45rem; border-radius: 4px; }
 .contrib-repo { color: var(--muted); font-size: 0.8rem; }
 
 /* ── ROLES ── */
 .roles { display: grid; gap: 1.25rem; }
-.role { padding: 1.25rem 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+.role { padding: 1.25rem 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
 .role h3 { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; }
 .role p { font-size: 0.88rem; color: var(--muted); }
 .role-evidence { font-size: 0.75rem; color: var(--accent); font-weight: 600; margin-top: 0.35rem; }
