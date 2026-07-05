@@ -319,7 +319,7 @@ export type StyleKey = 'noir' | 'linen' | 'glass' | 'ink' | 'dusk' | 'atlas';
 
 export const STYLE_KEYS: readonly StyleKey[] = ['noir', 'linen', 'glass', 'ink', 'dusk', 'atlas'] as const;
 
-export const DEFAULT_STYLE: StyleKey = 'noir';
+export const DEFAULT_STYLE: StyleKey = 'atlas';
 
 export function resolveStyle(): StyleKey {
   const raw = (import.meta.env.PORTFOLIO_STYLE ?? import.meta.env.PUBLIC_PORTFOLIO_STYLE ?? DEFAULT_STYLE).toString().toLowerCase();
