@@ -1,4 +1,7 @@
 ---
+import { profile } from '../data/profile';
+import { apiCatalog, designVariants, insightArticles } from '../data/portfolio-content';
+
 interface Props {
   title: string;
   description?: string;
@@ -6,6 +9,13 @@ interface Props {
 }
 
 const { title, description = 'DF Wu — backend and platform engineer building stable, maintainable systems.', stylesheets = [] } = Astro.props;
+const commandData = [
+  ...profile.projects.map((item) => ({ type: 'Project', title: item.name, summary: item.description, url: item.url })),
+  ...profile.publications.map((item) => ({ type: 'Publication', title: item.title, summary: item.abstract, url: item.url })),
+  ...insightArticles.map((item) => ({ type: 'Insight', title: item.title, summary: item.summary, url: `#insight-${item.slug}` })),
+  ...apiCatalog.map((item) => ({ type: 'API', title: item.label, summary: item.description, url: item.path })),
+  ...designVariants.map((item) => ({ type: 'Style', title: item.name, summary: item.thesis, url: item.branch })),
+];
 ---
 
 <!doctype html>
@@ -23,9 +33,53 @@ const { title, description = 'DF Wu — backend and platform engineer building s
       rel="stylesheet"
     />
     {stylesheets.map((href) => <link rel="stylesheet" href={href} />)}
+    <script type="application/json" id="portfolio-command-data" set:html={JSON.stringify(commandData)} />
+    <script defer src="/scripts/portfolio-effects.js"></script>
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body data-portfolio-shell>
+    <a class="skip-link" href="#portfolio-content">Skip to portfolio content</a>
+    <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
+    <div id="portfolio-content">
+      <slot />
+    </div>
+
+    <div class="portfolio-dock" aria-label="Portfolio tools">
+      <button type="button" data-tool="search" aria-label="Open command search" title="Search">Search</button>
+      <button type="button" data-tool="api" aria-label="Open API console" title="API">API</button>
+      <button type="button" data-tool="theme" aria-label="Toggle contrast mode" title="Contrast">Tone</button>
+      <button type="button" data-tool="top" aria-label="Back to top" title="Top">Top</button>
+    </div>
+
+    <dialog class="portfolio-dialog command-dialog" data-command-dialog aria-label="Portfolio command search">
+      <form method="dialog" class="dialog-head">
+        <strong>Search portfolio intelligence</strong>
+        <button type="submit" aria-label="Close search">Close</button>
+      </form>
+      <label class="command-input">
+        <span>Query</span>
+        <input type="search" data-command-input placeholder="Search projects, papers, APIs, variants" autocomplete="off" />
+      </label>
+      <div class="command-results" data-command-results></div>
+    </dialog>
+
+    <dialog class="portfolio-dialog api-dialog" data-api-dialog aria-label="Portfolio API console">
+      <form method="dialog" class="dialog-head">
+        <strong>Portfolio API console</strong>
+        <button type="submit" aria-label="Close API console">Close</button>
+      </form>
+      <div class="api-console-grid">
+        <div class="api-list">
+          {apiCatalog.map((api) => (
+            <button type="button" data-api-endpoint={api.path}>
+              <span>{api.label}</span>
+              <small>{api.path}</small>
+            </button>
+          ))}
+          <button type="button" data-live-github>Live GitHub profile</button>
+        </div>
+        <pre class="api-preview" data-api-preview>{JSON.stringify({ ready: true, hint: 'Choose an endpoint to preview JSON.' }, null, 2)}</pre>
+      </div>
+    </dialog>
   </body>
 </html>
