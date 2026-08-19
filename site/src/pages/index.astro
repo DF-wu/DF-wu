@@ -1,11 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import StyleRenderer from '../components/StyleRenderer.astro';
 import { profile, resolveStyle } from '../data/profile';
-import NoirPortfolio from '../components/NoirPortfolio.astro';
-import LinenPortfolio from '../components/LinenPortfolio.astro';
-import GlassPortfolio from '../components/GlassPortfolio.astro';
-import InkPortfolio from '../components/InkPortfolio.astro';
-import DuskPortfolio from '../components/DuskPortfolio.astro';
 
 const style = resolveStyle();
 const description = `${profile.fullName} — ${profile.title} based in ${profile.location}. ${profile.tagline}`;
@@ -16,10 +12,7 @@ const stylesheets = [`/styles/${style}.css`];
   title={`${profile.fullName} — ${profile.title}`}
   description={description}
   stylesheets={stylesheets}
+  currentStyle={style}
 >
-  {style === 'noir' && <NoirPortfolio />}
-  {style === 'linen' && <LinenPortfolio />}
-  {style === 'glass' && <GlassPortfolio />}
-  {style === 'ink' && <InkPortfolio />}
-  {style === 'dusk' && <DuskPortfolio />}
+  <StyleRenderer style={style} />
 </Base>

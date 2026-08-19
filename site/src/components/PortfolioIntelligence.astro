@@ -1,0 +1,110 @@
+---
+import { profile } from '../data/profile';
+import { apiCatalog, capabilityMatrix, impactSignals, insightArticles, timeline } from '../data/portfolio-content';
+
+const articleCategories = ['All', ...Array.from(new Set(insightArticles.map((item) => item.category)))];
+---
+
+<section class="portfolio-intel" aria-labelledby="intel-title">
+  <div class="intel-shell">
+    <div class="intel-heading">
+      <p class="intel-kicker">Portfolio intelligence layer</p>
+      <h2 id="intel-title">Research evidence, APIs, charts, and blog-grade operating notes.</h2>
+      <p>
+        This shared layer turns every variant into a richer portfolio surface: API endpoints, command search,
+        live GitHub enrichment, article cards, timeline context, and machine-readable data.
+      </p>
+    </div>
+
+    <div class="intel-grid">
+      <article class="intel-card hero-card">
+        <span>Data API</span>
+        <h3>{apiCatalog.length} static endpoints</h3>
+        <p>Profile, projects, metrics, insights, styles, feed, search, and OpenAPI are generated at build time.</p>
+        <div class="api-chip-row">
+          {apiCatalog.slice(0, 5).map((api) => <a href={api.path}>{api.label}</a>)}
+        </div>
+      </article>
+
+      <article class="intel-card">
+        <span>Live enhancement</span>
+        <h3>GitHub public API slot</h3>
+        <p>The client can fetch current public profile data without requiring secrets. If the network fails, static evidence remains complete.</p>
+        <div class="live-github" data-github-card>
+          <strong>Static fallback</strong>
+          <small>{profile.stats.publicRepos} repositories / {profile.stats.mergedPRs} merged PRs</small>
+        </div>
+      </article>
+
+      <article class="intel-card">
+        <span>Capability matrix</span>
+        <h3>Feature coverage</h3>
+        <div class="capability-list">
+          {capabilityMatrix.map((item) => (
+            <div>
+              <strong>{item.feature}</strong>
+              <small>{item.status}</small>
+            </div>
+          ))}
+        </div>
+      </article>
+    </div>
+
+    <div class="chart-grid" aria-label="Evidence charts">
+      <article class="chart-card">
+        <span>Impact chart</span>
+        <h3>Proof distribution</h3>
+        <div class="bar-chart">
+          {impactSignals.map((signal) => (
+            <div class={`bar-row tone-${signal.tone}`}>
+              <label>{signal.label}</label>
+              <div aria-hidden="true"><span style={`--value:${signal.value}%`}></span></div>
+              <strong>{signal.value}</strong>
+              <small>{signal.detail}</small>
+            </div>
+          ))}
+        </div>
+      </article>
+
+      <article class="chart-card timeline-card">
+        <span>Timeline</span>
+        <h3>Context map</h3>
+        <div class="timeline-list">
+          {timeline.map((item) => (
+            <article>
+              <time>{item.period}</time>
+              <h4>{item.title}</h4>
+              <p>{item.summary}</p>
+            </article>
+          ))}
+        </div>
+      </article>
+    </div>
+
+    <section class="insight-lab" id="insights" aria-labelledby="insights-title">
+      <div class="insight-head">
+        <div>
+          <p class="intel-kicker">Engineering journal</p>
+          <h3 id="insights-title">Blog-grade essays distilled into portfolio proof.</h3>
+        </div>
+        <div class="filter-row" aria-label="Insight filters">
+          {articleCategories.map((category) => (
+            <button type="button" data-filter-button={category}>{category}</button>
+          ))}
+        </div>
+      </div>
+      <div class="insight-grid">
+        {insightArticles.map((article) => (
+          <article class="insight-card" id={`insight-${article.slug}`} data-insight-card data-category={article.category}>
+            <span>{article.category} / {article.readingTime}</span>
+            <h4>{article.title}</h4>
+            <p>{article.summary}</p>
+            <div>
+              {article.tags.map((tag) => <small>{tag}</small>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
+</section>

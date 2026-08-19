@@ -315,11 +315,13 @@ export const profile = {
   ],
 } as const;
 
-export type StyleKey = 'noir' | 'linen' | 'glass' | 'ink' | 'dusk';
+export type StyleKey = 'noir' | 'linen' | 'glass' | 'ink' | 'dusk' | 'atlas' | 'signal' | 'forge' | 'observatory' | 'archive';
 
-export const STYLE_KEYS: readonly StyleKey[] = ['noir', 'linen', 'glass', 'ink', 'dusk'] as const;
+export const STYLE_KEYS: readonly StyleKey[] = ['noir', 'linen', 'glass', 'ink', 'dusk', 'atlas', 'signal', 'forge', 'observatory', 'archive'] as const;
+
+export const DEFAULT_STYLE: StyleKey = 'atlas';
 
 export function resolveStyle(): StyleKey {
-  const raw = (import.meta.env.PORTFOLIO_STYLE ?? import.meta.env.PUBLIC_PORTFOLIO_STYLE ?? 'noir').toString().toLowerCase();
+  const raw = (import.meta.env.PORTFOLIO_STYLE ?? import.meta.env.PUBLIC_PORTFOLIO_STYLE ?? DEFAULT_STYLE).toString().toLowerCase();
   return (STYLE_KEYS as readonly string[]).includes(raw) ? (raw as StyleKey) : 'noir';
 }

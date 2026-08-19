@@ -1,0 +1,32 @@
+---
+import type { StyleKey } from '../data/profile';
+import NoirPortfolio from './NoirPortfolio.astro';
+import LinenPortfolio from './LinenPortfolio.astro';
+import GlassPortfolio from './GlassPortfolio.astro';
+import InkPortfolio from './InkPortfolio.astro';
+import DuskPortfolio from './DuskPortfolio.astro';
+import AtlasPortfolio from './AtlasPortfolio.astro';
+import SignalPortfolio from './SignalPortfolio.astro';
+import ForgePortfolio from './ForgePortfolio.astro';
+import ObservatoryPortfolio from './ObservatoryPortfolio.astro';
+import ArchivePortfolio from './ArchivePortfolio.astro';
+import PortfolioIntelligence from './PortfolioIntelligence.astro';
+
+interface Props {
+  style: StyleKey;
+}
+
+const { style } = Astro.props;
+---
+
+{style === 'noir' && <NoirPortfolio />}
+{style === 'linen' && <LinenPortfolio />}
+{style === 'glass' && <GlassPortfolio />}
+{style === 'ink' && <InkPortfolio />}
+{style === 'dusk' && <DuskPortfolio />}
+{style === 'atlas' && <AtlasPortfolio />}
+{style === 'signal' && <SignalPortfolio />}
+{style === 'forge' && <ForgePortfolio />}
+{style === 'observatory' && <ObservatoryPortfolio />}
+{style === 'archive' && <ArchivePortfolio />}
+<PortfolioIntelligence />

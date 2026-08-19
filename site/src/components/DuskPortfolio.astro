@@ -21,6 +21,10 @@ import { profile } from '../data/profile';
       <a class="primary" href={profile.links.linkedin} target="_blank" rel="noopener">Connect</a>
       <a class="secondary" href={profile.links.paper} target="_blank" rel="noopener">Read Paper</a>
     </div>
+    <div class="hero-portrait" aria-label="Profile portrait">
+      <img src="https://github.com/DF-wu.png?size=180" alt="Portrait avatar of ChuFei Wu" width="180" height="180" loading="eager" />
+      <span>Reliable services after the demo</span>
+    </div>
   </section>
 
   <div class="divider"></div>
@@ -70,7 +74,7 @@ import { profile } from '../data/profile';
           <span style="color:var(--muted);font-size:0.82rem;font-style:italic">{p.titleEn}</span>
           <span style="color:var(--muted);font-size:0.8rem">{p.authors.join('、')}</span>
           <span style="color:var(--accent);font-size:0.78rem">{p.venue} &middot; {p.location} &middot; {p.year}</span>
-          {p.award && <span style="font-size:0.78rem;color:var(--accent2);font-weight:700">🏆 {p.award}</span>}
+          {p.award && <span style="font-size:0.78rem;color:var(--accent2);font-weight:700">Award · {p.award}</span>}
         </div>
       ))}
     </div>
@@ -82,7 +86,7 @@ import { profile } from '../data/profile';
     <p class="section-label">Awards</p>
     {profile.awards.map((a) => (
       <div class="role" style="background:linear-gradient(135deg, rgba(94,234,212,0.1), rgba(192,132,252,0.08))">
-        <h3>🏆 {a.title}</h3>
+        <h3>Award · {a.title}</h3>
         <p>{a.context}</p>
         <div class="role-evidence">{a.year}</div>
       </div>
