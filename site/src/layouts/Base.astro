@@ -1,20 +1,27 @@
 ---
 import { profile } from '../data/profile';
+import type { StyleKey } from '../data/profile';
 import { apiCatalog, designVariants, insightArticles } from '../data/portfolio-content';
 
 interface Props {
   title: string;
   description?: string;
   stylesheets?: string[];
+  currentStyle?: StyleKey;
 }
 
-const { title, description = 'DF Wu — backend and platform engineer building stable, maintainable systems.', stylesheets = [] } = Astro.props;
+const {
+  title,
+  description = 'DF Wu — backend and platform engineer building stable, maintainable systems.',
+  stylesheets = [],
+  currentStyle,
+} = Astro.props;
 const commandData = [
   ...profile.projects.map((item) => ({ type: 'Project', title: item.name, summary: item.description, url: item.url })),
   ...profile.publications.map((item) => ({ type: 'Publication', title: item.title, summary: item.abstract, url: item.url })),
   ...insightArticles.map((item) => ({ type: 'Insight', title: item.title, summary: item.summary, url: `#insight-${item.slug}` })),
   ...apiCatalog.map((item) => ({ type: 'API', title: item.label, summary: item.description, url: item.path })),
-  ...designVariants.map((item) => ({ type: 'Style', title: item.name, summary: item.thesis, url: item.branch })),
+  ...designVariants.map((item) => ({ type: 'Style', title: item.name, summary: item.thesis, url: `/styles/${item.key}/` })),
 ];
 ---
 
@@ -45,11 +52,42 @@ const commandData = [
     </div>
 
     <div class="portfolio-dock" aria-label="Portfolio tools">
+      <button type="button" data-tool="styles" aria-label="Switch design style" title="Styles">Style</button>
       <button type="button" data-tool="search" aria-label="Open command search" title="Search">Search</button>
       <button type="button" data-tool="api" aria-label="Open API console" title="API">API</button>
       <button type="button" data-tool="theme" aria-label="Toggle contrast mode" title="Contrast">Tone</button>
       <button type="button" data-tool="top" aria-label="Back to top" title="Top">Top</button>
     </div>
+
+    <dialog class="portfolio-dialog styles-dialog" data-styles-dialog aria-label="Design style switcher">
+      <form method="dialog" class="dialog-head">
+        <strong>Switch design system</strong>
+        <button type="submit" aria-label="Close style switcher">Close</button>
+      </form>
+      <div class="styles-list">
+        {designVariants.map((variant, index) => (
+          <a
+            href={`/styles/${variant.key}/`}
+            class="styles-list-item"
+            aria-current={currentStyle === variant.key ? 'page' : undefined}
+          >
+            <span class="styles-list-index">{String(index + 1).padStart(2, '0')}</span>
+            <span class="styles-list-body">
+              <strong>{variant.name}</strong>
+              <small>{variant.thesis}</small>
+            </span>
+            {currentStyle === variant.key && <span class="styles-list-current">Current</span>}
+          </a>
+        ))}
+        <a href="/styles/" class="styles-list-item styles-list-gallery">
+          <span class="styles-list-index">☰</span>
+          <span class="styles-list-body">
+            <strong>Open the full gallery</strong>
+            <small>Compare palettes, theses, and interaction effects side by side.</small>
+          </span>
+        </a>
+      </div>
+    </dialog>
 
     <dialog class="portfolio-dialog command-dialog" data-command-dialog aria-label="Portfolio command search">
       <form method="dialog" class="dialog-head">

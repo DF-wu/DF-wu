@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import StyleRenderer from '../../components/StyleRenderer.astro';
+import { profile, STYLE_KEYS } from '../../data/profile';
+import type { StyleKey } from '../../data/profile';
+import { designVariants } from '../../data/portfolio-content';
+
+export function getStaticPaths() {
+  return STYLE_KEYS.map((style) => ({ params: { style } }));
+}
+
+const style = Astro.params.style as StyleKey;
+const variant = designVariants.find((item) => item.key === style);
+const variantName = variant?.name ?? style;
+const description = variant
+  ? `${profile.fullName} — ${variantName}. ${variant.thesis}`
+  : `${profile.fullName} — ${profile.title}. ${profile.tagline}`;
+const stylesheets = [`/styles/${style}.css`];
+---
+
+<Base
+  title={`${profile.fullName} — ${variantName}`}
+  description={description}
+  stylesheets={stylesheets}
+  currentStyle={style}
+>
+  <StyleRenderer style={style} />
+</Base>

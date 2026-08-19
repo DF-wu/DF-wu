@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import { profile, DEFAULT_STYLE } from '../../data/profile';
+import { designVariants } from '../../data/portfolio-content';
+
+const description = `${profile.fullName} — one portfolio, ${designVariants.length} interchangeable design systems. Preview every variant live.`;
+const stylesheets = ['/styles/global.css'];
+---
+
+<Base
+  title={`${profile.fullName} — Style Gallery`}
+  description={description}
+  stylesheets={stylesheets}
+>
+  <main class="style-gallery">
+    <header class="gallery-head">
+      <p class="gallery-kicker">Design system gallery</p>
+      <h1>One portfolio. {designVariants.length} ways to read it.</h1>
+      <p class="gallery-lede">
+        Every variant renders the same evidence — research, delivery, operations, writing — through a different
+        editorial thesis. Pick one to preview it live, or set <code>PORTFOLIO_STYLE</code> to make it the deployed
+        default.
+      </p>
+      <nav class="gallery-actions" aria-label="Gallery shortcuts">
+        <a href="/" class="gallery-cta">View deployed default ({DEFAULT_STYLE})</a>
+        <a href="/api/styles.json" class="gallery-cta gallery-cta-ghost">styles.json</a>
+      </nav>
+    </header>
+
+    <ol class="gallery-grid">
+      {designVariants.map((variant, index) => (
+        <li class="gallery-card" data-style-key={variant.key}>
+          <a href={`/styles/${variant.key}/`} class="gallery-card-link">
+            <span class="gallery-index">{String(index + 1).padStart(2, '0')}</span>
+            <span class="gallery-swatch" data-swatch={variant.key} aria-hidden="true"></span>
+            <span class="gallery-card-body">
+              <strong>{variant.name}</strong>
+              <em>{variant.thesis}</em>
+              <small>Palette · {variant.palette}</small>
+              <span class="gallery-tags">
+                {variant.effects.map((effect) => (
+                  <span class="gallery-tag">{effect}</span>
+                ))}
+              </span>
+            </span>
+            <span class="gallery-open" aria-hidden="true">Preview →</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </main>
+</Base>

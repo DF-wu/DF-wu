@@ -8,7 +8,8 @@ export function GET() {
   return jsonResponse({
     generatedAt: nowIso(),
     styles: STYLE_KEYS,
-    variants: designVariants,
+    gallery: '/styles/',
+    variants: designVariants.map((variant) => ({ ...variant, previewPath: `/styles/${variant.key}/` })),
     capabilities: capabilityMatrix,
   });
 }

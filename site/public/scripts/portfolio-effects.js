@@ -4,6 +4,7 @@
   const progress = document.querySelector('[data-reading-progress]');
   const commandDialog = document.querySelector('[data-command-dialog]');
   const apiDialog = document.querySelector('[data-api-dialog]');
+  const stylesDialog = document.querySelector('[data-styles-dialog]');
   const commandInput = document.querySelector('[data-command-input]');
   const commandResults = document.querySelector('[data-command-results]');
   const apiPreview = document.querySelector('[data-api-preview]');
@@ -58,6 +59,7 @@
         setTimeout(() => commandInput?.focus(), 20);
       }
       if (action === 'api') openDialog(apiDialog);
+      if (action === 'styles') openDialog(stylesDialog);
       if (action === 'theme') {
         document.documentElement.toggleAttribute('data-contrast');
         localStorage.setItem('portfolio-contrast', document.documentElement.hasAttribute('data-contrast') ? '1' : '0');
