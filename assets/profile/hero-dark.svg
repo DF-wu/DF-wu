@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-labelledby="title desc">
+<title id="title">DF / connected systems</title>
+<desc id="desc">Three signal paths cross between service boundaries and arrive at a shared output. An authored motif for building, testing, and operating software.</desc>
+<rect width="900" height="220" rx="16" fill="#142235"/>
+<text x="48" y="153" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="118" font-weight="650" letter-spacing="-8" fill="#edf3fc">DF</text>
+<g fill="none" stroke-width="3">
+<path d="M288 58H407Q429 58 441 80L475 140Q487 162 510 162H804" stroke="#8eb9ff"/>
+<path d="M288 110H804" stroke="#76d2c3"/>
+<path d="M288 162H407Q429 162 441 140L475 80Q487 58 510 58H804" stroke="#8eb9ff"/>
+<path d="M563 34V186M694 34V186" stroke="#354b66" stroke-dasharray="5 9"/>
+<path d="M835 34H851V186H835" stroke="#afc1d8"/>
+</g>
+<g fill="#142235" stroke-width="3">
+<circle cx="288" cy="58" r="7" stroke="#8eb9ff"/>
+<circle cx="288" cy="110" r="7" stroke="#76d2c3"/>
+<circle cx="288" cy="162" r="7" stroke="#8eb9ff"/>
+<circle cx="563" cy="58" r="7" stroke="#8eb9ff"/>
+<circle cx="694" cy="162" r="7" stroke="#8eb9ff"/>
+</g>
+<g fill="#76d2c3"><circle cx="804" cy="58" r="5"/><circle cx="804" cy="110" r="5"/><circle cx="804" cy="162" r="5"/></g>
+</svg>
