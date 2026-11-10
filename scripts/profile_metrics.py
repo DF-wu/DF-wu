@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import re
 import sys
+import tempfile
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -188,8 +189,26 @@ def save_source(name, data, renderer):
     files = {OUTPUT / f'{name}-{theme}.svg': renderer(data, palette)
              for theme, palette in PALETTES.items()}
     files[OUTPUT / f'{name}.json'] = json.dumps(data, indent=2, ensure_ascii=True) + '\n'
-    for path, content in files.items():
-        atomic_write(path, content)
+    # Prepare new files and rollback copies before replacing any last-good output.
+    with tempfile.TemporaryDirectory(dir=OUTPUT) as directory:
+        staging = Path(directory)
+        for path, content in files.items():
+            atomic_write(staging / path.name, content)
+            if path.exists():
+                (staging / (path.name + '.previous')).write_bytes(path.read_bytes())
+        installed = []
+        try:
+            for path in files:
+                (staging / path.name).replace(path)
+                installed.append(path)
+        except OSError:
+            for path in reversed(installed):
+                previous = staging / (path.name + '.previous')
+                if previous.exists():
+                    previous.replace(path)
+                else:
+                    path.unlink()
+            raise
 
 
 def write_text_data():
@@ -234,7 +253,7 @@ def main():
             print(f'{name}: refreshed public aggregate snapshot')
         except Exception as error:
             # No URLs, payloads, headers, project names, or tokens in failure logs.
-            print(f'{name}: refresh failed ({type(error).__name__}); last good assets retained', file=sys.stderr)
+            print(f'{name}: refresh failed ({type(error).__name__}); automation will not publish this run', file=sys.stderr)
             failures.append(name)
     write_text_data()
     return bool(failures)

@@ -45,7 +45,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 scripts/profile_metrics.py
-      - name: Commit successful snapshots
+      - name: Commit validated snapshots
+        if: steps.refresh.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -59,5 +60,5 @@ jobs:
       - name: Report partial or total refresh failure
         if: steps.refresh.outcome == 'failure'
         run: |
-          echo 'At least one public source failed validation. Its previous assets and dates were retained.'
+          echo 'A public source or output write failed. No snapshots from this run were published.'
           exit 1

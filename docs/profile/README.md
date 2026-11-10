@@ -67,8 +67,8 @@ No WakaTime key is required for this integration. Secret-name inspection found `
 - Pull requests run offline unit tests with read-only repository permission and no credentials persisted in checkout. Refresh runs only for this exact repository and master, with contents-write permission limited to that job.
 - Checkout is pinned to the verified v4.2.2 commit. Python uses only the standard library already present on the runner. No pip/npm installation, WakaTime action, PAT, or new external service is required.
 - GitHub's repository-scoped Actions token authenticates only fixed GitHub API URLs and the scoped push. The public WakaTime fetch receives no token.
-- Each source is fetched, validated, and rendered before its output files are replaced. Each file is replaced atomically. A failed source keeps all its previous outputs; an independent successful source can still update. Text data is rebuilt from saved snapshots.
-- A partial refresh commits successful data, then deliberately fails the run to surface the stale source. Failed API bodies, headers, and exception messages are not printed. Dates on retained charts remain unchanged.
+- Each source is fetched, validated, and rendered before its output files are replaced. New files and rollback copies are staged first; an installation failure restores the prior source set. Each file replacement is atomic. Text data is rebuilt from saved snapshots. Independent sources can still refresh locally, but automation commits only when the entire refresh succeeds.
+- Any source, validation, or output-write failure prevents the automation commit and deliberately fails the run. The committed assets and their dates remain unchanged, including if the filesystem cannot complete a rollback. A subsequent scheduled/manual run retries both sources. Failed API bodies, headers, and exception messages are not printed.
 - Only metric files are staged. Pushes are ordinary fast-forward pushes; concurrent master changes cause a safe push failure for the next scheduled/manual retry. No force push or automatic rebase is used.
 
 Local refresh and checks:
@@ -79,7 +79,7 @@ python3 -m unittest discover -s scripts -p 'test_profile_metrics.py' -v
 git diff --check
 ```
 
-The GitHub API can be used unauthenticated within public rate limits. In Actions, `GH_TOKEN` is supplied by `github.token`. Unit tests are offline and cover pagination, fork filtering, exact PR windows, private/incomplete-source rejection, malformed/stale WakaTime content, XML escaping, and last-good preservation with independent updates.
+The GitHub API can be used unauthenticated within public rate limits. In Actions, `GH_TOKEN` is supplied by `github.token`. Unit tests are offline and cover pagination, fork filtering, exact PR windows, private/incomplete-source rejection, malformed/stale WakaTime content, XML escaping, last-good preservation with independent local updates, and rollback after an interrupted multi-file installation.
 
 ## Git identity and target
 

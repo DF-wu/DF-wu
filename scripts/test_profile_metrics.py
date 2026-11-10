@@ -88,6 +88,21 @@ class PublicMetricsTests(unittest.TestCase):
         for forbidden in ('<script', '<foreignObject', '<style', 'http://wakatime', 'onload='):
             self.assertNotIn(forbidden, rendered)
 
+    def test_install_failure_rolls_back_the_entire_source_snapshot(self):
+        data = m.parse_wakatime(share(), TODAY)
+        with tempfile.TemporaryDirectory() as temp, patch.object(m, 'OUTPUT', Path(temp)):
+            m.save_source('wakatime', data, m.chart_wakatime)
+            previous = {p.name: p.read_bytes() for p in Path(temp).iterdir()}
+            changed = dict(data, observed='2026-11-12')
+            replace = Path.replace
+            def fail_second_install(path, target):
+                if path.name == 'wakatime-dark.svg' and Path(target).parent == Path(temp):
+                    raise OSError('Simulated installation failure')
+                return replace(path, target)
+            with patch.object(Path, 'replace', fail_second_install), self.assertRaises(OSError):
+                m.save_source('wakatime', changed, m.chart_wakatime)
+            self.assertEqual({p.name: p.read_bytes() for p in Path(temp).iterdir()}, previous)
+
 
 if __name__ == '__main__':
     unittest.main()
