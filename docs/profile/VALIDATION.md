@@ -36,6 +36,6 @@ GitHub's Markdown API independently confirmed that all three picture/source/img 
 
 This validates the draft branch's repository README on GitHub. The account's live profile continues to show master until a separate merge decision. Mobile QA changes CSS viewport size, not the user agent, and is not a physical-device test.
 
-The master-only scheduled/manual write path was not executed: doing so before review would publish changes to master. Its parser/generator, workflow syntax, and offline failure paths were validated locally. The PR's test job provides the CI check; the refresh job deliberately skips PR events. No website build or deployment was requested or performed.
+The master-only scheduled/manual write path was not executed: doing so before review would publish changes to master. Its parser/generator, workflow syntax, and offline failure paths were validated locally. The PR's test job provides the CI check; the refresh job deliberately skips PR events. No manual website build or deployment was requested or run, and no website source or deployment configuration changed. The existing Vercel integration automatically produced a branch preview on push and reported success.
 
 Research/experience evidence and source-retrieval limits are documented in [the maintenance note](README.md#public-evidence). WakaTime exposes percentages for its Last Year label, without exact date boundaries or hours; GitHub metrics are public snapshots rather than private contributions or proficiency scores.
