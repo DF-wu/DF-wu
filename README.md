@@ -103,6 +103,16 @@ At ITRI / PDAS-team, I worked on personal-data authorization and valuation/payme
 | [BehaviorMonitor](https://github.com/DF-wu/BehaviorMonitor) | Full-stack AI-assisted implementation with real-time UI, admin panel, analytics, logs, Firebase backend, and GitHub Pages deployment. | React 19, TypeScript, Firebase |
 | [urlbalancer](https://github.com/DF-wu/urlbalancer) | Go + React practice around control-plane/data-plane separation and reverse-proxy service logic. | Go, Gin, React, SQLite |
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=DF-wu/iDRACFanSpeedControl,DF-wu/HideReplier,DF-wu/CapsWriter-Offline-Container,DF-wu/taobaoOrderExporter,DF-wu/lilac-mono&amp;type=date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=DF-wu/iDRACFanSpeedControl,DF-wu/HideReplier,DF-wu/CapsWriter-Offline-Container,DF-wu/taobaoOrderExporter,DF-wu/lilac-mono&amp;type=Date&amp;theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=DF-wu/iDRACFanSpeedControl,DF-wu/HideReplier,DF-wu/CapsWriter-Offline-Container,DF-wu/taobaoOrderExporter,DF-wu/lilac-mono&amp;type=Date" />
+    <img alt="GitHub stars over time for iDRACFanSpeedControl, HideReplier, CapsWriter-Offline-Container, taobaoOrderExporter, and lilac-mono" src="https://api.star-history.com/svg?repos=DF-wu/iDRACFanSpeedControl,DF-wu/HideReplier,DF-wu/CapsWriter-Offline-Container,DF-wu/taobaoOrderExporter,DF-wu/lilac-mono&amp;type=Date" />
+  </picture>
+</a>
+
 ## Experience
 
 | Context | Period | What I did |
