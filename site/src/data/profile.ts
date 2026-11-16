@@ -136,13 +136,13 @@ export const profile = {
   },
 
   stats: {
-    snapshotDate: '2026-06-07',
-    publicRepos: 127,
-    nonForkRepos: 64,
+    snapshotDate: '2026-11-16',
+    publicRepos: 132,
+    nonForkRepos: 80,
     yearlyContributions: 605,
     yearlyCommits: 567,
-    mergedPRs: 23,
-    externalPRs: 12,
+    mergedPRs: 180,
+    externalPRs: 15,
     ieeepapers: 2,
     publications: 5,
     ossProjects: 5,
@@ -178,10 +178,10 @@ export const profile = {
     {
       name: 'HideReplier',
       url: 'https://github.com/DF-wu/HideReplier',
-      stack: 'Java · Spring Boot · Docker · Fly.io',
+      stack: 'Go · Vite · MongoDB · Docker · Fly.io',
       description:
-        'Anonymous Discord reply bot built for the NTOU CS Discord context. It grew from a course project into a containerized service with CI/CD, Docker Hub image flow, and Fly.io deployment.',
-      highlight: 'Full lifecycle side project · 10 stars',
+        'Anonymous Discord reply bot built for the NTOU CS Discord. It started as a Java/Spring Boot course project and was rewritten in Go with a Vite frontend, tuned to run on a single shared vCPU with 256MB RAM on Fly.io.',
+      highlight: 'Java → Go rewrite · 256MB runtime · 10 stars',
     },
     {
       name: 'myServices',
@@ -199,9 +199,38 @@ export const profile = {
         'Dell PowerEdge fan control through iDRAC/IPMI with Docker deployment, NVMe/GPU temperature inputs, configurable thresholds, and a recent README/code audit around fail-safe behavior.',
       highlight: 'Dell R730XD tested · 10 stars',
     },
+    {
+      name: 'CapsWriter-Offline-Container',
+      url: 'https://github.com/DF-wu/CapsWriter-Offline-Container',
+      stack: 'Python · Docker · CPU/GPU inference · OpenAI API',
+      description:
+        'Offline voice input that also runs as a shared speech-to-text service on a NAS. Maintained fork with container packaging, CPU/GPU inference, desktop/Web/CLI clients, and an OpenAI-compatible audio endpoint.',
+      highlight: 'Maintained fork · fork-v2.1.0 released',
+    },
   ],
 
   contributions: [
+    {
+      repo: 'stanley2058/lilac-mono',
+      pr: '#36',
+      url: 'https://github.com/stanley2058/lilac-mono/pull/36',
+      type: 'Fix',
+      description: 'UUID delivery identities for GitHub webhooks and workflow cancellation',
+    },
+    {
+      repo: 'stanley2058/lilac-mono',
+      pr: '#35',
+      url: 'https://github.com/stanley2058/lilac-mono/pull/35',
+      type: 'Feature',
+      description: 'Link reply references on the configured GitHub host',
+    },
+    {
+      repo: 'stanley2058/lilac-mono',
+      pr: '#13',
+      url: 'https://github.com/stanley2058/lilac-mono/pull/13',
+      type: 'Fix',
+      description: 'Prevent issue_comment self-trigger loops',
+    },
     {
       repo: 'stanley2058/lilac-mono',
       pr: '#5',

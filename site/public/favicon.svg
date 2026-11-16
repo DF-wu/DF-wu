@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="4" fill="#0a0a0f"/>
-  <text x="16" y="22" font-family="monospace" font-size="16" font-weight="bold" fill="#e0e0e0" text-anchor="middle">DF</text>
+  <rect width="32" height="32" rx="7" fill="#171b1d"/>
+  <path d="M6 25 L12 19 H26" fill="none" stroke="#2457d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="26" cy="19" r="2.6" fill="#b5742a"/>
+  <text x="16" y="15" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="800" fill="#f8f7f2" text-anchor="middle">DF</text>
 </svg>

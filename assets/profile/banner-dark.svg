@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="t d">
+<title id="t">ChuFei Wu (吳朱飛) — Backend &amp; Platform Engineer</title>
+<desc id="d">Career route map: research, delivery, operations and collaboration lines meeting at one engineer.</desc>
+<style>
+  .flow { fill: none; stroke: rgba(13,17,23,0.85); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 16; animation: flow 1.6s linear infinite; }
+  .track { fill: none; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
+  .pulse { animation: pulse 2.4s ease-out infinite; transform-origin: 72px 296px; }
+  @keyframes flow { to { stroke-dashoffset: -36; } }
+  @keyframes pulse { 0% { transform: scale(0.6); opacity: 0.9; } 80%, 100% { transform: scale(2); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .flow, .pulse { animation: none; } }
+</style>
+<defs>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="rgba(240,246,252,0.045)" stroke-width="1"/></pattern>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b22"/></linearGradient>
+  <radialGradient id="glow" cx="0.78" cy="0.5" r="0.45"><stop offset="0" stop-color="rgba(56,139,253,0.18)"/><stop offset="1" stop-color="rgba(56,139,253,0.18)" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="0.5" y="0.5" width="1199" height="329" rx="16" fill="url(#bg)" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="1199" height="329" rx="16" fill="url(#grid)"/>
+<rect x="0.5" y="0.5" width="1199" height="329" rx="16" fill="url(#glow)"/>
+<text x="64" y="86" fill="#d29a4a" font-family="'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', sans-serif" font-size="22" font-weight="700" letter-spacing="10">吳朱飛</text>
+<text x="60" y="166" fill="#e6edf3" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700" letter-spacing="-1.5">ChuFei Wu</text>
+<text x="64" y="208" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22">Backend &amp; Platform Engineer · Tainan, Taiwan</text>
+<rect x="64" y="230" width="197" height="32" rx="16" fill="rgba(240,246,252,0.06)" stroke="#30363d"/>
+<text x="78" y="251" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">event-driven systems</text>
+<rect x="271" y="230" width="163" height="32" rx="16" fill="rgba(240,246,252,0.06)" stroke="#30363d"/>
+<text x="285" y="251" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">contract testing</text>
+<rect x="444" y="230" width="129" height="32" rx="16" fill="rgba(240,246,252,0.06)" stroke="#30363d"/>
+<text x="458" y="251" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">platform ops</text>
+<circle cx="72" cy="296" r="5" fill="#2da44e"/><circle class="pulse" cx="72" cy="296" r="5" fill="none" stroke="#2da44e" stroke-width="2"/>
+<text x="86" y="301" fill="#2da44e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600">Open to backend &amp; platform roles</text>
+<g transform="translate(670 -45)">
+<path class="track" d="M260 210 L180 130 H40" stroke="#2f6fed"/><path class="flow" d="M260 210 L180 130 H40"/>
+<circle cx="180" cy="130" r="7" fill="#0d1117" stroke="#2f6fed" stroke-width="4"/>
+<text x="180" y="110" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">SOSELab</text>
+<circle cx="110" cy="130" r="7" fill="#0d1117" stroke="#2f6fed" stroke-width="4"/>
+<text x="110" y="110" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">CCTS</text>
+<circle cx="40" cy="130" r="9" fill="#2f6fed" stroke="#0d1117" stroke-width="3"/>
+<text x="40" y="110" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">APSEC 22</text>
+<path class="track" d="M260 210 L340 130 H480" stroke="#c7832f"/><path class="flow" d="M260 210 L340 130 H480"/>
+<circle cx="340" cy="130" r="7" fill="#0d1117" stroke="#c7832f" stroke-width="4"/>
+<text x="340" y="110" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">ITRI</text>
+<circle cx="410" cy="130" r="7" fill="#0d1117" stroke="#c7832f" stroke-width="4"/>
+<text x="410" y="110" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">PDAS</text>
+<circle cx="480" cy="130" r="9" fill="#c7832f" stroke="#0d1117" stroke-width="3"/>
+<text x="480" y="110" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">AKS</text>
+<path class="track" d="M260 210 L340 290 H480" stroke="#239072"/><path class="flow" d="M260 210 L340 290 H480"/>
+<circle cx="340" cy="290" r="7" fill="#0d1117" stroke="#239072" stroke-width="4"/>
+<text x="340" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">Docker</text>
+<circle cx="410" cy="290" r="7" fill="#0d1117" stroke="#239072" stroke-width="4"/>
+<text x="410" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">iDRAC</text>
+<circle cx="480" cy="290" r="9" fill="#239072" stroke="#0d1117" stroke-width="3"/>
+<text x="480" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">HomeLab</text>
+<path class="track" d="M260 210 L180 290 H40" stroke="#d2553f"/><path class="flow" d="M260 210 L180 290 H40"/>
+<circle cx="180" cy="290" r="7" fill="#0d1117" stroke="#d2553f" stroke-width="4"/>
+<text x="180" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">g0v</text>
+<circle cx="110" cy="290" r="7" fill="#0d1117" stroke="#d2553f" stroke-width="4"/>
+<text x="110" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">lilac</text>
+<circle cx="40" cy="290" r="9" fill="#d2553f" stroke="#0d1117" stroke-width="3"/>
+<text x="40" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">15 PRs</text>
+<circle cx="260" cy="210" r="58" fill="#0d1117" stroke="#e6edf3" stroke-width="4"/>
+<circle cx="260" cy="210" r="48" fill="none" stroke="#30363d" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+<text x="260" y="222" text-anchor="middle" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="34" font-weight="800">DF</text>
+</g>
+</svg>

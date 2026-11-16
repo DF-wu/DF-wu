@@ -1,109 +1,200 @@
-<div align="center">
-  <h1>吳朱飛 · ChuFei Wu · DF Wu</h1>
+<a href="https://df.is-a.dev">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/profile/banner-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/profile/banner-light.svg" />
+    <img alt="ChuFei Wu (吳朱飛) — Backend & Platform Engineer. Career route map: research, delivery, operations and collaboration lines meeting at one engineer." src="./assets/profile/banner-light.svg" width="100%" />
+  </picture>
+</a>
 
-  <p>
-    <strong>Software Engineer · Service Developer · Backend / Platform Engineer</strong><br />
-    Taiwan · M.S. / B.S. in Computer Science and Engineering, National Taiwan Ocean University
-  </p>
+<p align="center">
+  <a href="https://df.is-a.dev"><img alt="Website" src="https://img.shields.io/badge/df.is--a.dev-portfolio-2457d6?style=for-the-badge&logo=astro&logoColor=white" /></a>
+  <a href="https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf"><img alt="Resume" src="https://img.shields.io/badge/Resume-PDF-b5742a?style=for-the-badge" /></a>
+  <a href="https://www.linkedin.com/in/chufei-wu-b33990164/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-ChuFei_Wu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://g0v.social/@df"><img alt="Mastodon" src="https://img.shields.io/badge/Mastodon-@df@g0v.social-6364FF?style=for-the-badge&logo=mastodon&logoColor=white" /></a>
+  <a href="mailto:df@dfder.tw"><img alt="Email" src="https://img.shields.io/badge/Email-df@dfder.tw-1d6b57?style=for-the-badge" /></a>
+</p>
 
-  <p>
-    <a href="https://df.is-a.dev"><img alt="Live profile" src="https://img.shields.io/badge/Live_Profile-df.is--a.dev-d6a84f?style=for-the-badge&logo=githubpages&logoColor=111111" /></a>
-    <a href="https://github.com/DF-wu"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-DF--wu-111111?style=for-the-badge&logo=github" /></a>
-    <a href="https://www.linkedin.com/in/chufei-wu-b33990164/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-ChuFei_Wu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-    <a href="https://g0v.social/@df"><img alt="Mastodon" src="https://img.shields.io/badge/Mastodon-@df@g0v.social-6364FF?style=for-the-badge&logo=mastodon&logoColor=white" /></a>
-  </p>
-</div>
+<p align="center">
+  <b>Backend · Platform · Event-driven systems</b><br />
+  M.S. / B.S. Computer Science and Engineering, National Taiwan Ocean University · Tainan, Taiwan
+</p>
 
 ---
 
-## What To Know First
+### Hi, I'm DF 👋
 
-I am strongest where backend engineering meets operational reality: event-driven systems, microservices, deployment, CI/CD, data flow, and the question of whether a system can still be understood after it ships.
+I am strongest where backend engineering meets operational reality: **event-driven systems, microservices, deployment, CI/CD, and data flow**, plus the question of whether a system can still be understood after it ships.
 
-My portfolio has four proof lines:
+- 🔬 My thesis became **[CCTS](https://github.com/DF-wu/CCTS)**, a contract-testing service for event-driven microservices: **IEEE APSEC 2022** (first author) and **TCSE 2022 Best Chinese Paper**.
+- 🏗️ At **ITRI / PDAS-team** I worked on personal-data authorization and payment systems delivered to **Azure Kubernetes Service**.
+- 🖥️ I run a **home-lab with 30+ services** (storage, DNS, monitoring, media, home automation), so I live with my own operational decisions.
+- 🌱 Open to **backend / platform engineering** roles.
 
-| Proof line | Evidence |
-| --- | --- |
-| **SOSELab research training** | Service-oriented software engineering lab context: microservice testing, monitoring, retrieval/search, SOA, and chatbot application architecture |
-| **Research that became software** | CCTS, an 8k+ LOC Spring Boot verification service for event-driven microservices; IEEE APSEC 2022; TCSE 2022 Best Chinese Paper |
-| **Customer-delivered engineering** | ITRI / PDAS-team work on personal-data authorization and valuation/payment systems, including AKS delivery and CI/CD/infrastructure documentation |
-| **Operations I personally live with** | HomeLab with 30+ services across storage, DNS, monitoring, media, albums, and home automation; iDRAC/IPMI server automation |
-| **Public collaboration** | Merged PRs across search-provider integration, documentation correctness, localization, firmware build docs, and project cleanup |
+<table>
+  <tr>
+    <td align="center" width="25%"><h3>2</h3><sub>IEEE papers<br />APSEC 2022 · ICS 2020</sub></td>
+    <td align="center" width="25%"><h3>🏆 1</h3><sub>Best paper award<br />TCSE 2022</sub></td>
+    <td align="center" width="25%"><h3>30+</h3><sub>services operated<br />in my home-lab</sub></td>
+    <td align="center" width="25%"><h3>15</h3><sub>external merged PRs<br />180 merged PRs total</sub></td>
+  </tr>
+</table>
+
+<sub>Numbers from the public GitHub API/search and my public resume, refreshed 2026-11-16.</sub>
+
+## 🧭 Selected work
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🔬 <a href="https://github.com/DF-wu/CCTS">CCTS</a> · Composite Contract Testing Service</h4>
+      My thesis system: Pact contracts → runtime event logs → state-model validation → test reports, which catches missing transitions in event-driven microservices.<br /><br />
+      <sub><b>Java · Spring Boot · RabbitMQ · MongoDB · Pact</b> — 8k+ LOC · APSEC 2022</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h4>💬 <a href="https://github.com/DF-wu/HideReplier">HideReplier</a></h4>
+      Anonymous Discord reply bot for the NTOU CS community. It started as a Java/Spring Boot course project and was rewritten in Go with a Vite frontend, running on a 256MB Fly.io VM.<br /><br />
+      <sub><b>Go · Vite · MongoDB · Docker · Fly.io</b> — ⭐ 10</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🌡️ <a href="https://github.com/DF-wu/iDRACFanSpeedControl">iDRACFanSpeedControl</a></h4>
+      Dell PowerEdge fan control over iDRAC/IPMI with ESXi, NVMe and GPU temperature inputs, Docker deployment, and a fail-safe audit.<br /><br />
+      <sub><b>Shell · Docker · IPMI · ESXi · NVIDIA</b> — ⭐ 10 · R730XD tested</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🏠 <a href="https://github.com/DF-wu/myServices">myServices</a></h4>
+      The configuration and ops notes behind my home-lab: service composition, storage and network layout, MariaDB backup, Docker and server maintenance.<br /><br />
+      <sub><b>Docker · Linux · NAS · MariaDB · SDN</b> — 30+ services in production at home</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🎙️ <a href="https://github.com/DF-wu/CapsWriter-Offline-Container">CapsWriter-Offline-Container</a></h4>
+      Maintained fork of an offline voice-input tool that also runs as a shared speech-to-text service on a NAS. Adds container packaging, CPU/GPU inference, and an OpenAI-compatible audio API.<br /><br />
+      <sub><b>Python · Docker · CPU/GPU inference</b> — fork-v2.1.0</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🗺️ <a href="https://df.is-a.dev">df.is-a.dev</a></h4>
+      This profile as a website: an Astro site with ten switchable design systems, static JSON APIs, and a command palette. Source lives in <a href="./site"><code>site/</code></a>.<br /><br />
+      <sub><b>Astro · TypeScript · CSS</b> — deployed via GitHub Pages</sub>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary><b>More experiments</b></summary>
+<br />
+
+| Project | What it explores | Stack |
+| --- | --- | --- |
+| [BehaviorMonitor](https://github.com/DF-wu/BehaviorMonitor) | AI-assisted full-stack build: real-time UI, admin panel, analytics, Firebase backend | React 19, TypeScript, Firebase |
+| [urlbalancer](https://github.com/DF-wu/urlbalancer) | Control-plane / data-plane separation and reverse-proxy service logic | Go, Gin, React, SQLite |
+| [CCTS PoC services](https://github.com/DF-wu/CCTS_poc_orchestrator) | Orchestrator / [payment](https://github.com/DF-wu/CCTS_poc_payment) / [points](https://github.com/DF-wu/CCTS_poc_points) / [logging](https://github.com/DF-wu/CCTS_poc_logging) services used to validate CCTS | Java, Spring Boot, RabbitMQ |
+
+</details>
+
+## 📚 Research
+
+Graduate research at **[SOSELab](https://soselab.cs.ntou.edu.tw/)** (Service-Oriented Software Engineering Lab), NTOU CSE, advised by [Prof. Shang-Pin Ma](https://soselab.cs.ntou.edu.tw/director/).
+Thesis: **事件驅動微服務系統之契約測試暨端到端測試研究** (2022/7).
+
+| | Work | Venue |
+| :---: | --- | --- |
+| 🥇 | [Testing for Event-Driven Microservices Based on Consumer-Driven Contracts and State Models](https://ieeexplore.ieee.org/document/10043304/) | **IEEE APSEC 2022** · first author |
+| 🏆 | 事件驅動微服務系統之複合契約測試機制 | **TCSE 2022** · Best Chinese Paper Award |
+| 📄 | [PDAS: A Digital-Signature-Based Authorization Platform for Digital Personal Data](https://ieeexplore.ieee.org/document/9359082/) | **IEEE ICS 2020** · co-author |
+| 📄 | 數位個人資料授權之計價與雙向支付平台之系統設計 | NCS 2021 · co-author |
+| 📄 | 基於數位簽章之個資授權平台設計 | TCSE 2020 · co-author |
 
 ```mermaid
 flowchart LR
-  Research[CCTS research] --> Contracts[Pact contracts]
-  Contracts --> Events[Runtime event logs]
+  Contracts[Pact contracts] --> Events[Runtime event logs]
   Events --> States[State-model validation]
-  States --> Reports[Test result reports]
-  Delivery[ITRI / PDAS delivery] --> Infra[AKS + CI/CD + infrastructure]
-  Infra --> Ops[HomeLab / production habits]
+  States --> Reports[Test reports]
+  Delivery[ITRI / PDAS delivery] --> Infra[AKS + CI/CD]
+  Infra --> Ops[HomeLab habits]
+  Reports -.-> Ops
 ```
 
-## Verified Snapshot
+## 💼 Experience
 
-| Signal | Value |
-| --- | ---: |
-| GitHub public repositories | 127 |
-| Non-fork repositories visible via GitHub search | 64 |
-| Merged pull requests found via GitHub search | 23 |
-| External merged pull requests found via GitHub search | 12 |
-| IEEE publications | 2 |
-| Total research publications listed | 5 |
-| HomeLab services operated | 30+ |
-| CCTS implementation size | 8k+ LOC |
-| PDAS / payment platform implementation size | 40k+ LOC |
+| | Role | Period |
+| :---: | --- | --- |
+| 🔬 | **Research Assistant · Thesis Author** at SOSELab, NTOU CSE<br /><sub>Designed and built CCTS; IEEE APSEC 2022; TCSE 2022 Best Chinese Paper.</sub> | 2020 – 2022 |
+| 🏗️ | **Software Engineer Intern** at ITRI · PDAS-team<br /><sub>Personal-data authorization + valuation/payment platform: microservices, event-driven design, blockchain, fintech, CI/CD, AKS delivery.</sub> | Jul – Dec 2021 |
+| 🏭 | **MIS / Internal Systems** at Ming-Chyuan Ltd.<br /><sub>Maintains and modernizes digital systems for CNC manufacturing workflows.</sub> | 2012 – present |
+| 🎓 | **Teaching Assistant** at National Taiwan Ocean University<br /><sub>Migrated course content to a newer CMS workflow; supported lesson design.</sub> | after graduation |
+| 🌐 | **Open-source collaborator** · g0v civic tech and public OSS<br /><sub>Integrations, webhook fixes, localization, and documentation correctness.</sub> | ongoing |
 
-<sub>Snapshot refreshed from public GitHub API/search and public resume on 2026-06-07.</sub>
+## 🛠️ Tech stack
 
-## Research And Publications
+<p>
+  <img alt="Languages: Java, Go, Python, TypeScript, JavaScript, Bash, C, Solidity. Frameworks: Spring, Django, Node.js, Express, Angular, Vue, Astro, React. Platform: Docker, Kubernetes, Linux, Nginx, Jenkins, Azure, GitHub Actions, Cloudflare. Data: MongoDB, MySQL, PostgreSQL, Redis, SQLite, RabbitMQ, Kafka, Firebase." src="https://skillicons.dev/icons?i=java,go,python,ts,js,bash,c,solidity,spring,django,nodejs,express,angular,vue,astro,react,docker,kubernetes,linux,nginx,jenkins,azure,githubactions,cloudflare,mongodb,mysql,postgres,redis,sqlite,rabbitmq,kafka,firebase&perline=8" />
+</p>
 
-### SOSELab · Service-Oriented Software Engineering Laboratory
+<sub><b>Also:</b> Gin · MariaDB · AKS · ESXi · Unraid · TrueNAS · Pact · JUnit · Postman · SideeX · contract testing · event-driven design · home-lab operations</sub>
 
-I did my graduate research in [SOSELab](https://soselab.cs.ntou.edu.tw/) at NTOU CSE, advised by [Prof. Shang-Pin Ma](https://soselab.cs.ntou.edu.tw/director/). The lab's public research directions include microservice testing, microservice monitoring, microservice retrieval/search, service-oriented architecture, and chatbot application architecture.
+## 🤝 Open-source trail
 
-SOSELab's [postgraduates page](https://soselab.cs.ntou.edu.tw/lab-members/) lists my thesis record:
-**事件驅動微服務系統之契約測試暨端到端測試研究** (2022/7).
-
-SOSELab's [publications page](https://soselab.cs.ntou.edu.tw/publications/) also gives the cleanest public trail for my research line: APSEC 2022 CCTS, TCSE 2022 Best Chinese Paper, NCS 2021 personal-data valuation/payment, and ICS 2020 PDAS.
-
-### CCTS · Composite Contract Testing Service
-
-[CCTS](https://github.com/DF-wu/CCTS) is my thesis system for testing event-driven microservice behavior. It combines consumer-driven contracts, event-log sequence validation, and state-machine based flow assertions so teams can verify not only message contracts, but also whether real execution follows the expected service path.
-
-| Work | Venue | Role |
+| PR | Repository | Contribution |
 | --- | --- | --- |
-| [Testing for Event-Driven Microservices Based on Consumer-Driven Contracts and State Models](https://ieeexplore.ieee.org/document/10043304/) | IEEE APSEC 2022 | First author · thesis work |
-| 事件驅動微服務系統之複合契約測試機制 | TCSE 2022 | Best Chinese Paper Award |
+| [#36](https://github.com/stanley2058/lilac-mono/pull/36) | `stanley2058/lilac-mono` | UUID delivery identities for GitHub webhooks and workflow cancellation |
+| [#35](https://github.com/stanley2058/lilac-mono/pull/35) | `stanley2058/lilac-mono` | Link reply references on the configured GitHub host |
+| [#13](https://github.com/stanley2058/lilac-mono/pull/13) | `stanley2058/lilac-mono` | Prevent `issue_comment` self-trigger loops |
+| [#1](https://github.com/stanley2058/lilac-mono/pull/1) | `stanley2058/lilac-mono` | Exa web search provider and tests |
+| [#138](https://github.com/Minidoracat/mcp-feedback-enhanced/pull/138) | `Minidoracat/mcp-feedback-enhanced` | Traditional Chinese localization and docs |
 
-Related proof-of-concept services:
-[orchestrator](https://github.com/DF-wu/CCTS_poc_orchestrator) ·
-[payment](https://github.com/DF-wu/CCTS_poc_payment) ·
-[points](https://github.com/DF-wu/CCTS_poc_points) ·
-[logging](https://github.com/DF-wu/CCTS_poc_logging)
+<details>
+<summary><b>More merged PRs</b></summary>
+<br />
 
-### PDAS · Personal Data Authorization / Valuation / Payment
-
-At ITRI / PDAS-team, I worked on personal-data authorization and valuation/payment systems. My contribution areas included logging, payment, blockchain, third-party fintech integration, CI/CD, infrastructure, and delivery documentation, with deployment to Azure Kubernetes Service.
-
-| Work | Venue | Role |
+| PR | Repository | Contribution |
 | --- | --- | --- |
-| [PDAS: A Digital-Signature-Based Authorization Platform for Digital Personal Data](https://ieeexplore.ieee.org/document/9359082/) | IEEE ICS 2020 | Co-author · PDAS-team contributor |
-| 數位個人資料授權之計價與雙向支付平台之系統設計 | NCS 2021 | Co-author |
-| 基於數位簽章之個資授權平台設計 | TCSE 2020 | Co-author |
+| [#4](https://github.com/stanley2058/lilac-mono/pull/4) | `stanley2058/lilac-mono` | Custom Tavily API endpoint support |
+| [#5](https://github.com/stanley2058/lilac-mono/pull/5) | `stanley2058/lilac-mono` | Cleanup and documentation follow-up |
+| [#1](https://github.com/stanley2058/lilac-ai-rag-dashboard/pull/1) | `stanley2058/lilac-ai-rag-dashboard` | Configurable OpenAI API base URL |
+| [#111](https://github.com/yym68686/ChatGPT-Telegram-Bot/pull/111) | `yym68686/ChatGPT-Telegram-Bot` | Markdown table correctness fix |
+| [#19293](https://github.com/is-a-dev/register/pull/19293) | `is-a-dev/register` | Custom domain registration |
+| [#167](https://github.com/SrinivasanTarget/ContractTestingBoilerplate/pull/167) | `SrinivasanTarget/ContractTestingBoilerplate` | Corrected Pact broker port mismatch |
+| [#691](https://github.com/flipperdevices/flipperzero-firmware/pull/691) | `flipperdevices/flipperzero-firmware` | Corrected firmware build documentation command |
+| [#19](https://github.com/WayneChang65/ptt-crawler/pull/19) | `WayneChang65/ptt-crawler` | Typo fix |
+| [#3](https://github.com/penut85420/TranslationImprover/pull/3) | `penut85420/TranslationImprover` | MIT license and English README |
 
-## Selected Engineering Work
+</details>
 
-| Project | What it proves | Stack / context |
-| --- | --- | --- |
-| [CCTS](https://github.com/DF-wu/CCTS) | Research-grade backend system design for event-driven microservice testing. | Java, Spring Boot, RabbitMQ, MongoDB, Pact |
-| [HideReplier](https://github.com/DF-wu/HideReplier) | End-to-end side-project ownership: anonymous Discord reply bot, build chain, Docker image, Fly.io migration. | Java, Spring Boot, Docker |
-| [myServices](https://github.com/DF-wu/myServices) | Real operating environment, not a portfolio simulation: service composition, storage/network notes, MariaDB backup, Docker and server maintenance. | Docker, Linux, NAS, MariaDB, SDN |
-| [iDRACFanSpeedControl](https://github.com/DF-wu/iDRACFanSpeedControl) | Server operations automation with iDRAC/IPMI, ESXi temperature inputs, GPU-aware logic, Docker deployment, and explicit limitation auditing. | Shell, Docker, IPMI, ESXi, NVIDIA |
-| [BehaviorMonitor](https://github.com/DF-wu/BehaviorMonitor) | Full-stack AI-assisted implementation with real-time UI, admin panel, analytics, logs, Firebase backend, and GitHub Pages deployment. | React 19, TypeScript, Firebase |
-| [urlbalancer](https://github.com/DF-wu/urlbalancer) | Go + React practice around control-plane/data-plane separation and reverse-proxy service logic. | Go, Gin, React, SQLite |
+## 📈 GitHub activity
 
-## Star History
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/0-profile-details.svg" />
+    <img alt="GitHub profile details" src="./profile-summary-card-output/github/0-profile-details.svg" width="100%" />
+  </picture>
+</p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/1-repos-per-language.svg" />
+    <img alt="Repositories per language" src="./profile-summary-card-output/github/1-repos-per-language.svg" width="49%" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/2-most-commit-language.svg" />
+    <img alt="Most committed languages" src="./profile-summary-card-output/github/2-most-commit-language.svg" width="49%" />
+  </picture>
+</p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/3-stats.svg" />
+    <img alt="GitHub stats" src="./profile-summary-card-output/github/3-stats.svg" width="49%" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/4-productive-time.svg" />
+    <img alt="Productive time" src="./profile-summary-card-output/github/4-productive-time.svg" width="49%" />
+  </picture>
+</p>
+
+<details>
+<summary><b>Star history</b></summary>
+<br />
 
 <a href="https://www.star-history.com/?repos=DF-wu/iDRACFanSpeedControl,DF-wu/HideReplier,DF-wu/CapsWriter-Offline-Container,DF-wu/taobaoOrderExporter,DF-wu/lilac-mono&amp;type=date">
   <picture>
@@ -113,107 +204,34 @@ At ITRI / PDAS-team, I worked on personal-data authorization and valuation/payme
   </picture>
 </a>
 
-## Experience
-
-| Context | Period | What I did |
-| --- | --- | --- |
-| **SOSELAB, NTOU CSE** | 2020 - 2022 | Designed and implemented CCTS; published at IEEE APSEC 2022; won TCSE 2022 Best Chinese Paper. |
-| **Industrial Technology Research Institute (ITRI)** | Jul 2021 - Dec 2021 | Built personal-data authorization and valuation/payment systems across microservices, event-driven architecture, CI/CD, security, blockchain, fintech, AKS deployment, and delivery docs. |
-| **Ming-Chyuan Ltd.** | Jul 2012 - present | Maintains and modernizes internal digital systems for CNC manufacturing workflows, moving legacy systems toward more reliable architecture. |
-| **National Taiwan Ocean University** | Teaching Assistant | Helped migrate course content into a newer content-management workflow and supported lesson design/customization. |
-| **Public OSS / g0v.social** | Ongoing | Contributes fixes, integrations, localization, and documentation improvements to public projects. |
-
-## Technical Surface
-
-<p>
-  <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
-  <img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
-  <img alt="Python" src="https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54" />
-  <img alt="Shell" src="https://img.shields.io/badge/Shell-121011?style=flat-square&logo=gnubash&logoColor=white" />
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-  <img alt="Spring Boot" src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" />
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
-  <img alt="Kubernetes" src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
-  <img alt="RabbitMQ" src="https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white" />
-  <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white" />
-  <img alt="MariaDB" src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white" />
-</p>
-
-| Domain | Tools and habits |
-| --- | --- |
-| Backend | Java, Spring Boot, Go/Gin, Python/Django, Node.js/Express |
-| Data & messaging | MongoDB, MariaDB, MySQL, Redis, PostgreSQL, SQLite, RabbitMQ, Kafka |
-| Platform | Docker, Linux, Nginx, Jenkins, Kubernetes, AKS, ESXi, Unraid, TrueNAS |
-| SQA / delivery | Pact, JUnit, Postman, SideeX, Insomnia, CI/CD, customer-facing documentation |
-| Systems | Microservices, event-driven design, contract testing, home-lab operations, network/storage management |
-
-## Open Source Trail
-
-| PR | Repository | Contribution pattern |
-| --- | --- | --- |
-| [#1](https://github.com/stanley2058/lilac-mono/pull/1) | `stanley2058/lilac-mono` | Added Exa web search provider and tests |
-| [#4](https://github.com/stanley2058/lilac-mono/pull/4) | `stanley2058/lilac-mono` | Added custom Tavily API endpoint support |
-| [#5](https://github.com/stanley2058/lilac-mono/pull/5) | `stanley2058/lilac-mono` | Cleanup and documentation follow-up |
-| [#138](https://github.com/Minidoracat/mcp-feedback-enhanced/pull/138) | `Minidoracat/mcp-feedback-enhanced` | Traditional Chinese localization and docs enhancement |
-| [#111](https://github.com/yym68686/ChatGPT-Telegram-Bot/pull/111) | `yym68686/ChatGPT-Telegram-Bot` | Markdown table correctness fix |
-| [#691](https://github.com/flipperdevices/flipperzero-firmware/pull/691) | `flipperdevices/flipperzero-firmware` | Corrected firmware build documentation command |
-| [#167](https://github.com/SrinivasanTarget/ContractTestingBoilerplate/pull/167) | `SrinivasanTarget/ContractTestingBoilerplate` | Corrected Pact broker port mismatch |
-| [#19293](https://github.com/is-a-dev/register/pull/19293) | `is-a-dev/register` | Custom domain registration contribution |
-
-## Role Fit
-
-| Role | Why this background fits |
-| --- | --- |
-| **Backend Engineer** | CCTS, PDAS, HideReplier, and URL Balancer show service design across APIs, messaging, persistence, event flows, and deployment. |
-| **Platform Engineer** | HomeLab, AKS delivery, Docker/Linux/NAS operations, and iDRAC automation show day-two thinking, not only code writing. |
-| **Systems-oriented SWE** | SOSELAB research, ITRI delivery, internal systems maintenance, and OSS work show practical architecture under constraints. |
-
-## Extended GitHub Evidence
-
-<div align="center">
-  <img src="./profile-summary-card-output/monokai/0-profile-details.svg" alt="GitHub profile details" />
-  <img src="./profile-summary-card-output/monokai/1-repos-per-language.svg" alt="Repositories per language" />
-  <img src="./profile-summary-card-output/monokai/2-most-commit-language.svg" alt="Most committed languages" />
-  <img src="./profile-summary-card-output/monokai/3-stats.svg" alt="GitHub stats" />
-</div>
+</details>
 
 <details>
-<summary><strong>More activity signals</strong></summary>
-
+<summary><b>WakaTime coding activity</b></summary>
 <br />
-
-<div align="center">
-
-[![DF's GitHub stats](https://github-readme-stats.vercel.app/api?username=DF-wu&show_icons=true&count_private=true&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DF-wu&layout=compact&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
 
 [![WakaTime](https://wakatime.com/share/@cb2e708b-89d1-4093-bf95-cafd34987f43/d210fe3c-7b63-47b5-a4d4-b70bb8300fcb.svg)](https://wakatime.com/)
 
-</div>
-
 </details>
 
-## Source Links
+## 🎯 Where I fit
 
-- [Resume PDF](https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf)
-- [Live profile page](https://df.is-a.dev)
-- [SOSELab website](https://soselab.cs.ntou.edu.tw/)
-- [SOSELab postgraduates](https://soselab.cs.ntou.edu.tw/lab-members/)
-- [SOSELab publications](https://soselab.cs.ntou.edu.tw/publications/)
-- [CCTS repository](https://github.com/DF-wu/CCTS)
-- [IEEE APSEC 2022 paper](https://ieeexplore.ieee.org/document/10043304/)
-- [IEEE ICS 2020 paper](https://ieeexplore.ieee.org/document/9359082/)
-
-## Contact
-
-<p>
-  <a href="mailto:df@dfder.tw">df@dfder.tw</a> ·
-  <a href="https://df.is-a.dev">df.is-a.dev</a> ·
-  <a href="https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf">resume</a> ·
-  <a href="https://www.linkedin.com/in/chufei-wu-b33990164/">LinkedIn</a>
-</p>
+| Role | Why |
+| --- | --- |
+| **Backend Engineer** | CCTS, PDAS, and HideReplier cover APIs, messaging, persistence, event flows, and deployment. |
+| **Platform Engineer** | Home-lab, AKS delivery, Docker/Linux/NAS operations, and iDRAC automation: I think about day two, not only day one. |
+| **Systems-oriented SWE** | Research at SOSELab, delivery at ITRI, a decade of internal systems, and OSS work: practical architecture under real constraints. |
 
 ---
 
-<sub>Summary cards powered by <a href="https://github.com/vn7n24fzkq/github-profile-summary-cards">vn7n24fzkq/github-profile-summary-cards</a>.</sub>
+<p align="center">
+  <a href="mailto:df@dfder.tw">df@dfder.tw</a> ·
+  <a href="https://df.is-a.dev">df.is-a.dev</a> ·
+  <a href="https://github.com/DF-wu/resume/blob/main/CHUFEIWU_Resume.pdf">Resume</a> ·
+  <a href="https://www.linkedin.com/in/chufei-wu-b33990164/">LinkedIn</a> ·
+  <a href="https://soselab.cs.ntou.edu.tw/publications/">SOSELab publications</a>
+  <br /><br />
+  <sub><i>"It's not a bug, it's a feature." — but I will still write the test for it.</i></sub>
+  <br />
+  <sub>Summary cards by <a href="https://github.com/vn7n24fzkq/github-profile-summary-cards">github-profile-summary-cards</a> · icons by <a href="https://skillicons.dev">skillicons.dev</a></sub>
+</p>

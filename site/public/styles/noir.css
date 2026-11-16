@@ -1,6 +1,11 @@
 @import './global.css';
 
 :root {
+  --intel-bg: #07080a;
+  --intel-text: var(--text);
+  --intel-muted: var(--muted);
+  --intel-surface: var(--surface);
+  --intel-line: var(--line);
   color-scheme: dark;
   --bg: #050608;
   --bg-2: #11100d;

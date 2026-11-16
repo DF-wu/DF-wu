@@ -1,18 +1,26 @@
 ---
 import { profile } from '../data/profile';
-import { apiCatalog, capabilityMatrix, impactSignals, insightArticles, timeline } from '../data/portfolio-content';
+import { apiCatalog, capabilityMatrix, insightArticles, timeline } from '../data/portfolio-content';
 
+const snapshot = [
+  { label: 'Public repositories', value: profile.stats.publicRepos, source: 'GitHub API' },
+  { label: 'Non-fork repositories', value: profile.stats.nonForkRepos, source: 'GitHub search' },
+  { label: 'Merged pull requests', value: profile.stats.mergedPRs, source: 'GitHub search' },
+  { label: 'External merged PRs', value: profile.stats.externalPRs, source: 'GitHub search' },
+  { label: 'Publications', value: profile.stats.publications, source: '2 IEEE · 3 domestic' },
+  { label: 'HomeLab services', value: profile.stats.homeLabServices, source: 'myServices' },
+];
 const articleCategories = ['All', ...Array.from(new Set(insightArticles.map((item) => item.category)))];
 ---
 
 <section class="portfolio-intel" aria-labelledby="intel-title">
   <div class="intel-shell">
     <div class="intel-heading">
-      <p class="intel-kicker">Portfolio intelligence layer</p>
-      <h2 id="intel-title">Research evidence, APIs, charts, and blog-grade operating notes.</h2>
+      <p class="intel-kicker">Behind the page</p>
+      <h2 id="intel-title">Evidence, timeline, and engineering notes.</h2>
       <p>
-        This shared layer turns every variant into a richer portfolio surface: API endpoints, command search,
-        live GitHub enrichment, article cards, timeline context, and machine-readable data.
+        Everything on this site is also machine-readable: static JSON endpoints, a searchable index
+        (<kbd>Ctrl</kbd> / <kbd>⌘</kbd> + <kbd>K</kbd>), and a live GitHub lookup that degrades gracefully offline.
       </p>
     </div>
 
@@ -52,18 +60,17 @@ const articleCategories = ['All', ...Array.from(new Set(insightArticles.map((ite
 
     <div class="chart-grid" aria-label="Evidence charts">
       <article class="chart-card">
-        <span>Impact chart</span>
-        <h3>Proof distribution</h3>
-        <div class="bar-chart">
-          {impactSignals.map((signal) => (
-            <div class={`bar-row tone-${signal.tone}`}>
-              <label>{signal.label}</label>
-              <div aria-hidden="true"><span style={`--value:${signal.value}%`}></span></div>
-              <strong>{signal.value}</strong>
-              <small>{signal.detail}</small>
+        <span>Verified snapshot · {profile.stats.snapshotDate}</span>
+        <h3>Numbers you can check</h3>
+        <dl class="snapshot-grid">
+          {snapshot.map((item) => (
+            <div>
+              <dt>{item.label}</dt>
+              <dd>{item.value}</dd>
+              <small>{item.source}</small>
             </div>
           ))}
-        </div>
+        </dl>
       </article>
 
       <article class="chart-card timeline-card">
@@ -85,7 +92,7 @@ const articleCategories = ['All', ...Array.from(new Set(insightArticles.map((ite
       <div class="insight-head">
         <div>
           <p class="intel-kicker">Engineering journal</p>
-          <h3 id="insights-title">Blog-grade essays distilled into portfolio proof.</h3>
+          <h3 id="insights-title">Short notes on how I think about systems.</h3>
         </div>
         <div class="filter-row" aria-label="Insight filters">
           {articleCategories.map((category) => (

@@ -91,17 +91,39 @@ button {
   right: 1rem;
   bottom: 1rem;
   z-index: 900;
-  display: grid;
-  gap: 0.45rem;
-  padding: 0.45rem;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.3rem;
   border: 1px solid rgba(127, 127, 127, 0.22);
-  border-radius: 8px;
-  background: rgba(16, 18, 20, 0.82);
+  border-radius: 999px;
+  background: rgba(16, 18, 20, 0.78);
   backdrop-filter: blur(18px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+  opacity: 0.72;
+  transition: opacity 200ms ease;
 }
 
-.portfolio-dock button,
+.portfolio-dock:hover,
+.portfolio-dock:focus-within {
+  opacity: 1;
+}
+
+.portfolio-dock button {
+  min-height: 34px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  color: rgba(255, 255, 255, 0.82);
+  background: transparent;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.portfolio-dock button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
 .dialog-head button,
 .api-list button,
 .filter-row button {
@@ -115,7 +137,6 @@ button {
   font-weight: 800;
 }
 
-.portfolio-dock button:hover,
 .dialog-head button:hover,
 .api-list button:hover,
 .filter-row button:hover {
@@ -284,7 +305,7 @@ button {
 
 .intel-heading h2,
 .insight-head h3 {
-  max-width: 12ch;
+  max-width: 18ch;
   font-size: 3.4rem;
   font-weight: 900;
   letter-spacing: 0;
@@ -525,7 +546,6 @@ html[data-contrast] {
   .portfolio-dock {
     right: 0.75rem;
     bottom: 0.75rem;
-    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -809,4 +829,70 @@ html[data-contrast] {
   .portfolio-dock button {
     padding: 0.55rem;
   }
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 0;
+}
+
+.snapshot-grid div {
+  border: 1px solid var(--intel-line, rgba(127, 127, 127, 0.18));
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+}
+
+.snapshot-grid dt {
+  color: var(--intel-muted, var(--muted, #596267));
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.snapshot-grid dd {
+  margin: 0.3rem 0 0;
+  font-size: 2rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.snapshot-grid small {
+  color: var(--intel-muted, var(--muted, #596267));
+  font-size: 0.72rem;
+}
+
+.intel-heading kbd {
+  border: 1px solid var(--intel-line, rgba(127, 127, 127, 0.3));
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0 0.35em;
+  font-family: inherit;
+  font-size: 0.85em;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 2rem 0 5.5rem;
+  border-top: 1px solid rgba(127, 127, 127, 0.22);
+  color: inherit;
+  font-size: 0.82rem;
+  opacity: 0.72;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

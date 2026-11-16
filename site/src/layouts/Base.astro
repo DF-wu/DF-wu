@@ -16,6 +16,8 @@ const {
   stylesheets = [],
   currentStyle,
 } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://df.is-a.dev').toString();
+const ogImage = 'https://github.com/DF-wu.png?size=460';
 const commandData = [
   ...profile.projects.map((item) => ({ type: 'Project', title: item.name, summary: item.description, url: item.url })),
   ...profile.publications.map((item) => ({ type: 'Publication', title: item.title, summary: item.abstract, url: item.url })),
@@ -32,6 +34,18 @@ const commandData = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0a0a0f" />
+    <meta name="author" content={`${profile.fullName} (${profile.nameZh})`} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="me" href={profile.links.mastodon} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,6 +64,16 @@ const commandData = [
     <div id="portfolio-content">
       <slot />
     </div>
+
+    <footer class="site-footer">
+      <span>© {new Date().getFullYear()} {profile.fullName} · {profile.nameZh}</span>
+      <nav aria-label="Footer">
+        <a href={profile.links.email}>{profile.links.emailAddress}</a>
+        <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/DF-wu/DF-wu/tree/master/site" target="_blank" rel="noopener">Source</a>
+        <a href="/styles/">Design variants</a>
+      </nav>
+    </footer>
 
     <div class="portfolio-dock" aria-label="Portfolio tools">
       <button type="button" data-tool="styles" aria-label="Switch design style" title="Styles">Style</button>

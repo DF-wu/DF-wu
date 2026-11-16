@@ -128,11 +128,20 @@
   if (!reducedMotion && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => entry.target.toggleAttribute('data-visible', entry.isIntersecting));
+        entries.forEach((entry) => {
+          if (entry.target.hasAttribute('data-reveal')) {
+            if (entry.isIntersecting) {
+              entry.target.setAttribute('data-visible', '');
+              observer.unobserve(entry.target);
+            }
+            return;
+          }
+          entry.target.toggleAttribute('data-visible', entry.isIntersecting);
+        });
       },
       { threshold: 0.12 },
     );
-    document.querySelectorAll('.portfolio-intel article, .portfolio-intel .intel-heading').forEach((item) => observer.observe(item));
+    document.querySelectorAll('.portfolio-intel article, .portfolio-intel .intel-heading, [data-reveal]').forEach((item) => observer.observe(item));
   }
 
   window.addEventListener('scroll', updateProgress, { passive: true });
