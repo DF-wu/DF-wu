@@ -306,7 +306,7 @@ export const profile = {
     },
     {
       role: 'Open-source Collaborator',
-      org: 'g0v civic tech community · public OSS projects',
+      org: 'Public OSS projects',
       period: 'Ongoing',
       summary:
         'Contribute across personal infrastructure, team projects, and public OSS workflows. Pattern: cleanup, integration, correctness.',
@@ -328,7 +328,7 @@ export const profile = {
   interests: [
     'Event-driven distributed systems',
     'Home-lab infrastructure and self-hosting',
-    'Civic tech (g0v community)',
+    'Fediverse community (g0v.social member)',
     'Archery — former university club leader',
   ],
 

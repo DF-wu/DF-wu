@@ -52,7 +52,7 @@
 <text x="480" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">HomeLab</text>
 <path class="track" d="M260 210 L180 290 H40" stroke="#d2553f"/><path class="flow" d="M260 210 L180 290 H40"/>
 <circle cx="180" cy="290" r="7" fill="#0d1117" stroke="#d2553f" stroke-width="4"/>
-<text x="180" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">g0v</text>
+<text x="180" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">Flipper</text>
 <circle cx="110" cy="290" r="7" fill="#0d1117" stroke="#d2553f" stroke-width="4"/>
 <text x="110" y="320" text-anchor="middle" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">lilac</text>
 <circle cx="40" cy="290" r="9" fill="#d2553f" stroke="#0d1117" stroke-width="3"/>

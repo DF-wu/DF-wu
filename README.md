@@ -125,7 +125,7 @@ flowchart LR
 | 🏗️ | **Software Engineer Intern** at ITRI · PDAS-team<br /><sub>Personal-data authorization + valuation/payment platform: microservices, event-driven design, blockchain, fintech, CI/CD, AKS delivery.</sub> | Jul – Dec 2021 |
 | 🏭 | **MIS / Internal Systems** at Ming-Chyuan Ltd.<br /><sub>Maintains and modernizes digital systems for CNC manufacturing workflows.</sub> | 2012 – present |
 | 🎓 | **Teaching Assistant** at National Taiwan Ocean University<br /><sub>Migrated course content to a newer CMS workflow; supported lesson design.</sub> | after graduation |
-| 🌐 | **Open-source collaborator** · g0v civic tech and public OSS<br /><sub>Integrations, webhook fixes, localization, and documentation correctness.</sub> | ongoing |
+| 🌐 | **Open-source collaborator** · public OSS projects<br /><sub>Integrations, webhook fixes, localization, and documentation correctness.</sub> | ongoing |
 
 ## 🛠️ Tech stack
 
