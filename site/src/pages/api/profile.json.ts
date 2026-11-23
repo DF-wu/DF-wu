@@ -16,7 +16,6 @@ export function GET() {
       motto: profile.motto,
     },
     about: profile.about,
-    philosophy: profile.philosophy,
     education: profile.education,
     lab: profile.lab,
     links: profile.links,

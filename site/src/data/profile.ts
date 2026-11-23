@@ -14,13 +14,6 @@ export const profile = {
     'Outside formal roles, I run a home-lab with 30+ services across storage, DNS, monitoring, media, albums, and home automation. I maintain it myself.',
   ],
 
-  philosophy: [
-    'Architecture clarity over premature abstraction',
-    'Maintainability before complexity becomes costly',
-    'Measurable iteration over speculative engineering',
-    'Deployment-aware design from day one',
-  ],
-
   education: {
     degree: 'M.S. / B.S. in Computer Science and Engineering',
     school: 'National Taiwan Ocean University (NTOU)',
@@ -299,7 +292,7 @@ export const profile = {
     {
       role: 'Teaching Assistant',
       org: 'National Taiwan Ocean University',
-      period: 'After graduation',
+      period: '2020 – 2022',
       summary:
         'Helped migrate legacy course content into a newer content-management workflow and supported professors with lesson design and assigned customization.',
     },

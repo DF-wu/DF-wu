@@ -550,35 +550,6 @@ body {
   margin-top: 18px;
 }
 
-.philosophy {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 32px;
-  list-style: none;
-  counter-reset: principle;
-}
-
-.philosophy li {
-  counter-increment: principle;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  background: var(--surface);
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
-.philosophy li::before {
-  content: counter(principle, decimal-leading-zero);
-  display: block;
-  margin-bottom: 6px;
-  color: var(--brass);
-  font-family: var(--mono);
-  font-size: 0.7rem;
-}
-
 /* Routes */
 
 .route-grid {
@@ -1309,8 +1280,7 @@ html[data-enhanced] [data-reveal][data-visible] {
 
   .metric-ribbon,
   .route-grid,
-  .project-grid,
-  .philosophy {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
