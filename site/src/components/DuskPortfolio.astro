@@ -192,20 +192,6 @@ import { profile } from '../data/profile';
   <div class="divider"></div>
 
   <section class="section">
-    <p class="section-label">First 90 Days</p>
-    <div class="ramp">
-      {profile.rampUp.map((r) => (
-        <div class="ramp-item">
-          <span class="ramp-phase">{r.phase}</span>
-          <span class="ramp-focus">{r.focus}</span>
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <section class="section">
     <p class="section-label">Beyond Code</p>
     <div class="skills-grid">
       {profile.interests.map((i) => <span class="skill-tag">{i}</span>)}

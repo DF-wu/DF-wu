@@ -1115,29 +1115,6 @@ a.paper-row:hover {
   border-bottom: 0;
 }
 
-.ramp-up {
-  display: grid;
-  gap: 8px;
-  list-style: none;
-}
-
-.ramp-up li {
-  display: grid;
-  grid-template-columns: 74px 1fr;
-  gap: 12px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.ramp-up strong {
-  color: var(--brass);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  line-height: 2;
-  text-transform: uppercase;
-}
-
 .fit-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1220,42 +1197,6 @@ a.paper-row:hover {
   color: #fff;
   border-color: rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.1);
-}
-
-/* Shared intelligence section blends into the paper */
-
-.portfolio-intel {
-  --intel-bg: transparent;
-  --intel-surface: var(--surface);
-  --intel-line: var(--line);
-  border-top: 1px solid var(--line);
-}
-
-.portfolio-intel .intel-heading h2,
-.portfolio-intel .insight-head h3 {
-  font-family: var(--serif);
-  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 800;
-  line-height: 1.04;
-}
-
-.portfolio-intel .intel-heading p {
-  margin-top: 18px;
-}
-
-.portfolio-intel .intel-kicker {
-  color: var(--cobalt);
-  font-family: var(--mono);
-  letter-spacing: 0.06em;
-}
-
-.portfolio-intel .insight-card p,
-.portfolio-intel .intel-card p {
-  margin-top: 10px;
-}
-
-.portfolio-intel .insight-card div {
-  margin-top: 14px;
 }
 
 /* ---------- Motion ---------- */

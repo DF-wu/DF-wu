@@ -1,6 +1,6 @@
 ---
 import { profile } from '../data/profile';
-import { impactSignals, insightArticles, timeline } from '../data/portfolio-content';
+import { timeline } from '../data/portfolio-content';
 
 const opsMetrics = [
   { label: 'Home-lab services', value: profile.stats.homeLabServices },
@@ -14,9 +14,7 @@ const opsMetrics = [
   <nav class="signal-nav" aria-label="Primary">
     <a href="#signal-top" class="signal-brand">DF Wu / Signal Desk</a>
     <div>
-      <a href="#signals">Signals</a>
       <a href="#incidents">Timeline</a>
-      <a href="#briefings">Briefings</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -55,23 +53,6 @@ const opsMetrics = [
       ))}
     </section>
 
-    <section class="signal-section" id="signals" aria-labelledby="signals-title">
-      <div class="section-head">
-        <p class="signal-kicker">Signal board</p>
-        <h2 id="signals-title">Four evidence channels define the work.</h2>
-      </div>
-      <div class="signal-grid">
-        {impactSignals.map((signal) => (
-          <article class={`signal-card tone-${signal.tone}`}>
-            <span>{signal.label}</span>
-            <strong>{signal.value}</strong>
-            <div aria-hidden="true"><i style={`--value:${signal.value}%`}></i></div>
-            <p>{signal.detail}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
     <section class="signal-section split" id="incidents" aria-labelledby="incident-title">
       <div class="section-head sticky">
         <p class="signal-kicker">Incident memory</p>
@@ -84,22 +65,6 @@ const opsMetrics = [
             <time>{item.period}</time>
             <h3>{item.title}</h3>
             <p>{item.summary}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="signal-section" id="briefings" aria-labelledby="briefings-title">
-      <div class="section-head">
-        <p class="signal-kicker">Briefings</p>
-        <h2 id="briefings-title">Short essays for teams evaluating fit.</h2>
-      </div>
-      <div class="briefing-grid">
-        {insightArticles.map((article) => (
-          <article>
-            <span>{article.category} / {article.readingTime}</span>
-            <h3>{article.title}</h3>
-            <p>{article.summary}</p>
           </article>
         ))}
       </div>

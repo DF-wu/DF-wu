@@ -1,6 +1,6 @@
 ---
 import { profile } from '../data/profile';
-import { capabilityMatrix, insightArticles, timeline } from '../data/portfolio-content';
+import { timeline } from '../data/portfolio-content';
 
 const pipeline = [
   { step: '01', label: 'Observe', detail: 'Find where runtime behavior and team expectations diverge.' },
@@ -16,7 +16,6 @@ const pipeline = [
     <div>
       <a href="#bench">Workbench</a>
       <a href="#pipeline">Pipeline</a>
-      <a href="#notes">Notes</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -82,29 +81,6 @@ const pipeline = [
             <time>{item.period}</time>
             <h3>{item.title}</h3>
             <p>{item.summary}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="forge-section" id="notes" aria-labelledby="notes-title">
-      <div class="forge-section-head">
-        <p class="forge-kicker">Shop notes</p>
-        <h2 id="notes-title">What the system should leave behind.</h2>
-      </div>
-      <div class="note-grid">
-        {capabilityMatrix.map((item) => (
-          <article>
-            <h3>{item.feature}</h3>
-            <p>{item.note}</p>
-            <span>{item.status}</span>
-          </article>
-        ))}
-        {insightArticles.slice(0, 2).map((item) => (
-          <article>
-            <h3>{item.title}</h3>
-            <p>{item.summary}</p>
-            <span>{item.readingTime}</span>
           </article>
         ))}
       </div>

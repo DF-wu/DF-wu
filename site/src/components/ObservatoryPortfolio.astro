@@ -1,6 +1,6 @@
 ---
 import { profile } from '../data/profile';
-import { apiCatalog, designVariants, impactSignals } from '../data/portfolio-content';
+import { apiCatalog, designVariants } from '../data/portfolio-content';
 
 const metricWall = [
   { label: 'Public repositories', value: profile.stats.publicRepos },
@@ -32,11 +32,6 @@ const metricWall = [
       </div>
       <aside class="radar-card" aria-label="Evidence radar">
         <img src="https://github.com/DF-wu.png?size=320" alt="Portrait avatar of ChuFei Wu" width="320" height="320" loading="eager" />
-        <div class="radar-chart" aria-label="Impact score chart">
-          {impactSignals.map((signal) => (
-            <span class={`tone-${signal.tone}`} style={`--score:${signal.value}%`}>{signal.label}</span>
-          ))}
-        </div>
       </aside>
     </section>
 

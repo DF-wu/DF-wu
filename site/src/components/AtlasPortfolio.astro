@@ -12,29 +12,29 @@ const routes = [
   {
     tone: 'research',
     label: 'Research route',
-    title: 'Event-driven systems need observable contracts.',
+    title: 'Contract testing for event-driven microservices.',
     body: 'CCTS connects Pact contracts, runtime event logs, RabbitMQ, MongoDB, and state-model assertions so execution paths can be checked instead of guessed.',
     proof: 'APSEC 2022 / TCSE Best Chinese Paper',
   },
   {
     tone: 'delivery',
     label: 'Delivery route',
-    title: 'Production pressure shaped the platform instinct.',
+    title: 'Personal-data authorization and payment platform at ITRI.',
     body: 'PDAS and the valuation/payment platform pushed work across logging, payment, blockchain, fintech integration, CI/CD, infrastructure, and AKS delivery.',
     proof: 'ITRI / PDAS-team / ICS 2020',
   },
   {
     tone: 'operations',
     label: 'Operations route',
-    title: 'Home-lab work keeps the architecture honest.',
-    body: 'Thirty-plus self-hosted services make reliability personal: storage, DNS, monitoring, media, albums, automation, and server control all have consequences.',
+    title: 'Running my own infrastructure.',
+    body: 'A self-hosted home-lab of 30+ services: storage, DNS, monitoring, media, albums, and home automation, plus Dell server fan control through iDRAC.',
     proof: 'HomeLab / iDRAC / internal systems',
   },
   {
     tone: 'collaboration',
     label: 'Collaboration route',
-    title: 'Public work trends toward integration and correctness.',
-    body: 'The open-source trail is not random volume. It is a pattern of adding missing integrations, fixing webhook edge cases, improving localization, and correcting docs.',
+    title: 'Pull requests to other people\'s projects.',
+    body: 'Mostly integrations, webhook fixes, localization, and documentation corrections in public repositories.',
     proof: `${profile.stats.mergedPRs} merged PRs / ${profile.stats.externalPRs} external`,
   },
 ];
@@ -120,8 +120,8 @@ const splitStack = (stack: string) => stack.split(' · ');
           {profile.fullName}
         </h1>
         <p class="hero-lede">
-          I build backend and platform systems with a researcher's test discipline, a delivery engineer's
-          constraint awareness, and an <em>operator's memory</em>.
+          Backend and platform engineer. I did my M.S. on contract testing for event-driven microservices,
+          worked on ITRI's personal-data authorization platform, and run my own home-lab.
         </p>
         <div class="hero-actions" aria-label="Primary links">
           <a class="primary-action" href={profile.links.email}>Get in touch <span aria-hidden="true">→</span></a>
@@ -190,8 +190,8 @@ const splitStack = (stack: string) => stack.split(' · ');
 
     <section class="atlas-section thesis" aria-labelledby="thesis-title">
       <div class="section-head">
-        <p class="kicker">Operating thesis</p>
-        <h2 id="thesis-title">The through-line is reliability. The habit is clarity.</h2>
+        <p class="kicker">About</p>
+        <h2 id="thesis-title">About me</h2>
       </div>
       <div class="thesis-copy">
         {profile.about.map((text) => <p>{text}</p>)}
@@ -204,10 +204,10 @@ const splitStack = (stack: string) => stack.split(' · ');
     <section class="atlas-section" id="routes" aria-labelledby="routes-title">
       <div class="section-head inline">
         <div>
-          <p class="kicker">Evidence routes</p>
-          <h2 id="routes-title">Four routes, one engineering personality.</h2>
+          <p class="kicker">Overview</p>
+          <h2 id="routes-title">Four areas of work.</h2>
         </div>
-        <p>Every line on the map above is backed by something you can open: a paper, a repository, a pull request, or a running service.</p>
+        <p>Research, delivery work, home-lab operations, and open-source contributions. Details for each are further down the page.</p>
       </div>
       <div class="route-grid">
         {routes.map((route, index) => (
@@ -226,9 +226,9 @@ const splitStack = (stack: string) => stack.split(' · ');
       <div class="section-head inline">
         <div>
           <p class="kicker">Selected systems</p>
-          <h2 id="systems-title">Projects organized as proof, not decoration.</h2>
+          <h2 id="systems-title">Projects</h2>
         </div>
-        <p>Each project shows a different pressure: research validation, full ownership, home-lab operations, server automation, or a shared service on a NAS.</p>
+        <p>My thesis system, a Discord bot, home-lab configuration, a server fan-control tool, and a maintained fork of an offline speech-to-text tool.</p>
       </div>
       <div class="project-grid">
         <a class="project-card featured" href={featuredProject.url} target="_blank" rel="noopener" data-reveal>
@@ -266,7 +266,7 @@ const splitStack = (stack: string) => stack.split(' · ');
       <div class="section-head inline">
         <div>
           <p class="kicker">Experience</p>
-          <h2 id="experience-title">Research, delivery, and a decade of internal systems.</h2>
+          <h2 id="experience-title">Experience</h2>
         </div>
         <p>{profile.education.degree} · {profile.education.school} · {profile.education.graduated}. Advised by {profile.education.advisor} at SOSELab.</p>
       </div>
@@ -288,7 +288,7 @@ const splitStack = (stack: string) => stack.split(' · ');
       <div class="section-head inline">
         <div>
           <p class="kicker">Research trail · <a href={profile.lab.url} target="_blank" rel="noopener">SOSELab</a></p>
-          <h2 id="research-title">The academic line reinforces the system line.</h2>
+          <h2 id="research-title">Publications</h2>
         </div>
         <p>{profile.lab.description}</p>
       </div>
@@ -326,10 +326,10 @@ const splitStack = (stack: string) => stack.split(' · ');
     <section class="atlas-section" aria-labelledby="stack-title">
       <div class="section-head inline">
         <div>
-          <p class="kicker">Technical surface</p>
-          <h2 id="stack-title">Broad stack, narrow engineering taste.</h2>
+          <p class="kicker">Tools</p>
+          <h2 id="stack-title">Languages and tools I have used</h2>
         </div>
-        <p>Tools change by context, but the patterns stay consistent: clear contracts, explicit data flow, deployable systems, and maintainable handoffs.</p>
+        <p>Collected from the projects, research, and jobs listed above.</p>
       </div>
       <div class="stack-matrix">
         {stackGroups.map((group) => (
@@ -346,10 +346,10 @@ const splitStack = (stack: string) => stack.split(' · ');
     <section class="atlas-section" aria-labelledby="collab-title">
       <div class="section-head inline">
         <div>
-          <p class="kicker">Collaboration ledger</p>
-          <h2 id="collab-title">How I touch unfamiliar code.</h2>
+          <p class="kicker">Open source</p>
+          <h2 id="collab-title">Merged pull requests in other repositories</h2>
         </div>
-        <p>Merged pull requests in other people's repositories: learn the boundary, reduce friction, leave a clearer path behind.</p>
+        <p>A selection. Each entry links to the pull request.</p>
       </div>
       <div class="ledger">
         {profile.contributions.map((item) => (
@@ -366,13 +366,8 @@ const splitStack = (stack: string) => stack.split(' · ');
       <div class="section-head inline">
         <div>
           <p class="kicker">Role fit</p>
-          <h2 id="fit-title">Backend, platform, and systems-oriented engineering.</h2>
+          <h2 id="fit-title">Roles that match my background</h2>
         </div>
-        <ol class="ramp-up" aria-label="First 90 days">
-          {profile.rampUp.map((step) => (
-            <li><strong>{step.phase}</strong>{step.focus}</li>
-          ))}
-        </ol>
       </div>
       <div class="fit-grid">
         {profile.roles.map((role) => (
@@ -388,8 +383,8 @@ const splitStack = (stack: string) => stack.split(' · ');
     <section class="atlas-contact" id="contact" aria-labelledby="contact-title">
       <div>
         <p class="kicker">Contact</p>
-        <h2 id="contact-title">If the team values stable systems and low entropy, let's talk.</h2>
-        <p class="contact-motto">“{profile.motto}” — but I will still write the test for it.</p>
+        <h2 id="contact-title">Get in touch</h2>
+        <p class="contact-motto">Email is the best way to reach me.</p>
       </div>
       <div class="contact-links">
         <a class="primary-action" href={profile.links.email}>{profile.links.emailAddress}</a>

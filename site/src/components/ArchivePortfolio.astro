@@ -1,13 +1,12 @@
 ---
 import { profile } from '../data/profile';
-import { insightArticles, timeline } from '../data/portfolio-content';
+import { timeline } from '../data/portfolio-content';
 ---
 
 <div class="archive-shell">
   <nav class="archive-nav" aria-label="Primary">
     <a href="#archive-top">DF Wu Archive</a>
     <div>
-      <a href="#essays">Essays</a>
       <a href="#papers">Papers</a>
       <a href="#index">Index</a>
       <a href="#contact">Contact</a>
@@ -18,30 +17,13 @@ import { insightArticles, timeline } from '../data/portfolio-content';
     <section class="archive-hero" aria-labelledby="archive-title">
       <div>
         <p class="archive-kicker">{profile.nameZh} / {profile.title}</p>
-        <h1 id="archive-title">A knowledge journal for systems that need to stay understandable.</h1>
+        <h1 id="archive-title">Papers, projects, and a short chronology.</h1>
         <p>{profile.tagline}</p>
       </div>
       <figure>
         <img src="https://github.com/DF-wu.png?size=360" alt="Portrait avatar of ChuFei Wu" width="360" height="360" loading="eager" />
         <figcaption>{profile.fullName} / {profile.location}</figcaption>
       </figure>
-    </section>
-
-    <section class="archive-section" id="essays" aria-labelledby="essays-title">
-      <div class="archive-section-head">
-        <p class="archive-kicker">Featured essays</p>
-        <h2 id="essays-title">Long-form proof, compressed for scanning.</h2>
-      </div>
-      <div class="essay-grid">
-        {insightArticles.map((article, index) => (
-          <article class={index === 0 ? 'feature' : ''}>
-            <span>{article.category} / {article.readingTime}</span>
-            <h3>{article.title}</h3>
-            <p>{article.summary}</p>
-            <div>{article.tags.map((tag) => <small>{tag}</small>)}</div>
-          </article>
-        ))}
-      </div>
     </section>
 
     <section class="archive-section split" id="papers" aria-labelledby="papers-title">
@@ -88,7 +70,6 @@ import { insightArticles, timeline } from '../data/portfolio-content';
     <section class="archive-contact" id="contact">
       <h2>For teams that value clear systems and clear writing.</h2>
       <div>
-        <a href="/api/feed.json">JSON feed</a>
         <a href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
         <a href={profile.links.resume} target="_blank" rel="noopener">Resume</a>
       </div>

@@ -96,15 +96,6 @@
       }
     }
 
-    const filterButton = event.target.closest('[data-filter-button]');
-    if (filterButton) {
-      const category = filterButton.getAttribute('data-filter-button');
-      document.querySelectorAll('[data-filter-button]').forEach((button) => button.toggleAttribute('aria-pressed', button === filterButton));
-      document.querySelectorAll('[data-insight-card]').forEach((card) => {
-        const visible = category === 'All' || card.getAttribute('data-category') === category;
-        card.toggleAttribute('hidden', !visible);
-      });
-    }
   });
 
   commandInput?.addEventListener('input', () => renderCommands(commandInput.value));
@@ -141,7 +132,7 @@
       },
       { threshold: 0.12 },
     );
-    document.querySelectorAll('.portfolio-intel article, .portfolio-intel .intel-heading, [data-reveal]').forEach((item) => observer.observe(item));
+    document.querySelectorAll('[data-reveal]').forEach((item) => observer.observe(item));
   }
 
   window.addEventListener('scroll', updateProgress, { passive: true });

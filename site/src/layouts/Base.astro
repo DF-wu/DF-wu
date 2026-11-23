@@ -1,7 +1,7 @@
 ---
 import { profile } from '../data/profile';
 import type { StyleKey } from '../data/profile';
-import { apiCatalog, designVariants, insightArticles } from '../data/portfolio-content';
+import { apiCatalog, designVariants } from '../data/portfolio-content';
 
 interface Props {
   title: string;
@@ -21,7 +21,6 @@ const ogImage = 'https://github.com/DF-wu.png?size=460';
 const commandData = [
   ...profile.projects.map((item) => ({ type: 'Project', title: item.name, summary: item.description, url: item.url })),
   ...profile.publications.map((item) => ({ type: 'Publication', title: item.title, summary: item.abstract, url: item.url })),
-  ...insightArticles.map((item) => ({ type: 'Insight', title: item.title, summary: item.summary, url: `#insight-${item.slug}` })),
   ...apiCatalog.map((item) => ({ type: 'API', title: item.label, summary: item.description, url: item.path })),
   ...designVariants.map((item) => ({ type: 'Style', title: item.name, summary: item.thesis, url: `/styles/${item.key}/` })),
 ];
@@ -115,7 +114,7 @@ const commandData = [
 
     <dialog class="portfolio-dialog command-dialog" data-command-dialog aria-label="Portfolio command search">
       <form method="dialog" class="dialog-head">
-        <strong>Search portfolio intelligence</strong>
+        <strong>Search this site</strong>
         <button type="submit" aria-label="Close search">Close</button>
       </form>
       <label class="command-input">

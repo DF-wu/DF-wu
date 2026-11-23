@@ -9,9 +9,9 @@ export const profile = {
 
   about: [
     'I am a software engineer and service developer with an M.S. and B.S. in Computer Science and Engineering from National Taiwan Ocean University. My strongest through-line is reliability: service design, event flow validation, deployment, and operations.',
-    'At SOSELAB, my thesis work became CCTS, a Composite Contract Testing Service for event-driven microservices. It combines Pact contracts, runtime event logs, and state-model validation so testers can detect missing transitions and execution failures instead of trusting happy-path demos.',
+    'At SOSELAB, my thesis work became CCTS, a Composite Contract Testing Service for event-driven microservices. It combines Pact contracts, runtime event logs, and state-model validation to detect missing transitions and execution failures.',
     'At ITRI, I worked on the Personal Data Authorization System and a personal-data valuation/payment platform. The work touched logging, payment, blockchain, third-party fintech, CI/CD, infrastructure, and delivery on Azure Kubernetes Service.',
-    'Outside formal roles, I run a home-lab with 30+ services across storage, DNS, monitoring, media, albums, and home automation. That environment keeps my platform work honest because I live with the operational consequences.',
+    'Outside formal roles, I run a home-lab with 30+ services across storage, DNS, monitoring, media, albums, and home automation. I maintain it myself.',
   ],
 
   philosophy: [
@@ -149,7 +149,6 @@ export const profile = {
     homeLabServices: '30+',
     cctsLoc: '8k+',
     pdasLoc: '40k+',
-    availability: '99%',
   },
 
   skills: {
@@ -304,25 +303,12 @@ export const profile = {
       summary:
         'Helped migrate legacy course content into a newer content-management workflow and supported professors with lesson design and assigned customization.',
     },
-    {
-      role: 'Open-source Collaborator',
-      org: 'Public OSS projects',
-      period: 'Ongoing',
-      summary:
-        'Contribute across personal infrastructure, team projects, and public OSS workflows. Pattern: cleanup, integration, correctness.',
-    },
   ],
 
   roles: [
     { title: 'Backend Engineer', evidence: 'CCTS, PDAS, HideReplier', why: 'Service delivery with microservice, event-driven, API, messaging, and persistence experience' },
     { title: 'Platform Engineer', evidence: 'HomeLab, AKS delivery, iDRACFanSpeedControl', why: 'Deployment-aware engineering across containers, Linux, storage, network, and operational automation' },
     { title: 'Systems-Oriented SWE', evidence: 'SOSELAB, ITRI, OSS contributions', why: 'Practical architecture decisions under research, customer-delivery, and public collaboration constraints' },
-  ],
-
-  rampUp: [
-    { phase: 'Month 1', focus: 'Map architecture boundaries. Find where the team loses time.' },
-    { phase: 'Month 2', focus: 'Small, targeted fixes. Reduce friction before adding features.' },
-    { phase: 'Month 3', focus: 'Measurable reliability gains. Nobody stayed late because of my code.' },
   ],
 
   interests: [

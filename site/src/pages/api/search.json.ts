@@ -1,5 +1,5 @@
 import { profile } from '../../data/profile';
-import { apiCatalog, designVariants, insightArticles } from '../../data/portfolio-content';
+import { apiCatalog, designVariants } from '../../data/portfolio-content';
 import { jsonResponse, nowIso } from '../../lib/api';
 
 export const prerender = true;
@@ -32,13 +32,6 @@ export function GET() {
         summary: item.description,
         url: item.url,
         tags: [item.type],
-      })),
-      ...insightArticles.map((item) => ({
-        type: 'insight',
-        title: item.title,
-        summary: item.summary,
-        url: `#insight-${item.slug}`,
-        tags: item.tags,
       })),
       ...apiCatalog.map((item) => ({
         type: 'api',

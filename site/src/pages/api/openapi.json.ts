@@ -9,7 +9,7 @@ export function GET() {
     info: {
       title: 'DF Wu Portfolio Data API',
       version: '1.0.0',
-      description: 'Static JSON endpoints for portfolio identity, projects, metrics, insights, styles, and search.',
+      description: 'Static JSON endpoints for portfolio identity, projects, metrics, styles, and search.',
     },
     paths: Object.fromEntries(
       apiCatalog
