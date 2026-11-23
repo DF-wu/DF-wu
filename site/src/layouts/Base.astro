@@ -8,6 +8,7 @@ interface Props {
   description?: string;
   stylesheets?: string[];
   currentStyle?: StyleKey;
+  minimal?: boolean;
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   description = 'DF Wu — backend and platform engineer building stable, maintainable systems.',
   stylesheets = [],
   currentStyle,
+  minimal = false,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://df.is-a.dev').toString();
 const ogImage = 'https://github.com/DF-wu.png?size=460';
@@ -53,13 +55,13 @@ const commandData = [
       rel="stylesheet"
     />
     {stylesheets.map((href) => <link rel="stylesheet" href={href} />)}
-    <script type="application/json" id="portfolio-command-data" set:html={JSON.stringify(commandData)} />
-    <script defer src="/scripts/portfolio-effects.js"></script>
+    {!minimal && <script type="application/json" id="portfolio-command-data" set:html={JSON.stringify(commandData)} />}
+    {!minimal && <script defer src="/scripts/portfolio-effects.js"></script>}
     <title>{title}</title>
   </head>
   <body data-portfolio-shell>
     <a class="skip-link" href="#portfolio-content">Skip to portfolio content</a>
-    <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
+    {!minimal && <div class="reading-progress" data-reading-progress aria-hidden="true"></div>}
     <div id="portfolio-content">
       <slot />
     </div>
@@ -70,9 +72,12 @@ const commandData = [
         <a href={profile.links.email}>{profile.links.emailAddress}</a>
         <a href={profile.links.github} target="_blank" rel="noopener">GitHub</a>
         <a href="https://github.com/DF-wu/DF-wu/tree/master/site" target="_blank" rel="noopener">Source</a>
-        <a href="/styles/">Design variants</a>
+        {!minimal && <a href="/styles/">Design variants</a>}
       </nav>
     </footer>
+
+    {!minimal && (
+    <Fragment>
 
     <div class="portfolio-dock" aria-label="Portfolio tools">
       <button type="button" data-tool="styles" aria-label="Switch design style" title="Styles">Style</button>
@@ -142,5 +147,7 @@ const commandData = [
         <pre class="api-preview" data-api-preview>{JSON.stringify({ ready: true, hint: 'Choose an endpoint to preview JSON.' }, null, 2)}</pre>
       </div>
     </dialog>
+    </Fragment>
+    )}
   </body>
 </html>

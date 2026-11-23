@@ -269,6 +269,13 @@ export const profile = {
 
   experience: [
     {
+      role: 'MIS / Internal Systems Maintainer',
+      org: 'Ming-Chyuan Ltd.',
+      period: 'Jul 2012 – Present',
+      summary:
+        'Maintains and modernizes digital systems for CNC manufacturing workflows, moving legacy products toward more reliable internal architecture while targeting high availability.',
+    },
+    {
       role: 'Research Assistant · Thesis Author',
       org: 'SOSELAB, NTOU CSE',
       period: '2020 – 2022',
@@ -281,13 +288,6 @@ export const profile = {
       period: 'Jul 2021 – Dec 2021',
       summary:
         'Researched, designed, implemented, and delivered personal-data authorization and valuation/payment systems. Worked across decentralized architecture, microservices, event-driven design, CI/CD, security, blockchain, third-party finance, AKS deployment, and delivery documentation.',
-    },
-    {
-      role: 'MIS / Internal Systems Maintainer',
-      org: 'Ming-Chyuan Ltd.',
-      period: 'Jul 2012 – Present',
-      summary:
-        'Maintains and modernizes digital systems for CNC manufacturing workflows, moving legacy products toward more reliable internal architecture while targeting high availability.',
     },
     {
       role: 'Teaching Assistant',
@@ -323,13 +323,13 @@ export const profile = {
   ],
 } as const;
 
-export type StyleKey = 'noir' | 'linen' | 'glass' | 'ink' | 'dusk' | 'atlas' | 'signal' | 'forge' | 'observatory' | 'archive';
+export type StyleKey = 'classic' | 'noir' | 'linen' | 'glass' | 'ink' | 'dusk' | 'atlas' | 'signal' | 'forge' | 'observatory' | 'archive';
 
-export const STYLE_KEYS: readonly StyleKey[] = ['noir', 'linen', 'glass', 'ink', 'dusk', 'atlas', 'signal', 'forge', 'observatory', 'archive'] as const;
+export const STYLE_KEYS: readonly StyleKey[] = ['classic', 'noir', 'linen', 'glass', 'ink', 'dusk', 'atlas', 'signal', 'forge', 'observatory', 'archive'] as const;
 
-export const DEFAULT_STYLE: StyleKey = 'atlas';
+export const DEFAULT_STYLE: StyleKey = 'classic';
 
 export function resolveStyle(): StyleKey {
   const raw = (import.meta.env.PORTFOLIO_STYLE ?? import.meta.env.PUBLIC_PORTFOLIO_STYLE ?? DEFAULT_STYLE).toString().toLowerCase();
-  return (STYLE_KEYS as readonly string[]).includes(raw) ? (raw as StyleKey) : 'noir';
+  return (STYLE_KEYS as readonly string[]).includes(raw) ? (raw as StyleKey) : DEFAULT_STYLE;
 }

@@ -1,0 +1,161 @@
+---
+import { profile } from '../data/profile';
+
+const ownNames = new Set(['Chu-Fei Wu', '吳朱飛']);
+
+const skillGroups = [
+  { label: 'Languages', items: profile.skills.languages },
+  { label: 'Frameworks', items: profile.skills.frameworks },
+  { label: 'Infrastructure', items: profile.skills.infrastructure },
+  { label: 'Data & messaging', items: profile.skills.data },
+];
+
+const links = [
+  { label: profile.links.emailAddress, href: profile.links.email },
+  { label: 'GitHub', href: profile.links.github },
+  { label: 'LinkedIn', href: profile.links.linkedin },
+  { label: 'Resume (PDF)', href: profile.links.resume },
+  { label: 'Mastodon', href: profile.links.mastodon },
+];
+---
+
+<div class="cv">
+  <header class="cv-header">
+    <img
+      class="cv-avatar"
+      src="https://github.com/DF-wu.png?size=160"
+      alt="Photo of ChuFei Wu"
+      width="80"
+      height="80"
+      loading="eager"
+    />
+    <div class="cv-identity">
+      <h1>{profile.fullName} <span lang="zh-Hant">{profile.nameZh}</span></h1>
+      <p class="cv-role">{profile.title} · {profile.location}</p>
+      <p class="cv-status">Open to backend and platform engineering roles.</p>
+      <ul class="cv-links">
+        {links.map((link) => (
+          <li>
+            <a href={link.href} target={link.href.startsWith('mailto:') ? undefined : '_blank'} rel="noopener">{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="cv-section" aria-labelledby="about">
+      <h2 id="about">About</h2>
+      <div class="cv-body prose">
+        {profile.about.map((text) => <p>{text}</p>)}
+      </div>
+    </section>
+
+    <section class="cv-section" aria-labelledby="experience">
+      <h2 id="experience">Experience</h2>
+      <ol class="cv-body cv-entries">
+        {profile.experience.map((item) => (
+          <li>
+            <div class="entry-head">
+              <h3>{item.role}</h3>
+              <span class="entry-date">{item.period}</span>
+            </div>
+            <p class="entry-org">{item.org}</p>
+            <p>{item.summary}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="cv-section" aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <div class="cv-body cv-entries">
+        <div>
+          <div class="entry-head">
+            <h3>{profile.education.degree}</h3>
+            <span class="entry-date">{profile.education.graduated}</span>
+          </div>
+          <p class="entry-org">{profile.education.school}</p>
+          <p>
+            <a href={profile.lab.url} target="_blank" rel="noopener">SOSELab</a> (Service-Oriented Software Engineering Lab),
+            advised by <a href={profile.lab.advisorUrl} target="_blank" rel="noopener">{profile.education.advisor}</a>.
+          </p>
+          <p>
+            Master's thesis: <span lang="zh-Hant">事件驅動微服務系統之契約測試暨端到端測試研究</span>
+            (Contract testing and end-to-end testing for event-driven microservice systems), 2022.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section" aria-labelledby="publications">
+      <h2 id="publications">Publications</h2>
+      <div class="cv-body">
+        <h3 class="cv-subhead">International (IEEE)</h3>
+        <ol class="cv-pubs">
+          {profile.publications.map((paper) => (
+            <li>
+              <span class="pub-authors">{paper.authors.map((author, i) => (<>{ownNames.has(author) ? <strong>{author}</strong> : author}{i < paper.authors.length - 1 ? ', ' : ''}</>))}</span>.{' '}
+              <a href={paper.url} target="_blank" rel="noopener">{paper.title}</a>.{' '}
+              <span class="pub-venue">{paper.venue}, {paper.year}.</span>
+            </li>
+          ))}
+        </ol>
+
+        <h3 class="cv-subhead">Domestic conferences (Taiwan)</h3>
+        <ol class="cv-pubs">
+          {profile.domesticPublications.map((paper) => (
+            <li>
+              <span class="pub-authors">{paper.authors.map((author, i) => (<>{ownNames.has(author) ? <strong>{author}</strong> : author}{i < paper.authors.length - 1 ? '、' : ''}</>))}</span>.{' '}
+              <span lang="zh-Hant">{paper.title}</span> ({paper.titleEn}).{' '}
+              <span class="pub-venue">{paper.venue}.</span>
+              {paper.award && <span class="pub-award">{paper.award}</span>}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="cv-section" aria-labelledby="projects">
+      <h2 id="projects">Projects</h2>
+      <ul class="cv-body cv-entries">
+        {profile.projects.map((project) => (
+          <li>
+            <div class="entry-head">
+              <h3><a href={project.url} target="_blank" rel="noopener">{project.name}</a></h3>
+            </div>
+            <p class="entry-org">{project.stack}</p>
+            <p>{project.description}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="cv-section" aria-labelledby="open-source">
+      <h2 id="open-source">Open source</h2>
+      <div class="cv-body">
+        <p class="cv-note">Selected merged pull requests to other people's repositories.</p>
+        <ul class="cv-prs">
+          {profile.contributions.map((item) => (
+            <li>
+              <a href={item.url} target="_blank" rel="noopener">{item.repo} {item.pr}</a>
+              <span>{item.description}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section" aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <dl class="cv-body cv-skills">
+        {skillGroups.map((group) => (
+          <div>
+            <dt>{group.label}</dt>
+            <dd>{group.items.join(', ')}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  </main>
+</div>

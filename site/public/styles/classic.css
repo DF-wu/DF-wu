@@ -1,0 +1,268 @@
+@import './global.css';
+
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #1f2328;
+  --muted: #59636e;
+  --line: #e4e7eb;
+  --accent: #0b57d0;
+  --font: 'Inter', 'Noto Sans TC', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --max-w: 880px;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.cv {
+  width: min(var(--max-w), calc(100% - 40px));
+  margin: 0 auto;
+  padding: 64px 0 24px;
+}
+
+.cv a {
+  color: var(--accent);
+}
+
+.cv a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Header ---------- */
+
+.cv-header {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  align-items: start;
+  padding-bottom: 40px;
+}
+
+.cv-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+}
+
+.cv-identity h1 {
+  font-size: 1.6rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.cv-identity h1 span {
+  margin-left: 6px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.cv-role {
+  margin-top: 4px;
+  font-size: 1.02rem;
+}
+
+.cv-status {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.cv-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin-top: 14px;
+  font-size: 0.92rem;
+}
+
+/* ---------- Sections ---------- */
+
+.cv-section {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  padding: 36px 0;
+  border-top: 1px solid var(--line);
+}
+
+.cv-section > h2 {
+  padding-top: 2px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cv-body {
+  min-width: 0;
+}
+
+.prose p + p {
+  margin-top: 14px;
+}
+
+.cv-entries {
+  display: grid;
+  gap: 26px;
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2px 16px;
+}
+
+.entry-head h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.entry-date {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.entry-org {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.entry-org + p,
+.cv-entries p + p {
+  margin-top: 6px;
+}
+
+/* ---------- Publications ---------- */
+
+.cv-subhead {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.cv-pubs + .cv-subhead {
+  margin-top: 26px;
+}
+
+.cv-pubs {
+  display: grid;
+  gap: 12px;
+}
+
+.pub-authors strong {
+  font-weight: 650;
+}
+
+.pub-venue {
+  color: var(--muted);
+}
+
+.pub-award {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ---------- Open source ---------- */
+
+.cv-note {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.cv-prs {
+  display: grid;
+  gap: 8px;
+}
+
+.cv-prs li {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) 1fr;
+  gap: 16px;
+  font-size: 0.95rem;
+}
+
+.cv-prs a {
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  font-size: 0.86rem;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Skills ---------- */
+
+.cv-skills {
+  display: grid;
+  gap: 10px;
+}
+
+.cv-skills div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+}
+
+.cv-skills dt {
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  width: min(var(--max-w), calc(100% - 40px));
+  padding: 24px 0 40px;
+  border-top-color: var(--line);
+  color: var(--muted);
+  opacity: 1;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+  .cv {
+    padding-top: 40px;
+  }
+
+  .cv-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cv-section {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 28px 0;
+  }
+
+  .cv-prs li,
+  .cv-skills div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media print {
+  .cv {
+    padding-top: 0;
+  }
+
+  .cv a {
+    color: inherit;
+  }
+}

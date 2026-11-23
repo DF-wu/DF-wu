@@ -30,12 +30,20 @@ export const apiCatalog = [
   { path: '/api/profile.json', label: 'Profile API', description: 'Identity, links, education, lab, experience, and role-fit metadata.' },
   { path: '/api/projects.json', label: 'Projects API', description: 'Selected systems, stack labels, highlights, and proof notes.' },
   { path: '/api/metrics.json', label: 'Metrics API', description: 'Snapshot counters and timeline entries.' },
-  { path: '/api/styles.json', label: 'Styles API', description: 'Ten portfolio design variants with branch names and design goals.' },
+  { path: '/api/styles.json', label: 'Styles API', description: 'Portfolio design variants with branch names and design goals.' },
   { path: '/api/search.json', label: 'Search API', description: 'Prebuilt search index for command palette and external consumers.' },
   { path: '/api/openapi.json', label: 'OpenAPI', description: 'Machine-readable endpoint inventory for portfolio data surfaces.' },
 ] as const;
 
 export const designVariants = [
+  {
+    key: 'classic',
+    branch: 'master',
+    name: 'Classic Profile',
+    thesis: 'A plain, single-column professional profile. The default homepage.',
+    palette: 'white, graphite, blue links',
+    effects: ['single column', 'reverse-chronological experience', 'citation-style publications'],
+  },
   {
     key: 'noir',
     branch: 'portfolio/noir',

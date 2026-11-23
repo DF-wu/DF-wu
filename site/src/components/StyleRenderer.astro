@@ -1,5 +1,6 @@
 ---
 import type { StyleKey } from '../data/profile';
+import ClassicPortfolio from './ClassicPortfolio.astro';
 import NoirPortfolio from './NoirPortfolio.astro';
 import LinenPortfolio from './LinenPortfolio.astro';
 import GlassPortfolio from './GlassPortfolio.astro';
@@ -18,6 +19,7 @@ interface Props {
 const { style } = Astro.props;
 ---
 
+{style === 'classic' && <ClassicPortfolio />}
 {style === 'noir' && <NoirPortfolio />}
 {style === 'linen' && <LinenPortfolio />}
 {style === 'glass' && <GlassPortfolio />}
