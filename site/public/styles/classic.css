@@ -187,16 +187,27 @@ body {
   font-size: 0.92rem;
 }
 
+.cv-oss {
+  gap: 22px;
+}
+
+.cv-oss h3 a {
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
 .cv-prs {
   display: grid;
-  gap: 8px;
+  gap: 2px;
+  margin-top: 6px;
 }
 
 .cv-prs li {
   display: grid;
-  grid-template-columns: minmax(0, 260px) 1fr;
-  gap: 16px;
-  font-size: 0.95rem;
+  grid-template-columns: 48px 1fr;
+  gap: 8px;
+  font-size: 0.93rem;
 }
 
 .cv-prs a {
@@ -250,7 +261,6 @@ body {
     padding: 28px 0;
   }
 
-  .cv-prs li,
   .cv-skills div {
     grid-template-columns: 1fr;
     gap: 0;

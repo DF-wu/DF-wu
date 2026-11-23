@@ -1,5 +1,5 @@
 ---
-import { profile } from '../data/profile';
+import { openSource, profile } from '../data/profile';
 
 const ownNames = new Set(['Chu-Fei Wu', '吳朱飛']);
 
@@ -134,12 +134,24 @@ const links = [
     <section class="cv-section" aria-labelledby="open-source">
       <h2 id="open-source">Open source</h2>
       <div class="cv-body">
-        <p class="cv-note">Selected merged pull requests to other people's repositories.</p>
-        <ul class="cv-prs">
-          {profile.contributions.map((item) => (
+        <p class="cv-note">Merged pull requests to repositories I do not own, grouped by project.</p>
+        <ul class="cv-entries cv-oss">
+          {openSource.map((project) => (
             <li>
-              <a href={item.url} target="_blank" rel="noopener">{item.repo} {item.pr}</a>
-              <span>{item.description}</span>
+              <div class="entry-head">
+                <h3><a href={project.url} target="_blank" rel="noopener">{project.repo}</a></h3>
+                <span class="entry-date">{project.year}</span>
+              </div>
+              {'about' in project && <p class="entry-org">{project.about}</p>}
+              {'summary' in project && <p>{project.summary}</p>}
+              <ul class="cv-prs">
+                {project.prs.map((item) => (
+                  <li>
+                    <a href={item.url} target="_blank" rel="noopener">#{item.number}</a>
+                    <span>{item.title}</span>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>

@@ -1,3 +1,83 @@
+export const openSource = [
+  {
+    repo: 'stanley2058/lilac-mono',
+    url: 'https://github.com/stanley2058/lilac-mono',
+    about: 'Lilac, an event-driven agent runtime.',
+    year: '2026',
+    summary: 'Added the Exa and Tavily search providers and fixed several GitHub integration issues.',
+    prs: [
+      { number: 36, type: 'Fix', title: 'UUID delivery identities for GitHub webhooks and workflow cancellation', url: 'https://github.com/stanley2058/lilac-mono/pull/36' },
+      { number: 35, type: 'Feature', title: 'Link reply references on the configured GitHub host', url: 'https://github.com/stanley2058/lilac-mono/pull/35' },
+      { number: 13, type: 'Fix', title: 'Prevent issue_comment self-trigger loops', url: 'https://github.com/stanley2058/lilac-mono/pull/13' },
+      { number: 5, type: 'Cleanup', title: 'Follow-up cleanup for the Tavily endpoint change', url: 'https://github.com/stanley2058/lilac-mono/pull/5' },
+      { number: 4, type: 'Feature', title: 'Custom Tavily API endpoint support', url: 'https://github.com/stanley2058/lilac-mono/pull/4' },
+      { number: 1, type: 'Feature', title: 'Exa web search provider', url: 'https://github.com/stanley2058/lilac-mono/pull/1' },
+    ],
+  },
+  {
+    repo: 'stanley2058/lilac-ai-rag-dashboard',
+    url: 'https://github.com/stanley2058/lilac-ai-rag-dashboard',
+    year: '2026',
+    prs: [
+      { number: 1, type: 'Feature', title: 'Configurable OpenAI API base URL', url: 'https://github.com/stanley2058/lilac-ai-rag-dashboard/pull/1' },
+    ],
+  },
+  {
+    repo: 'Minidoracat/mcp-feedback-enhanced',
+    url: 'https://github.com/Minidoracat/mcp-feedback-enhanced',
+    about: 'MCP server for interactive user feedback in AI-assisted development.',
+    year: '2025',
+    prs: [
+      { number: 138, type: 'i18n', title: 'Traditional Chinese localization and documentation improvements', url: 'https://github.com/Minidoracat/mcp-feedback-enhanced/pull/138' },
+    ],
+  },
+  {
+    repo: 'yym68686/ChatGPT-Telegram-Bot',
+    url: 'https://github.com/yym68686/ChatGPT-Telegram-Bot',
+    about: 'AI chat bot for Telegram.',
+    year: '2025',
+    prs: [
+      { number: 111, type: 'Docs', title: 'Fix Markdown table syntax in the documentation', url: 'https://github.com/yym68686/ChatGPT-Telegram-Bot/pull/111' },
+    ],
+  },
+  {
+    repo: 'WayneChang65/ptt-crawler',
+    url: 'https://github.com/WayneChang65/ptt-crawler',
+    about: 'Web crawler module for PTT.',
+    year: '2022',
+    prs: [
+      { number: 19, type: 'Fix', title: 'Fix a typo in the bottom-post abbreviation', url: 'https://github.com/WayneChang65/ptt-crawler/pull/19' },
+    ],
+  },
+  {
+    repo: 'SrinivasanTarget/ContractTestingBoilerplate',
+    url: 'https://github.com/SrinivasanTarget/ContractTestingBoilerplate',
+    about: 'Contract testing boilerplate for Spring Boot and Kafka microservices.',
+    year: '2021',
+    prs: [
+      { number: 167, type: 'Fix', title: 'Correct the Pact Broker port', url: 'https://github.com/SrinivasanTarget/ContractTestingBoilerplate/pull/167' },
+    ],
+  },
+  {
+    repo: 'flipperdevices/flipperzero-firmware',
+    url: 'https://github.com/flipperdevices/flipperzero-firmware',
+    about: 'Flipper Zero firmware.',
+    year: '2021',
+    prs: [
+      { number: 691, type: 'Docs', title: 'Correct the docker-compose command in the build instructions', url: 'https://github.com/flipperdevices/flipperzero-firmware/pull/691' },
+    ],
+  },
+  {
+    repo: 'penut85420/TranslationImprover',
+    url: 'https://github.com/penut85420/TranslationImprover',
+    about: 'Form-filling tool for reporting Taiwan terminology issues to Google Translate.',
+    year: '2020',
+    prs: [
+      { number: 3, type: 'Docs', title: 'Add an MIT license and an English README', url: 'https://github.com/penut85420/TranslationImprover/pull/3' },
+    ],
+  },
+] as const;
+
 export const profile = {
   name: 'DF Wu',
   fullName: 'ChuFei Wu',
@@ -201,71 +281,15 @@ export const profile = {
     },
   ],
 
-  contributions: [
-    {
-      repo: 'stanley2058/lilac-mono',
-      pr: '#36',
-      url: 'https://github.com/stanley2058/lilac-mono/pull/36',
-      type: 'Fix',
-      description: 'UUID delivery identities for GitHub webhooks and workflow cancellation',
-    },
-    {
-      repo: 'stanley2058/lilac-mono',
-      pr: '#35',
-      url: 'https://github.com/stanley2058/lilac-mono/pull/35',
-      type: 'Feature',
-      description: 'Link reply references on the configured GitHub host',
-    },
-    {
-      repo: 'stanley2058/lilac-mono',
-      pr: '#13',
-      url: 'https://github.com/stanley2058/lilac-mono/pull/13',
-      type: 'Fix',
-      description: 'Prevent issue_comment self-trigger loops',
-    },
-    {
-      repo: 'stanley2058/lilac-mono',
-      pr: '#5',
-      url: 'https://github.com/stanley2058/lilac-mono/pull/5',
-      type: 'Cleanup',
-      description: 'Quality refinement for maintainable iteration',
-    },
-    {
-      repo: 'stanley2058/lilac-mono',
-      pr: '#4',
-      url: 'https://github.com/stanley2058/lilac-mono/pull/4',
-      type: 'Integration',
-      description: 'Custom Tavily API endpoint support',
-    },
-    {
-      repo: 'stanley2058/lilac-mono',
-      pr: '#1',
-      url: 'https://github.com/stanley2058/lilac-mono/pull/1',
-      type: 'Feature',
-      description: 'Exa web search provider integration',
-    },
-    {
-      repo: 'Minidoracat/mcp-feedback-enhanced',
-      pr: '#138',
-      url: 'https://github.com/Minidoracat/mcp-feedback-enhanced/pull/138',
-      type: 'i18n',
-      description: 'Traditional Chinese localization and documentation',
-    },
-    {
-      repo: 'yym68686/ChatGPT-Telegram-Bot',
-      pr: '#111',
-      url: 'https://github.com/yym68686/ChatGPT-Telegram-Bot/pull/111',
-      type: 'Fix',
-      description: 'Documentation correctness',
-    },
-    {
-      repo: 'is-a-dev/register',
-      pr: '#19293',
-      url: 'https://github.com/is-a-dev/register/pull/19293',
-      type: 'Infra',
-      description: 'Custom domain registration',
-    },
-  ],
+  contributions: openSource.flatMap((project) =>
+    project.prs.map((item) => ({
+      repo: project.repo,
+      pr: `#${item.number}`,
+      url: item.url,
+      type: item.type,
+      description: item.title,
+    })),
+  ),
 
   experience: [
     {
