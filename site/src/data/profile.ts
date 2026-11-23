@@ -8,10 +8,10 @@ export const profile = {
   motto: "It's not a bug, it's a feature.",
 
   about: [
-    'I am a software engineer and service developer with an M.S. and B.S. in Computer Science and Engineering from National Taiwan Ocean University. My strongest through-line is reliability: service design, event flow validation, deployment, and operations.',
-    'At SOSELAB, my thesis work became CCTS, a Composite Contract Testing Service for event-driven microservices. It combines Pact contracts, runtime event logs, and state-model validation to detect missing transitions and execution failures.',
-    'At ITRI, I worked on the Personal Data Authorization System and a personal-data valuation/payment platform. The work touched logging, payment, blockchain, third-party fintech, CI/CD, infrastructure, and delivery on Azure Kubernetes Service.',
-    'Outside formal roles, I run a home-lab with 30+ services across storage, DNS, monitoring, media, albums, and home automation. I maintain it myself.',
+    'Software engineer with a B.S. and M.S. in Computer Science and Engineering from National Taiwan Ocean University. My work centers on backend services, event-driven systems, deployment, and operations.',
+    'My master\'s thesis at SOSELab produced CCTS, a contract testing service for event-driven microservices that checks Pact contracts, runtime event logs, and state models together.',
+    'At ITRI I worked on the Personal Data Authorization System (PDAS) and a personal-data valuation and payment platform, deployed on Azure Kubernetes Service.',
+    'I also run and maintain a home-lab of 30+ self-hosted services.',
   ],
 
   education: {
@@ -164,7 +164,7 @@ export const profile = {
       url: 'https://github.com/DF-wu/CCTS',
       stack: 'Java · Spring Boot · RabbitMQ · MongoDB',
       description:
-        'Composite Contract Testing Service — my NTOU thesis system and APSEC 2022 paper implementation. It combines Pact contracts, event-log sequence validation, and state-model checks to catch missing transitions and execution failures in event-driven microservices.',
+        'Composite Contract Testing Service, my thesis system and the implementation behind the APSEC 2022 paper. It checks event-driven microservices against Pact contracts, recorded event sequences, and state models to find missing transitions and execution failures.',
       highlight: 'APSEC 2022 · TCSE Best Chinese Paper · 8k+ LOC',
     },
     {
@@ -172,7 +172,7 @@ export const profile = {
       url: 'https://github.com/DF-wu/HideReplier',
       stack: 'Go · Vite · MongoDB · Docker · Fly.io',
       description:
-        'Anonymous Discord reply bot built for the NTOU CS Discord. It started as a Java/Spring Boot course project and was rewritten in Go with a Vite frontend, tuned to run on a single shared vCPU with 256MB RAM on Fly.io.',
+        'Anonymous reply bot for the NTOU CS Discord server. Started as a Java/Spring Boot course project, later rewritten in Go with a Vite frontend. Runs on Fly.io with one shared vCPU and 256 MB RAM.',
       highlight: 'Java → Go rewrite · 256MB runtime · 10 stars',
     },
     {
@@ -180,7 +180,7 @@ export const profile = {
       url: 'https://github.com/DF-wu/myServices',
       stack: 'Docker · Linux · NAS · MariaDB · SDN',
       description:
-        'Home-lab service configuration and operations notes. The broader environment runs 30+ services across storage, DNS, monitoring, media, albums, and home automation with VM/container integration.',
+        'Configuration and operations notes for my home-lab: 30+ services for storage, DNS, monitoring, media, photo albums, and home automation, running on VMs and containers.',
       highlight: '30+ services · real operating environment',
     },
     {
@@ -188,7 +188,7 @@ export const profile = {
       url: 'https://github.com/DF-wu/iDRACFanSpeedControl',
       stack: 'Shell · Docker · IPMI · ESXi · NVIDIA',
       description:
-        'Dell PowerEdge fan control through iDRAC/IPMI with Docker deployment, NVMe/GPU temperature inputs, configurable thresholds, and a recent README/code audit around fail-safe behavior.',
+        'Fan controller for Dell PowerEdge servers. Sets fan speed through iDRAC/IPMI based on iDRAC, NVMe, and NVIDIA GPU temperatures. Runs in Docker.',
       highlight: 'Dell R730XD tested · 10 stars',
     },
     {
@@ -196,7 +196,7 @@ export const profile = {
       url: 'https://github.com/DF-wu/CapsWriter-Offline-Container',
       stack: 'Python · Docker · CPU/GPU inference · OpenAI API',
       description:
-        'Offline voice input that also runs as a shared speech-to-text service on a NAS. Maintained fork with container packaging, CPU/GPU inference, desktop/Web/CLI clients, and an OpenAI-compatible audio endpoint.',
+        'Maintained fork of an offline voice input tool, packaged as a container so it can run as a shared speech-to-text service on a NAS. Supports CPU/GPU inference and an OpenAI-compatible transcription endpoint.',
       highlight: 'Maintained fork · fork-v2.1.0 released',
     },
   ],
@@ -273,28 +273,28 @@ export const profile = {
       org: 'Ming-Chyuan Ltd.',
       period: 'Jul 2012 – Present',
       summary:
-        'Maintains and modernizes digital systems for CNC manufacturing workflows, moving legacy products toward more reliable internal architecture while targeting high availability.',
+        'Maintain and modernize the internal systems behind the company\'s CNC manufacturing workflows, moving legacy systems toward a more reliable architecture.',
     },
     {
-      role: 'Research Assistant · Thesis Author',
+      role: 'Research Assistant',
       org: 'SOSELAB, NTOU CSE',
       period: '2020 – 2022',
       summary:
-        'Designed and implemented CCTS — a contract-testing framework for event-driven microservice systems. Published at IEEE APSEC 2022, received the 2022 TCSE Best Chinese Paper Award, and maintained related PoC services for orchestrator/payment/points/logging flows.',
+        'Designed and built CCTS, a contract testing service for event-driven microservices. Published at IEEE APSEC 2022 and received the 2022 TCSE Best Chinese Paper Award. Also maintained related proof-of-concept services.',
     },
     {
       role: 'Software Engineer Intern',
       org: 'Industrial Technology Research Institute (ITRI) · PDAS-team',
       period: 'Jul 2021 – Dec 2021',
       summary:
-        'Researched, designed, implemented, and delivered personal-data authorization and valuation/payment systems. Worked across decentralized architecture, microservices, event-driven design, CI/CD, security, blockchain, third-party finance, AKS deployment, and delivery documentation.',
+        'Worked on the design, implementation, and delivery of the personal-data authorization (PDAS) and valuation/payment systems: microservices, CI/CD, blockchain and third-party payment integration, and deployment on Azure Kubernetes Service.',
     },
     {
       role: 'Teaching Assistant',
       org: 'National Taiwan Ocean University',
       period: '2020 – 2022',
       summary:
-        'Helped migrate legacy course content into a newer content-management workflow and supported professors with lesson design and assigned customization.',
+        'Migrated course materials to a newer content-management system and helped professors prepare lessons.',
     },
   ],
 
